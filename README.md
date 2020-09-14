@@ -1,2 +1,2 @@
 # Harold
-A discord bot for internet ivans discord server
+A discord bot for internet ivans and Lasr's discord servers
