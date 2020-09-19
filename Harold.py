@@ -35,7 +35,7 @@ class MyClient(discord.Client):
             await message.channel.send('We do not support nor condone piracy in this server as it is\n 1. Against Discord TOS (Terms of Service)\n 2. it is illegal, buy your damn games')
 
         if message.content.startswith('.Harold'):
-            await message.channel.send('A Discord Bot Meant for Internet Ivans Discord Server and Lazrs Discord Server!\n\n https://github.com/Lazr1026/Harold')
+            await message.channel.send('A Discord Bot Meant for Internet Ivan\'s Discord Server and Lazr\'s Discord Server!\n\n https://github.com/Lazr1026/Harold')
 
         if message.content.endswith('bad'):
             await message.channel.send('https://cdn.discordapp.com/emojis/659910907245363203.gif?v=1')
