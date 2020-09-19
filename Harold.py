@@ -59,7 +59,13 @@ class MyClient(discord.Client):
             await message.channel.send('undertale best rpg dont <@664297659686715403>')
 
         if message.content.startswith('<@754750158125924483>'):
-            await message.channel.send ('you just pinged a bot')
+            await message.channel.send('you just pinged a bot')
+        if message.content.startswith('.dump 3ds')
+            await message.channel.send('3DS Cart dump guide (no video yet): https://github.com/knight-ryu12/godmode9-layeredfs-usage/wiki/Godmode9-CIA-Dumping-and-Building')
+        if message.content.startswith('.dump ds')
+            await message.channel.send('DS(i) Cart dump guide: https://www.youtube.com/watch?v=x-Et2zkl3Ek'
+        if message.content.startswith('.cartinstall')
+            await message.channel.send('Cartinstall guide: https://www.youtube.com/watch?v=pzbfHQ6uTcU')
         
 client = MyClient()
 client.run('')
