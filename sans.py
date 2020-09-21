@@ -88,4 +88,4 @@ async def cfwuses_wiiu(ctx):
 async def ban(ctx, member : discord.Member, *,reason=0):
     await member.ban(reason=reason)
 
-client.run('NzU0NzUwMTU4MTI1OTI0NDgz.X15R3A.jJMfbNxLFjbIWJCuMZDZCcpQ4gw')
+client.run('')
