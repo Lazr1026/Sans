@@ -114,7 +114,7 @@ async def nospace(ctx):
 
 @client.command()
 async def sans(ctx):
-    await ctx.send('https://github.com/Lazr1026/Sans')
+    await ctx.send('Link to SANS source code \nhttps://github.com/Lazr1026/Sans')
 
 @client.command()
 async def radeon(ctx):
@@ -124,7 +124,7 @@ async def e(ctx):
     await ctx.send(':wink:')
 @client.command()
 async def credits(ctx):
-    await ctx.send('Lazr: creator and programmer \n Radeon: programmer \n Uwuham: telling us discord.js is better')
+    await ctx.send('Lazr: creator and programmer \nRadeon: programmer \nUwUham: telling us discord.js is better')
 
 @client.command()
 async def lstm(ctx):
@@ -140,15 +140,12 @@ async def lstm(ctx):
         checkpointName = cmd[7:]
         send = "Sampling " + checkpointName + "..."
         await ctx.send(send)
-        sample = subprocess.run(['bash', '/home/pi/sample.sh', checkpointName], stdout=subprocess.PIPE)
-        sample = sample.stdout
-        sample = str(sample)
-        sample = sample.replace('\\n', '\n')
-        sample = "Sample: \n" + "```" + sample + "```"
+        sample = getLstmSample(checkpointName)
         await ctx.send(sample)
         sent = 1
     if sent == 0:
-        await ctsx.send('Invalid LSTM directive.')
+        await ctx.send('Invalid LSTM directive.')
+
 def getLstmCheckpoint():
     checkpoints = subprocess.run(['bash', '/home/pi/checkpoints.sh'], stdout=subprocess.PIPE)
     checkpoints = checkpoints.stdout
@@ -157,12 +154,21 @@ def getLstmCheckpoint():
     checkpoints = "Checkpoints: \n" + "```" + checkpoints + "```"
     return checkpoints
 
+def getLstmSample(checkpointName):
+    sample = subprocess.run(['bash', '/home/pi/sample.sh', checkpointName], stdout=subprocess.PIPE)
+    sample = sample.stdout
+    sample = str(sample)
+    sample = sample.replace('\\n', '\n')
+    sample = "Sample: \n" + "```" + sample + "```"
+    return sample
+
 @client.command()
 @commands.has_any_role('Owner', 'Owner 🍙', 'Staff', 'Admin👮‍♂️')
 async def ban(ctx, member : discord.Member, *,reason=0):
     await member.ban(reason=reason)
     send = "user " + str(member) + " has been banned."
     await ctx.send(send)
+
 @client.command()
 @commands.has_any_role('Owner', 'Owner 🍙', 'Staff', 'Admin👮', 'peeps', 'Helper', 'OMEGAMOD')
 async def say(ctx, message):
@@ -173,6 +179,11 @@ async def say(ctx, message):
 async def update(ctx):
     await ctx.send("Updating code. The bot will be down for roughly 2 minutes.")
     subprocess.run(['sudo', '/home/pi/duckdns/sans.sh'])
+
+@client.command()
+async def local58(ctx):
+    await ctx.send('`THERE ARE NO FACES`')
+    await ctx.send('`DO NOT LOOK AT THE MOON`')
 
 @client.command()
 async def help(ctx):
