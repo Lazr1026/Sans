@@ -123,8 +123,8 @@ async def sans(ctx):
 async def radeon(ctx):
     await ctx.send('radeon says she\'s gonna hardmod another 3ds, prepare to lose some brain cells.')
 @client.command()
-async def e(ctx):
-    await ctx.send(':wink:')
+async def uwuham(ctx):
+    await ctx.send('yes we know. js is better than py')
 @client.command()
 async def credits(ctx):
     await ctx.send('Lazr: creator and programmer \nRadeon: programmer \nUwUham: telling us discord.js is better')
@@ -200,12 +200,11 @@ async def snas(ctx):
 
 @client.command()
 async def help(ctx):
-    await ctx.send('''```  ban         
-  cartinstall 
+    await ctx.send('''```  cartinstall 
   cfwuses     
   credits     
   dump        
-  e           
+  uwuham           
   guide       
   help        Shows this message
   invite      
