@@ -8,6 +8,10 @@ print('stage2')
 client = commands.Bot(command_prefix = '.')
 print('botStage')
 
+tokenfile = open("token", "r")
+token = tokenfile.read()
+tokenfile.close()
+
 @client.event
 async def on_ready():
     print('Ready.')
@@ -161,4 +165,5 @@ async def say(ctx, message):
     await ctx.message.delete()
     await ctx.send(ctx.message.content[5:])
 
-client.run('')
+client.run(token)
+
