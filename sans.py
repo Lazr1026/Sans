@@ -9,7 +9,7 @@ print('stage2')
 client = commands.Bot(command_prefix = '.')
 print('botStage')
 
-tokenfile = open("/home/pi/Sans/token", "r")
+tokenfile = open("/home/lucas/Downloads/Sans-master/token", "r")
 token = tokenfile.read()
 tokenfile.close()
 
@@ -95,7 +95,7 @@ async def cfwuses(ctx):
         await ctx.send('https://cdn.discordapp.com/attachments/754753360132833431/757744237440794654/wiiu_cfw.PNG')
         sent = 1
     if ctx.message.content == ".cfwuses nx":
-        await ctx.send('https://cdn.discordapp.com/attachments/754753360132833431/757744237440794654/wiiu_cfw.PNG')
+        await ctx.send('https://media.discordapp.net/attachments/439933093118476289/692162539261526047/image0.png?width=343&height=395')
         sent = 1
     if sent == 0:
         await ctx.send('Options are: 3ds, wiiu, nx')
