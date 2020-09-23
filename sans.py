@@ -8,7 +8,7 @@ print('stage2')
 client = commands.Bot(command_prefix = '.')
 print('botStage')
 
-tokenfile = open("token", "r")
+tokenfile = open("/home/pi/Sans/token", "r")
 token = tokenfile.read()
 tokenfile.close()
 
