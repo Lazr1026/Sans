@@ -127,7 +127,12 @@ async def credits(ctx):
     await ctx.send('Lazr: creator and programmer \nRadeon: programmer \nUwUham: telling us discord.js is better')
 @client.command()
 async def sdformat(ctx):
-    await ctx.send('Common formatting tools:\n\n <http://www.ridgecrop.demon.co.uk/index.htm?guiformat.html> (Windows)\n <https://gparted.org/download.php> + <https://github.com/dosfstools/dosfstools> (linux)\n <https://support.apple.com/guide/disk-utility/format-a-disk-for-windows-computers-dskutl1010> (MacOS)\n\n MacOS: Always select "MS-DOS (FAT)", even if the card is larger than 32GB.')
+embed = discord.Embed(title="Dsp1", color=discord.Color.green())
+        embed.set_author(name="zoogie", url="https://github.com/zoogie", icon_url="https://gbatemp.net/data/avatars/l/357/357147.jpg?1426471484")
+        embed.description = "Dump 3DS's DSP component to SD for homebrew audio."
+        embed.set_thumbnail(url="https://raw.githubusercontent.com/Cruel/DspDump/master/icon.png")
+        embed.url = "https://github.com/zoogie/DSP1/releases"
+        await ctx.send(embed=embed)
 @client.command()
 async def lazr(ctx):
     await ctx.send('lazr says they want to hardmod, prepare to gain some brain cells')
