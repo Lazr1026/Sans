@@ -192,6 +192,10 @@ async def local58(ctx):
     await ctx.send('`DO NOT LOOK AT THE MOON`')
 
 @client.command()
+async def snas(ctx):
+    await ctx.send('https://tenor.com/view/sans-undertale-dance-gif-12730380')
+
+@client.command()
 async def help(ctx):
     await ctx.send('''```  ban         
   cartinstall 
@@ -214,7 +218,8 @@ async def help(ctx):
   say         
   sdlock      
   sdroot      
-  update```''')
+  update      
+  snas```''')
 
 client.run(token)
 
