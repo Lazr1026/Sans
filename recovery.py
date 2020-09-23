@@ -17,6 +17,7 @@ tokenfile.close()
 async def on_ready():
     print('Ready.')
 
+@commands.has_any_role('Owner')
 @client.command()
 async def recover(ctx):
     await ctx.send("Performing recovery. Please make sure the latest git commit is in a working state.")
