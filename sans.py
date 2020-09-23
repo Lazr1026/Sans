@@ -31,8 +31,11 @@ async def guide(ctx):
     if ctx.message.content == ".guide nx":
         await ctx.send('https://nh-server.github.io/switch-guide/')
         sent = 1
+    if ctx.message.content == ".guide wii":
+        await ctx.send('https://wii.guide/')
+        sent = 1
     if sent == 0:
-        await ctx.send('Options are: 3ds, wiiu, nx')
+        await ctx.send('Options are: 3ds, wiiu, wii, nx')
 
 @client.command()
 async def cartinstall(ctx):
