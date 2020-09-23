@@ -13,6 +13,8 @@ tokenfile = open("/home/pi/Sans/token", "r")
 token = tokenfile.read()
 tokenfile.close()
 
+client.remove_command('help')
+
 @client.event
 async def on_ready():
     print('Ready.')
@@ -171,5 +173,31 @@ async def say(ctx, message):
 async def update(ctx):
     await ctx.send("Updating code. The bot will be down for roughly 2 minutes.")
     subprocess.run(['sudo', '/home/pi/duckdns/sans.sh'])
+
+@client.command()
+async def help(ctx):
+    await ctx.send('''```  ban         
+  cartinstall 
+  cfwuses     
+  credits     
+  dump        
+  e           
+  guide       
+  help        Shows this message
+  invite      
+  lstm        
+  lumabug     
+  lumacheck   
+  nospace     
+  notbricked  
+  pirate      
+  r4          
+  radeon      
+  sans        
+  say         
+  sdlock      
+  sdroot      
+  update```''')
+
 client.run(token)
 
