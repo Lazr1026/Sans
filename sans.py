@@ -32,7 +32,7 @@ async def guide(ctx):
         await ctx.send('https://nh-server.github.io/switch-guide/')
         sent = 1
     if ctx.message.content == ".guide wii":
-        await ctx.send('https://wii.guide/')
+        await ctx.send('https://wii.guide/dump-games')
         sent = 1
     if sent == 0:
         await ctx.send('Options are: 3ds, wiiu, wii, nx')
