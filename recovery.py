@@ -21,3 +21,5 @@ async def on_ready():
 async def recover(ctx):
     await ctx.send("Performing recovery. Please make sure the latest git commit is in a working state.")
     subprocess.run(['sudo', '/home/pi/duckdns/sans.sh'])
+
+client.run(token)
