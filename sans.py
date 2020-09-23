@@ -49,8 +49,17 @@ async def dump(ctx):
     if ctx.message.content == ".dump 3ds":
         await ctx.send('https://youtu.be/b1Ng-b0fnpg')
         sent = 1
+    if ctx.message.content == ".dump wiiu":
+        await ctx.send('https://wiiu.hacks.guide/#/dump-games')
+        sent = 1
+    if ctx.message.content == ".dump vwii":
+        await ctx.send('https://wiiu.hacks.guide/#/dump-wii-games')
+        sent = 1
+    if ctx.message.content == ".dump wii":
+        await ctx.send('https://wii.guide/')
+        sent = 1
     if sent == 0:
-        await ctx.send('Options are: 3ds, ds')
+        await ctx.send('Options are: 3ds, ds, wiiu, vwii, wii')
 
 @client.command()
 async def invite(ctx):
