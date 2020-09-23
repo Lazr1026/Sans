@@ -120,6 +120,7 @@ async def radeon(ctx):
 @client.command()
 async def e(ctx):
     await ctx.send(':wink:')
+@client.command()
 async def credits(ctx):
     await ctx.send('Lazr: creator and programmer \n Radeon: programmer \n Uwuham: telling us discord.js is better')
 
