@@ -161,4 +161,4 @@ async def say(ctx, message):
     await ctx.message.delete()
     await ctx.send(ctx.message.content[5:])
 
-client.run('NzU0NzUwMTU4MTI1OTI0NDgz.X15R3A.JUQfUOI7bL5OFog7IAfckbl04HI')
+client.run('')
