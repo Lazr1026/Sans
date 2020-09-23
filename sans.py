@@ -1,5 +1,6 @@
 print('init')
 import discord
+import subprocess
 print('stage0')
 import asyncio 
 print('stage1')
@@ -136,7 +137,7 @@ async def lstm(ctx):
         checkpointName = cmd[7:]
         send = "Sampling " + checkpointName + "..."
         await ctx.send(send)
-        sample = subprocess.run(['bash', 'sample.sh', checkpointName], stdout=subprocess.PIPE)
+        sample = subprocess.run(['bash', '/home/pi/sample.sh', checkpointName], stdout=subprocess.PIPE)
         sample = sample.stdout
         sample = str(sample)
         sample = sample.replace('\\n', '\n')
@@ -146,7 +147,7 @@ async def lstm(ctx):
     if sent == 0:
         await ctsx.send('Invalid LSTM directive.')
 def getLstmCheckpoint():
-    checkpoints = subprocess.run(['bash', 'checkpoints.sh'], stdout=subprocess.PIPE)
+    checkpoints = subprocess.run(['bash', '/home/pi/checkpoints.sh'], stdout=subprocess.PIPE)
     checkpoints = checkpoints.stdout
     checkpoints = str(checkpoints)
     checkpoints = checkpoints.replace('\\n', '\n')
@@ -164,6 +165,10 @@ async def ban(ctx, member : discord.Member, *,reason=0):
 async def say(ctx, message):
     await ctx.message.delete()
     await ctx.send(ctx.message.content[5:])
-
+@client.command()
+@commands.has_any_role('Owner')
+async def update(ctx):
+    await ctx.send("Updating code. The bot will be down for roughly 2 minutes.")
+    subprocess.run(['sudo', '/home/pi/duckdns/sans.sh'])
 client.run(token)
 
