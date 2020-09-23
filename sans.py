@@ -125,10 +125,13 @@ async def e(ctx):
 @client.command()
 async def credits(ctx):
     await ctx.send('Lazr: creator and programmer \nRadeon: programmer \nUwUham: telling us discord.js is better')
- @client.command()
+@client.command()
 async def sdformat(ctx):
     await ctx.send('Common formatting tools:\n\n <http://www.ridgecrop.demon.co.uk/index.htm?guiformat.html> (Windows)\n\n <https://gparted.org/download.php> + <https://github.com/dosfstools/dosfstools> (linux)\n\n <https://support.apple.com/guide/disk-utility/format-a-disk-for-windows-computers-dskutl1010> (mac)\n\n MacOS: Always select "MS-DOS (FAT)", even if the card is larger than 32GB.')
-
+@client.command()
+async def lazr(ctx):
+    await ctx.send('lazr says they want to hardmod, prepare to gain some brain cells')
+    
 @client.command()
 async def lstm(ctx):
     sent = 0
