@@ -271,6 +271,6 @@ async def help(ctx):
         await ctx.send('Type the command :wink:')
         sent = 1
     if sent == 0:
-        await ctx.send('```What can I help you with?\n\n assistnce\n invite\n memes```')
+        await ctx.send('```What can I help you with?\n\n assistance\n invite\n memes```')
 client.run(token)
 
