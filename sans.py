@@ -247,7 +247,7 @@ async def help(ctx):
         await ctx.send('```Shows what the root of an sd card is```')
         sent = 1
     if ctx.message.content == ".help invite":
-        await ctx.send('```Invite commands are: ivan, homebrew, a secret one``` ;)')
+        await ctx.send('```Invite commands are: ivan, homebrew, analog```')
         sent = 1
     if ctx.message.content == ".help ivan":
         await ctx.send('```An invite to internet ivans discord server```')
