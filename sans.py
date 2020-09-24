@@ -195,7 +195,7 @@ async def say(ctx, message):
 @client.command()
 @commands.has_any_role('Owner')
 async def update(ctx):
-    await ctx.send("Updating code. The bot will be down for roughly 2 minutes.")
+    await ctx.send("Updating code. The bot will be down for roughly 15 seconds.")
     subprocess.run(['sudo', '/home/pi/duckdns/sans.sh'])
 
 @client.command()
