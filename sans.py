@@ -80,7 +80,7 @@ async def invite(ctx):
         await ctx.send('Options are: ivan, homebrew, analog, chill.')
         
 @client.command()
-async def guide(ctx):
+async def luma(ctx):
     sent = 0
     if str(ctx.message.content).startswith(".luma latest"):
         await ctx.send('https://github.com/LumaTeam/Luma3DS/releases/tag/v10.2')
@@ -298,7 +298,7 @@ async def help(ctx):
         await ctx.send('Type the command :wink:')
         sent = 1
     if ctx.message.content == ".help luma":
-       await ctx.send('Shows the different luma versions;)
+       await ctx.send('Shows the different luma versions')
        sent = 1
     if sent == 0:
         await ctx.send('```What can I help you with?\n\n assistance\n invite\n memes```')
