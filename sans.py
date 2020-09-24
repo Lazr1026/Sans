@@ -83,7 +83,7 @@ async def invite(ctx):
 async def guide(ctx):
     sent = 0
     if str(ctx.message.content).startswith(".luma latest"):
-        await ctx.send('https://github.com/LumaTeam/Luma3DS/releases/tag/v10.2)
+        await ctx.send('https://github.com/LumaTeam/Luma3DS/releases/tag/v10.2')
         sent = 1
     if str(ctx.message.content).startswith(".luma 7.0.5"):
         await ctx.send('https://github.com/LumaTeam/Luma3DS/releases/tag/v7.0.5')
