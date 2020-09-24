@@ -92,7 +92,7 @@ async def luma(ctx):
         await ctx.send('https://github.com/LumaTeam/Luma3DS/releases/tag/v7.1')
         sent = 1
     if sent == 0:
-        await ctx.send('```What luma version would you like?\n\n Latest\n 7.0.5\n 7.1```')
+       await ctx.send('```What luma version would you like?\n\n Latest\n 7.0.5\n 7.1```')
 
 
 @client.command()
