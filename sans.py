@@ -259,16 +259,16 @@ async def help(ctx):
         await ctx.send('```Memes are: radeon, snas, uwuham, lazr```')
         sent = 1
     if ctx.message.content == ".help radeon":
-        await ctx.send('```Type the command``` ;)')
+        await ctx.send('Type the command ;)')
         sent = 1
     if ctx.message.content == ".help snas":
-        await ctx.send('```Type the command``` ;)')
+        await ctx.send('Type the command ;)')
         sent = 1
     if ctx.message.content == ".help uwuham":
-        await ctx.send('```Type the command``` ;)')
+        await ctx.send('Type the command ;)')
         sent = 1
     if ctx.message.content == ".help lazr":
-        await ctx.send('```Type the command``` ;)')
+        await ctx.send('Type the command ;)')
         sent = 1
     if sent == 0:
         await ctx.send('```What can I help you with?\n\n assistnce\n invite\n memes```')
