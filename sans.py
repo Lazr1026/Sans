@@ -73,8 +73,11 @@ async def invite(ctx):
     if ctx.message.content == ".invite analog":
         await ctx.send('discord.gg/sZAaZR9')
         sent = 1
+    if ctx.message.content == ".invite lazr":
+        await ctx.send('discord.gg/7ECUWDp')
+        sent = 1
     if sent == 0:
-        await ctx.send('Options are: ivan, homebrew, and a secret server.')
+        await ctx.send('Options are: ivan, homebrew, analog, lazr.')
 
 
 @client.command()
