@@ -270,7 +270,5 @@ async def help(ctx):
      if ctx.message.content == ".help lazr":
         await ctx.send('```Type the command```')
         sent = 1
-     if sent == 0:
-        await ctx.send('What can I help you with?\n\n assistnce\n invite\n memes')
 client.run(token)
 
