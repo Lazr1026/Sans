@@ -226,13 +226,13 @@ async def help(ctx):
         await ctx.send('```Shows the guide for how to dump your games```')
         sent = 1
     if ctx.message.content == ".help guide":
-        await ctx.send('```.Shows the guide to install CFW on your console```')
+        await ctx.send('```Shows the guide to install CFW on your console```')
         sent = 1
     if ctx.message.content == ".help lumabug":
-        await ctx.send('```.lumabug\n\n Shows how to solve the lumabug```')
+        await ctx.send('```lumabug\n\n Shows how to solve the lumabug```')
         sent = 1
     if ctx.message.content == ".help lumacheck":
-        await ctx.send('```.Shows how to check your luma version```')
+        await ctx.send('```Shows how to check your luma version```')
         sent = 1
     if ctx.message.content == ".help nospace":
         await ctx.send('```Shows how to make a nand backup without enough space on your sd card```')
@@ -244,7 +244,7 @@ async def help(ctx):
         await ctx.send('```Says what an r4 is and what it does/its uses```')
         sent = 1
     if ctx.message.content == ".help sdlock":
-        await ctx.send('```.Shows how to unlock your sd card```')
+        await ctx.send('```Shows how to unlock your sd card```')
         sent = 1
     if ctx.message.content == ".help sdroot":
         await ctx.send('```Shows what the root of an sd card is```')
