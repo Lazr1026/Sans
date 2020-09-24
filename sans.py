@@ -226,10 +226,8 @@ async def help(ctx):
   r4          
   radeon      
   sans        
-  say         
   sdlock      
   sdroot      
-  update      
   snas```''')
 
 client.run(token)
