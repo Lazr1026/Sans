@@ -194,7 +194,7 @@ async def ban(ctx, member : discord.Member, *,reason=0):
     send = "user " + str(member) + " has been banned."
     await ctx.send(send)
 @client.command()
-@commands.has_any_role('Owner', 'Owner 🍙', 'Staff', 'Admin👮‍♂️')
+@commands.has_any_role('Owner', 'Owner 🍙', 'Staff', 'Admin👮‍♂️', 'Helper')
 async def kick(ctx, member : discord.Member, *,reason=0):
     await member.kick(reason=reason)
     send = "user "+str(member) + " has been kicked."
