@@ -70,7 +70,7 @@ async def invite(ctx):
     if ctx.message.content == ".invite homebrew":
         await ctx.send('discord.gg/C29hYvh')
         sent = 1
-    if ctx.message.content == ".invite dimma":
+    if ctx.message.content == ".invite analog":
         await ctx.send('discord.gg/sZAaZR9')
         sent = 1
     if sent == 0:
