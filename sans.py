@@ -209,7 +209,41 @@ async def snas(ctx):
 
 @client.command()
 async def help(ctx):
-    await ctx.send('''```What do you need help with?\n\n Assistance\n Invite\n Memes```''')
-
+    sent = 0
+    if ctx.message.content == ".help Assistance":
+        await ctx.send('```Assistance commands are: cartinstall, cfwusues, dump, guide, lumabug, lumacheck, nospace, notbricked, r4, sdlock, sdroot```')
+        sent = 1
+    if ctx.message.content == ".help cartinstall":
+        await ctx.send('```.cartinstall\n\n Shows the guide for cartinstall```')
+        sent = 1
+    if ctx.message.content == ".help cfwuses":
+        await ctx.send('```.cfwuses\n\n Shows what you can do with cfw```')
+        sent = 1
+    if ctx.message.content == ".help dump":
+        await ctx.send('```.dump\n\n Shows the guide for how to dump your games```')
+        sent = 1
+    if ctx.message.content == ".help guide":
+        await ctx.send('```.guide\n\n Shows the guide to install CFW on your console```')
+        sent = 1
+    if ctx.message.content == ".help lumabug":
+        await ctx.send('```.lumabug\n\n Shows how to solve the lumabug```')
+        sent = 1
+    if ctx.message.content == ".help lumacheck":
+        await ctx.send('```.lumacheck\n\n Shows how to check your luma version```')
+        sent = 1
+    if ctx.message.content == ".help nospace":
+        await ctx.send('```.nospace\n\n Shows how to make a nand backup without enough space on your sd card```')
+        sent = 1
+    if ctx.message.content == ".help notbricked":
+        await ctx.send('```.notbricked\n\n Shows that you are not bricked```')
+        sent = 1
+    if ctx.message.content == ".help r4":
+        await ctx.send('```.r4\n\n Says what an r4 is and what it does/its uses```')
+        sent = 1
+    if ctx.message.content == ".help sdlock":
+        await ctx.send('```.sdlock\n\n Shows how to unlock your sd card```')
+        sent = 1
+    if ctx.message.content == ".help sdroot":
+        await ctx.send('```.sdroot\n\n Shows what the root of an sd card is```')
 client.run(token)
 
