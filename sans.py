@@ -210,40 +210,67 @@ async def snas(ctx):
 @client.command()
 async def help(ctx):
     sent = 0
-    if ctx.message.content == ".help Assistance":
+    if ctx.message.content == ".help assistance":
         await ctx.send('```Assistance commands are: cartinstall, cfwusues, dump, guide, lumabug, lumacheck, nospace, notbricked, r4, sdlock, sdroot```')
         sent = 1
     if ctx.message.content == ".help cartinstall":
-        await ctx.send('```.cartinstall\n\n Shows the guide for cartinstall```')
+        await ctx.send('```Shows the guide for cartinstall```')
         sent = 1
     if ctx.message.content == ".help cfwuses":
-        await ctx.send('```.cfwuses\n\n Shows what you can do with cfw```')
+        await ctx.send('```Shows what you can do with cfw```')
         sent = 1
     if ctx.message.content == ".help dump":
-        await ctx.send('```.dump\n\n Shows the guide for how to dump your games```')
+        await ctx.send('```Shows the guide for how to dump your games```')
         sent = 1
     if ctx.message.content == ".help guide":
-        await ctx.send('```.guide\n\n Shows the guide to install CFW on your console```')
+        await ctx.send('```.Shows the guide to install CFW on your console```')
         sent = 1
     if ctx.message.content == ".help lumabug":
         await ctx.send('```.lumabug\n\n Shows how to solve the lumabug```')
         sent = 1
     if ctx.message.content == ".help lumacheck":
-        await ctx.send('```.lumacheck\n\n Shows how to check your luma version```')
+        await ctx.send('```.Shows how to check your luma version```')
         sent = 1
     if ctx.message.content == ".help nospace":
-        await ctx.send('```.nospace\n\n Shows how to make a nand backup without enough space on your sd card```')
+        await ctx.send('```Shows how to make a nand backup without enough space on your sd card```')
         sent = 1
     if ctx.message.content == ".help notbricked":
-        await ctx.send('```.notbricked\n\n Shows that you are not bricked```')
+        await ctx.send('```Shows that you are not bricked```')
         sent = 1
     if ctx.message.content == ".help r4":
-        await ctx.send('```.r4\n\n Says what an r4 is and what it does/its uses```')
+        await ctx.send('```Says what an r4 is and what it does/its uses```')
         sent = 1
     if ctx.message.content == ".help sdlock":
-        await ctx.send('```.sdlock\n\n Shows how to unlock your sd card```')
+        await ctx.send('```.Shows how to unlock your sd card```')
         sent = 1
     if ctx.message.content == ".help sdroot":
-        await ctx.send('```.sdroot\n\n Shows what the root of an sd card is```')
+        await ctx.send('```Shows what the root of an sd card is```')
+        sent = 1
+    if ctx.message.content == ".help invite":
+        await ctx.send('```Invite commands are: ivan, homebrew, a secret one``` ;)')
+        sent = 1
+    if ctx.message.content == ".help ivan":
+        await ctx.send('```An invite to internet ivans discord server```')
+        sent = 1
+    if ctx.message.content == ".help homebrew":
+        await ctx.send('```An invite to Nintendo Homebrews discord server```')
+        sent = 1
+    if ctx.message.content == ".help memes":
+        await ctx.send('```Memes are: radeon, snas, uwuham, lazr```')
+        sent = 1
+    if ctx.message.content == ".help radeon":
+        await ctx.send('```Type the command``` ;)')
+        sent = 1
+    if ctx.message.content == ".help snas":
+        await ctx.send('```Type the command``` ;)')
+        sent = 1
+    if ctx.message.content == ".help uwuham":
+        await ctx.send('```Type the command``` ;)')
+        sent = 1
+     if ctx.message.content == ".help lazr":
+        await ctx.send('```Type the command``` ;)')
+        sent = 1
+     if sent == 0:
+        await ctx.send('What can I help you with?\n\n assistnce\n invite\n memes')
 client.run(token)
 
