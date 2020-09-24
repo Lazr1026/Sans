@@ -22,16 +22,16 @@ async def on_ready():
 @client.command()
 async def guide(ctx):
     sent = 0
-    if ctx.message.content == ".guide 3ds":
+    if str(ctx.message.content).startswith(".guide 3ds"):
         await ctx.send('https://youtu.be/8yh6h_iwl6I')
         sent = 1
-    if ctx.message.content == ".guide wiiu":
+    if str(ctx.message.content).startswith(".guide wiiu"):
         await ctx.send('https://wiiu.hacks.guide')
         sent = 1
-    if ctx.message.content == ".guide nx":
+    if str(ctx.message.content).startswith(".guide nx"):
         await ctx.send('https://nh-server.github.io/switch-guide/')
         sent = 1
-    if ctx.message.content == ".guide wii":
+    if str(ctx.message.content).startswith(".guide wii"):
         await ctx.send('https://wii.guide')
         sent = 1
     if sent == 0:
