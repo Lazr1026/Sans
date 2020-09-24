@@ -78,12 +78,27 @@ async def invite(ctx):
         sent = 1
     if sent == 0:
         await ctx.send('Options are: ivan, homebrew, analog, chill.')
+        
+@client.command()
+async def luma(ctx):
+    sent = 0
+    if str(ctx.message.content).startswith(".luma latest"):
+        await ctx.send('https://github.com/LumaTeam/Luma3DS/releases')
+        sent = 1
+    if str(ctx.message.content).startswith(".luma 7.0.5'):
+        await ctx.send('https://github.com/LumaTeam/Luma3DS/releases/tag/v7.0.5')
+        sent = 1
+    if str(ctx.message.content).startswith(".luma 7.1'):
+        await ctx.send('https://github.com/LumaTeam/Luma3DS/releases/tag/v7.1')
+        sent = 1
+    if sent == 0:
+        await ctx.send('```What luma version would you like?\n\n Latest\n 7.0.5\n 7.1```')
 
 
 @client.command()
 async def pirate(ctx):
     await ctx.send('We do not support nor condone piracy as it is\n 1. Against Discord TOS\n 2. It is illegal, buy your damn games')
-
+    
 @client.command()
 async def lumacheck(ctx):
     await ctx.send('How to check your luma version\n\n 1. Power off your console\n 2. Press and hold the SELECT button, then press power while still holding SELECT\n 3. Send a picture of the luma configuration')
@@ -282,6 +297,9 @@ async def help(ctx):
     if ctx.message.content == ".help lazr":
         await ctx.send('Type the command :wink:')
         sent = 1
+    if ctx.message.content == ".help luma":
+       await ctx.send('Shows the different luma versions;)
+       sent = 1
     if sent == 0:
         await ctx.send('```What can I help you with?\n\n assistance\n invite\n memes```')
 client.run(token)
