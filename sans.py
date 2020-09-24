@@ -114,7 +114,7 @@ async def cfwuses(ctx):
         await ctx.send('https://cdn.discordapp.com/attachments/754753360132833431/757744237440794654/wiiu_cfw.PNG')
         sent = 1
     if ctx.message.content == ".cfwuses nx":
-        await ctx.send('https://media.discordapp.net/attachments/439933093118476289/692162539261526047/image0.png?width=343&height=395')
+        await ctx.send('https://cdn.discordapp.com/attachments/744815170626519062/758814416992075816/Screenshot_20200924-151725_Discord.jpg')
         sent = 1
     if sent == 0:
         await ctx.send('Options are: 3ds, wiiu, nx')
