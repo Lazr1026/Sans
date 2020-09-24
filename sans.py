@@ -101,7 +101,7 @@ async def r4(ctx):
     await ctx.send('An R4 is a Flashcart that can or cannot be used for ntrboot (unbrick and cfw installation tool I guess you can call it). Its also used to play gaems (hopefully dumped from carts).')
 
 @client.command()
-async def twlmeu(ctx):
+async def twlmenu(ctx):
     await ctx.send('https://www.youtube.com/watch?v=07ZMSrrZwCQ')
     
 @client.command()
