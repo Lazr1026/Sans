@@ -17,6 +17,8 @@ tokenfile.close()
 async def on_ready():
     print('Ready.')
 
+client.remove_command('help')
+
 @commands.has_any_role('Owner')
 @client.command()
 async def recover(ctx):
