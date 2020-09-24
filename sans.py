@@ -209,26 +209,7 @@ async def snas(ctx):
 
 @client.command()
 async def help(ctx):
-    await ctx.send('''```  cartinstall 
-  cfwuses     
-  credits     
-  dump        
-  uwuham           
-  guide       
-  help        Shows this message
-  invite      
-  lstm        
-  lumabug     
-  lumacheck   
-  nospace     
-  notbricked  
-  pirate      
-  r4          
-  radeon      
-  sans        
-  sdlock      
-  sdroot      
-  snas```''')
+    await ctx.send('''```What do you need help with?\n\n Assistance\n Invite\n Memes```''')
 
 client.run(token)
 
