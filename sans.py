@@ -92,7 +92,7 @@ async def luma(ctx):
         await ctx.send('https://github.com/Lazr1026/Sans/edit/master/sans.py')
         sent = 1
     if sent == 0:
-        await ctx.send('What luma version would you like?\n\n latest\n 7.0.5\n 7.1')
+        await ctx.send('```What luma version would you like?\n\n latest\n 7.0.5\n 7.1```')
 
 
 @client.command()
