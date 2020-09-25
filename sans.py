@@ -60,7 +60,7 @@ async def dump(ctx):
     if str(ctx.message.content).startswith(".dump vwii"):
         await ctx.send('https://wiiu.hacks.guide/#/dump-wii-games')
         sent = 1
-    if str(ctx.message.content(.startswith(".dump wii"):
+    if str(ctx.message.content).startswith(".dump wii"):
         await ctx.send('https://wii.guide/dump-games')
         sent = 1
     if sent == 0:
