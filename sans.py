@@ -5,6 +5,7 @@ print('stage0')
 import asyncio 
 print('stage1')
 from discord.ext import commands
+from discord.ext.commands import MemberConverter
 print('stage2')
 client = commands.Bot(command_prefix = '.')
 print('botStage')
@@ -150,8 +151,8 @@ async def nospace(ctx):
 async def sans(ctx):
     await ctx.send('Link to SANS source code \nhttps://github.com/Lazr1026/Sans')
 @client.command()
-async def profile(ctx):
-    user = ctx.message.author
+async def profile(ctx, user: discord.User):
+    await ctx.send("Profile image for user: " + str(user))
     pfp = user.avatar_url
     await ctx.send(pfp)
 
