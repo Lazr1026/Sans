@@ -48,19 +48,19 @@ async def cartinstall(ctx):
 @client.command() 
 async def dump(ctx):
     sent = 0
-    if ctx.message.content == ".dump ds":
+    if str(ctx.message.content).startswith(".dump ds"):
         await ctx.send('https://youtu.be/x-Et2zkl3Ek')
         sent = 1
-    if ctx.message.content == ".dump 3ds":
+    if str(ctx.message.content).startswith(".dump 3ds"):
         await ctx.send('https://youtu.be/b1Ng-b0fnpg')
         sent = 1
-    if ctx.message.content == ".dump wiiu":
+    if str(ctx.message.content).startswith(".dump wiiu"):
         await ctx.send('https://wiiu.hacks.guide/#/dump-games')
         sent = 1
-    if ctx.message.content == ".dump vwii":
+    if str(ctx.message.content).startswith(".dump vwii"):
         await ctx.send('https://wiiu.hacks.guide/#/dump-wii-games')
         sent = 1
-    if ctx.message.content == ".dump wii":
+    if str(ctx.message.content(.startswith(".dump wii"):
         await ctx.send('https://wii.guide/dump-games')
         sent = 1
     if sent == 0:
@@ -69,16 +69,16 @@ async def dump(ctx):
 @client.command()
 async def invite(ctx):
     sent = 0
-    if ctx.message.content == ".invite ivan":
+    if str(ctx.message.content).startswith(".invite ivan"):
         await ctx.send('https://discord.com/invite/eRP5pjA')
         sent = 1
-    if ctx.message.content == ".invite homebrew":
+    if str(ctx.message.content).startswith(".invite homebrew"):
         await ctx.send('discord.gg/C29hYvh')
         sent = 1
-    if ctx.message.content == ".invite analog":
+    if str(ctx.message.content).startswith(".invite analog"):
         await ctx.send('discord.gg/sZAaZR9')
         sent = 1
-    if ctx.message.content == ".invite chill":
+    if str(ctx.message.content).startswith(".invite chill"):
         await ctx.send('discord.gg/7ECUWDp')
         sent = 1
     if sent == 0:
