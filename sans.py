@@ -149,6 +149,14 @@ async def nospace(ctx):
 @client.command()
 async def sans(ctx):
     await ctx.send('Link to SANS source code \nhttps://github.com/Lazr1026/Sans')
+@client.command()
+async def profile(ctx):
+    userID = message.author.id
+    user = message.author
+    pfp = user.avatar_url
+    embed = discord.Embed(title="Profile Image:", description='<@%s>, test' % (userID), color=0xecce8b)
+    embed.set_image(url=pfp)
+    await client.send_message(message.channel, embed=embed)
 
 @client.command()
 async def radeon(ctx):
