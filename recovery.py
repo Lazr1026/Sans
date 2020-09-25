@@ -30,9 +30,13 @@ async def showerr(ctx):
     await ctx.send("Please wait while the error status is obtained. This will take around 10 seconds.")
     cmd = "bash /home/pi/duckdns/err.sh"
     p = Popen(cmd, shell=True, stdin=PIPE, stdout=PIPE, stderr=STDOUT, close_fds=True)
-    err = p.stdout.read()
-    err = str(err)
-    err = err.replace('\\n', '\n')
+    err2 = p.stdout.read()
+    errfile = open("/home/pi/ram/err", "r")
+    err = errfile.read()
+    errfile.close()
+    cmd = "bash /home/pi/duckdns/del.sh"
+    p = Popen(cmd, shell=True, stdin=PIPE, stdout=PIPE, stderr=STDOUT, close_fds=True)
+    err2 = p.stdout.read()
     err = "Error (or command output): \n" + "```" + err + "```"
     await ctx.send(err)
 
