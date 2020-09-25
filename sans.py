@@ -20,8 +20,8 @@ client.remove_command('help')
 async def on_ready():
     print('Ready.')
 
-@client.command()
-async def 7zip(ctx):
+@client.command(name="7zip")
+async def _7zip(ctx):
     await ctx.send("WinRAR is not a very good archiving utility. \nYou should use 7-Zip instead. \nhttps://www.7-zip.org/")
 
 @client.command()
