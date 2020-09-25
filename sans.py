@@ -150,7 +150,7 @@ async def nospace(ctx):
 async def sans(ctx):
     await ctx.send('Link to SANS source code \nhttps://github.com/Lazr1026/Sans')
 @client.command()
-async def profile(ctx):
+async def profile(ctx, message):
     userID = message.author.id
     user = message.author
     pfp = user.avatar_url
