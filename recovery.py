@@ -1,6 +1,7 @@
 print('init')
 import discord
 import subprocess
+from os import system
 print('stage0')
 import asyncio 
 print('stage1')
@@ -29,14 +30,12 @@ async def recover(ctx):
 async def showerr(ctx):
     await ctx.send("Please wait while the error status is obtained. This will take around 10 seconds.")
     cmd = "bash /home/pi/duckdns/err.sh"
-    p = Popen(cmd, shell=True, stdin=PIPE, stdout=PIPE, stderr=STDOUT, close_fds=True)
-    err2 = p.stdout.read()
+    system(cmd)
     errfile = open("/home/pi/ram/err", "r")
     err = errfile.read()
     errfile.close()
     cmd = "bash /home/pi/duckdns/del.sh"
-    p = Popen(cmd, shell=True, stdin=PIPE, stdout=PIPE, stderr=STDOUT, close_fds=True)
-    err2 = p.stdout.read()
+    system(cmd)
     err = "Error (or command output): \n" + "```" + err + "```"
     await ctx.send(err)
 
