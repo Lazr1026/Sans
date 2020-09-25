@@ -33,6 +33,6 @@ async def showerr(ctx):
     err = str(err)
     err = err.replace('\\n', '\n')
     err = "Error (or command output): \n" + "```" + err + "```"
-    await ctx.send(err)
+    await ctx.send(err[2:1])
 
 client.run(token)
