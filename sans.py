@@ -34,7 +34,7 @@ async def guide(ctx):
     if str(ctx.message.content).startswith(".guide wii"):
         await ctx.send('https://wii.guide')
         sent = 1
-    if sent == 0:
+    if sent == 0
         await ctx.send('Options are: 3ds, wiiu, wii, nx')
 
 @client.command()
