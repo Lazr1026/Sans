@@ -28,7 +28,7 @@ async def recover(ctx):
 @client.command()
 async def showerr(ctx):
     await ctx.send("Please wait while the error status is obtained. This will take around 10 seconds.")
-    err = subprocess.run(['bash', '/home/pi/duckdns/err.sh'], stdout=subprocess.PIPE)
+    err = subprocess.run(['bash', '/home/pi/duckdns/err.sh'], stderr=subprocess.PIPE)
     err = err.stdout
     err = str(err)
     err = err.replace('\\n', '\n')
