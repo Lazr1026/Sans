@@ -127,13 +127,13 @@ async def twlmenu(ctx):
 @client.command()
 async def cfwuses(ctx):
     sent = 0
-    if ctx.message.content == ".cfwuses 3ds":
+    if str(ctx.message.content).startswith(".cfwuses 3ds"):
         await ctx.send('https://3ds.eiphax.tech/tips.html')
         sent = 1
-    if ctx.message.content == ".cfwuses wiiu":
+    if str(ctx.message.content).startswith(".cfwuses wiiu"):
         await ctx.send('https://cdn.discordapp.com/attachments/754753360132833431/757744237440794654/wiiu_cfw.PNG')
         sent = 1
-    if ctx.message.content == ".cfwuses nx":
+    if str(ctx.message.content).startswith(".cfwuses nx"):
         await ctx.send('https://cdn.discordapp.com/attachments/744815170626519062/758814416992075816/Screenshot_20200924-151725_Discord.jpg')
         sent = 1
     if sent == 0:
