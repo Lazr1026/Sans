@@ -332,7 +332,7 @@ async def help(ctx):
         await ctx.send('```Shows the NDS Forwarders guide```')
         sent = 1
     if ctx.message.content == ".help vc":
-        await ctx.message.content('```Shows the guide on how to play old classics on your system```')
+        await ctx.send('```Shows the guide on how to play old classics on your system```')
         sent = 1
     if sent == 0:
         await ctx.send('```What can I help you with?\n\n assistance\n invite\n memes```')
