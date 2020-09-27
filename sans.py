@@ -125,6 +125,14 @@ async def twlmenu(ctx):
     await ctx.send('https://www.youtube.com/watch?v=07ZMSrrZwCQ')
     
 @client.command()
+async def ndsforwarders(ctx):
+    await ctx.send('https://gbatemp.net/threads/nds-forwarder-cias-for-your-home-menu.426174/')
+    
+@client.command()
+async def ap(ctx):
+    await ctx.send('https://glazedbelmont.github.io/appatching/')
+    
+@client.command()
 async def cfwuses(ctx):
     sent = 0
     if str(ctx.message.content).startswith(".cfwuses 3ds"):
