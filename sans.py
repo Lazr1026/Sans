@@ -260,7 +260,7 @@ async def snas(ctx):
 async def help(ctx):
     sent = 0
     if ctx.message.content == ".help assistance":
-        await ctx.send('```Assistance commands are: cartinstall, cfwusues, dump, guide, lumabug, lumacheck, nospace, notbricked, r4, sdlock, sdroot, luma, sd```')
+        await ctx.send('```Assistance commands are: cartinstall, cfwusues, dump, guide, lumabug, lumacheck, nospace, notbricked, r4, sdlock, sdroot, luma, sd, ndsforwarders, ap```')
         sent = 1
     if ctx.message.content == ".help cartinstall":
         await ctx.send('```Shows the guide for cartinstall```')
@@ -325,6 +325,12 @@ async def help(ctx):
     if ctx.message.content == ".help sd":
        await ctx.send('Shows the guide to help you with your SD card')
        sent = 1
+    if ctx.message.content == ".help ap":
+        await ctx.send('```Shows the AP-Patching guide```')
+        sent = 1
+    if ctx.message.content == ".help ndsforwarders":
+        await ctx.send('```Shows the NDS Forwarders guide```')
+        sent = 1
     if sent == 0:
         await ctx.send('```What can I help you with?\n\n assistance\n invite\n memes```')
 client.run(token)
