@@ -151,7 +151,7 @@ async def lumabug(ctx):
 async def nospace(ctx):
     await ctx.send('How to make a NAND backup without enough space on your sd card:\n 1. Copy the Nintendo 3DS and the DCIM folder (if you have it) to your computer, then delete them from your SD CARD.\n 2. Boot into GodMode9 and perform the backup again. Once it’s done power off your system.\n 3. Copy all the files in the gm9/out folder on your sd card to a place on your pc. Then delete those files from the SD CARD.\n 4. Copy the Nintendo 3DS and DCIM folder (if you had it) back to your sd card and delete it from your computer.')
 
-@client.command(name="sderrors")
+@client.command()
 async def sd(ctx):
     await ctx.send('How to check your sd card for errors:\n <https://3ds.eiphax.tech/sd.html>')
     
@@ -252,7 +252,7 @@ async def snas(ctx):
 async def help(ctx):
     sent = 0
     if ctx.message.content == ".help assistance":
-        await ctx.send('```Assistance commands are: cartinstall, cfwusues, dump, guide, lumabug, lumacheck, nospace, notbricked, r4, sdlock, sdroot, luma```')
+        await ctx.send('```Assistance commands are: cartinstall, cfwusues, dump, guide, lumabug, lumacheck, nospace, notbricked, r4, sdlock, sdroot, luma, sd```')
         sent = 1
     if ctx.message.content == ".help cartinstall":
         await ctx.send('```Shows the guide for cartinstall```')
@@ -313,6 +313,9 @@ async def help(ctx):
         sent = 1
     if ctx.message.content == ".help luma":
        await ctx.send('Shows the different luma versions')
+       sent = 1
+    if ctx.message.content == ".help sd":
+       await ctx.send('Shows the guide to help you with your SD card')
        sent = 1
     if sent == 0:
         await ctx.send('```What can I help you with?\n\n assistance\n invite\n memes```')
