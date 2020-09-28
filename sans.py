@@ -26,7 +26,7 @@ async def _7zip(ctx):
 
 @client.command()
 async def listhelpers(ctx):
-    await ctx.send('Helpers:\n\n __3DS__n Nintenmike.3dsx\n M1807\n UwUham\n\n __Wii U__\n Lazr\n\n Switch\n We dont have any switch helpers at this time :blobsad:')
+    await ctx.send('Helpers:\n\n __3DS__\n Nintenmike.3dsx\n M1807\n UwUham\n\n __Wii U__\n Lazr\n\n Switch\n We dont have any switch helpers at this time :blobsad:')
     
 @client.command()
 async def guide(ctx):
