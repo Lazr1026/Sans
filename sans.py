@@ -70,7 +70,7 @@ async def dump(ctx):
 async def invite(ctx):
     sent = 0
     if str(ctx.message.content).startswith(".invite ivan"):
-        await ctx.send('https://discord.com/invite/eRP5pjA')
+        await ctx.send('https://discord.gg/NM85JqJ')
         sent = 1
     if str(ctx.message.content).startswith(".invite homebrew"):
         await ctx.send('discord.gg/C29hYvh')
