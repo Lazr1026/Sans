@@ -25,6 +25,10 @@ async def _7zip(ctx):
     await ctx.send("WinRAR is not a very good archiving utility. \nYou should use 7-Zip instead. \nhttps://www.7-zip.org/")
 
 @client.command()
+async def listhelpers(ctx):
+    await ctx.send('Helpers:\n\n __3DS__n Nintenmike.3dsx\n M1807\n UwUham\n\n __Wii U__\n Lazr\n\n Switch\n We dont have any switch helpers at this time :blobsad:')
+    
+@client.command()
 async def guide(ctx):
     sent = 0
     if str(ctx.message.content).startswith(".guide 3ds"):
