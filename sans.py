@@ -80,7 +80,7 @@ async def invite(ctx):
         await ctx.send('discord.gg/C29hYvh')
         sent = 1
     if str(ctx.message.content).startswith(".invite analog"):
-        await ctx.send('discord.gg/sZAaZR9')
+        await ctx.send('https://discord.gg/7bXpJSh')
         sent = 1
     if str(ctx.message.content).startswith(".invite chill"):
         await ctx.send('discord.gg/7ECUWDp')
