@@ -141,6 +141,10 @@ async def ap(ctx):
     await ctx.send('https://glazedbelmont.github.io/appatching/')
     
 @client.command()
+async def meta(ctx):
+    await ctx.send('you seem to be in <#759902836116160532>')
+    
+@client.command()
 async def cfwuses(ctx):
     sent = 0
     if str(ctx.message.content).startswith(".cfwuses 3ds"):
