@@ -313,7 +313,7 @@ async def help(ctx):
         await ctx.send('```An invite to Nintendo Homebrews discord server```')
         sent = 1
     if ctx.message.content == ".help memes":
-        await ctx.send('```Memes are: radeon, snas, uwuham, lazr```')
+        await ctx.send('```Memes are: radeon, snas, uwuham, lazr, local58```')
         sent = 1
     if ctx.message.content == ".help radeon":
         await ctx.send('Type the command :wink:')
@@ -341,6 +341,9 @@ async def help(ctx):
         sent = 1
     if ctx.message.content == ".help vc":
         await ctx.send('```Shows the guide on how to play old classics on your system```')
+        sent = 1
+    if ctx.message.content == ".help local58":
+        await ctx.send('```honestly i have no idea what this is```')
         sent = 1
     if sent == 0:
         await ctx.send('```What can I help you with?\n\n assistance\n invite\n memes```')
