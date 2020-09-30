@@ -29,6 +29,10 @@ async def listhelpers(ctx):
     await ctx.send('Helpers:\n\n __3DS__\n Nintenmike.3dsx\n M1807\n UwUham\n radeon\n\n __Wii U__\n Lazr\n\n Switch\n We dont have any switch helpers at this time')
     
 @client.command()
+async def liststaff(ctx):
+    await ctx.send('Staff:\n\n Internet Ivan\n Nintenmike.3dsx\n Lazr')
+    
+@client.command()
 async def guide(ctx):
     sent = 0
     if str(ctx.message.content).startswith(".guide 3ds"):
