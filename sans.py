@@ -55,6 +55,22 @@ async def browserhax(ctx):
     await ctx.send('https://3ds.hacks.guide/homebrew-launcher-(browserhax-2020)')
         
 @client.command()
+async def fredtool(ctx):
+    await ctx.send('https://3ds.hacks.guide/installing-boot9strap-(fredtool)')
+        
+@client.command()
+async def soundhax(ctx):
+    sent = 0
+    if str(ctx.message.content).startswith(".soundhax hbl"):
+        await ctx.send('https://3ds.hacks.guide/homebrew-launcher-(soundhax)')
+        sent = 1
+    if str(ctx.message.content).startswith(".soundhax b9s"):
+        await ctx.send('https://3ds.hacks.guide/installing-boot9strap-(soundhax)')
+        sent = 1
+    if sent == 0:
+        await ctx.send('What soundhax would you like? hbl, b9s')
+        
+ @client.command()
 async def cartinstall(ctx):
     await ctx.send('https://youtu.be/pzbfHQ6uTcU')
 @client.command() 
