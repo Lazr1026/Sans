@@ -30,7 +30,7 @@ async def listhelpers(ctx):
     
 @client.command()
 async def liststaff(ctx):
-    await ctx.send('Staff:\n\n Internet Ivan\n Nintenmike.3dsx\n Lazr')
+    await ctx.send('Staff:\n Internet Ivan\n Nintenmike.3dsx\n Lazr')
     
 @client.command()
 async def guide(ctx):
