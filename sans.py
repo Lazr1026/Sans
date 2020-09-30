@@ -70,7 +70,7 @@ async def soundhax(ctx):
     if sent == 0:
         await ctx.send('What soundhax would you like? hbl, b9s')
         
- @client.command()
+@client.command()
 async def cartinstall(ctx):
     await ctx.send('https://youtu.be/pzbfHQ6uTcU')
 @client.command() 
