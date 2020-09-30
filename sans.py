@@ -26,7 +26,7 @@ async def _7zip(ctx):
 
 @client.command()
 async def listhelpers(ctx):
-    await ctx.send('Helpers:\n\n __3DS__\n Nintenmike.3dsx\n M1807\n UwUham\n radeon\n\n __Wii U__\n Lazr\n\n Switch\n jsjhax34')
+    await ctx.send('Helpers:\n\n __3DS__\n Nintenmike.3dsx\n M1807\n UwUham\n radeon\n\n __Wii U__\n Lazr\n\n __Switch__\n jsjhax34')
     
 @client.command()
 async def liststaff(ctx):
