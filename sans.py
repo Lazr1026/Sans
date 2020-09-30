@@ -51,6 +51,10 @@ async def guide(ctx):
         await ctx.send('Options are: 3ds, wiiu, wii, nx')
 
 @client.command()
+async def browserhax(ctx):
+    await ctx.send('https://3ds.hacks.guide/homebrew-launcher-(browserhax-2020)')
+        
+@client.command()
 async def cartinstall(ctx):
     await ctx.send('https://youtu.be/pzbfHQ6uTcU')
 @client.command() 
