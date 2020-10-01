@@ -371,5 +371,14 @@ async def help(ctx):
         sent = 1
     if sent == 0:
         await ctx.send('```What can I help you with?\n\n assistance\n invite\n memes```')
+
+@client.command()
+async def vc(ctx):
+    sent = 0
+    if ctx.message.content == ".vc 3ds":
+        await ctx.send('You can convert your roms to CIA format with this tool: https://mega.nz/#!qnAE1YjC!q3FRHgIAVEo4nRI2IfANHJr-r7Sil3YpPYE4w8ZbUPY \nUsage guide here: http://3ds.eiphax.tech/nsui.html')
+        sent = 1
+    if ctx.message.content == ".vc wiiu":
+        await ctx.send('You can play classics on your wiiu with this tool: https://gbatemp.net/threads/release-uwuvci-injectiine.486781/ \nUsage guide here: https://flumpster.github.io/instructions/index')
 client.run(token)
 
