@@ -296,7 +296,7 @@ async def snas(ctx):
 async def help(ctx):
     sent = 0
     if ctx.message.content == ".help assistance":
-        await ctx.send('```Assistance commands are: cartinstall, cfwusues, dump, guide, lumabug, lumacheck, nospace, notbricked, r4, sdlock, sdroot, luma, sd, ndsforwarders, ap, vc```')
+        await ctx.send('```Assistance commands are: cartinstall, cfwusues, dump, guide, lumabug, lumacheck, nospace, notbricked, r4, sdlock, sdroot, luma, sd, ndsforwarders, ap, vc, troubleshoot```')
         sent = 1
     if ctx.message.content == ".help cartinstall":
         await ctx.send('```Shows the guide for cartinstall```')
