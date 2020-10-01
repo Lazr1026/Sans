@@ -71,6 +71,10 @@ async def soundhax(ctx):
         await ctx.send('What soundhax would you like? hbl, b9s')
         
 @client.command()
+async def troubleshoot(ctx):
+    await ctx.send('How to troubleshoot seedminer based methods: https://3ds.eiphax.tech/issues.html')
+        
+@client.command()
 async def cartinstall(ctx):
     await ctx.send('https://youtu.be/pzbfHQ6uTcU')
 @client.command() 
@@ -368,6 +372,9 @@ async def help(ctx):
         sent = 1
     if ctx.message.content == ".help local58":
         await ctx.send('<@664297659686715403> says: honestly i have no idea what this is')
+        sent = 1
+    if ctx.message.content == ".help troubleshoot":
+        await ctx.send('```Shows hot to troubleshoot seedminer based methods```')
         sent = 1
     if sent == 0:
         await ctx.send('```What can I help you with?\n\n assistance\n invite\n memes```')
