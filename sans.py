@@ -382,5 +382,22 @@ async def vc(ctx):
         await ctx.send('You can play classics on your wiiu with this tool: https://gbatemp.net/threads/release-uwuvci-injectiine.486781/ \nUsage guide here: https://flumpster.github.io/instructions/index')
     if sent == 0:
         await ctx.send('Invalid syntax. Options are: 3ds, wiiu.')
+
+@client.command()
+async def baninfo(ctx):
+    sent = 0
+    if ctx.message.content == ".baninfo 3ds":
+        await ctx.send('''3DS Bans
+        Nintendo has shown a marked lack of care about bans on the 3DS lately.
+        However, such things as piracy and cheating online/cheating in multiplayer games have been known causes for NNID/console bans in the past.
+        eShop fraud (eg credit card chargebacks) will also get you banned.
+
+        You can enable online status and Spotpass/Streetpass as these do not seem to be high risk at this time.''')
+        sent = 1
+    if ctx.message.content == ".baninfo switch":
+        await ctx.send('Bans on the Switch are complicated. Please read this to learn more about the matter: https://nx.eiphax.tech/ban')
+        sent = 1
+    if sent == 0:
+        await ctx.send('Invalid syntax. Options are: 3ds, switch.')
 client.run(token)
 
