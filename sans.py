@@ -374,7 +374,7 @@ async def help(ctx):
         await ctx.send('<@664297659686715403> says: honestly i have no idea what this is')
         sent = 1
     if ctx.message.content == ".help troubleshoot":
-        await ctx.send('```Shows hot to troubleshoot seedminer based methods```')
+        await ctx.send('```Shows how to troubleshoot seedminer based methods```')
         sent = 1
     if sent == 0:
         await ctx.send('```What can I help you with?\n\n assistance\n invite\n memes```')
