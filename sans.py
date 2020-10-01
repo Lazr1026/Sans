@@ -380,5 +380,7 @@ async def vc(ctx):
         sent = 1
     if ctx.message.content == ".vc wiiu":
         await ctx.send('You can play classics on your wiiu with this tool: https://gbatemp.net/threads/release-uwuvci-injectiine.486781/ \nUsage guide here: https://flumpster.github.io/instructions/index')
+    if sent == 0:
+        await ctx.send('Invalid syntax. Options are: 3ds, wiiu.')
 client.run(token)
 
