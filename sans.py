@@ -209,7 +209,7 @@ async def radeon(ctx):
     await ctx.send('radeon says she\'s gonna hardmod another 3ds, prepare to lose some brain cells.')
 @client.command()
 async def uwuham(ctx):
-    await ctx.send('yes we know. js is better than py')
+    await ctx.send('guys somethings wrong with uwuham hes using python')
 @client.command()
 async def credits(ctx):
     await ctx.send('Lazr: creator and programmer \nRadeon: programmer \nUwUham: telling us discord.js is better')
