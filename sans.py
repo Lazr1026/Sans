@@ -51,6 +51,10 @@ async def guide(ctx):
         await ctx.send('Options are: 3ds, wiiu, wii, nx')
 
 @client.command()
+async def troubleshoot(ctx):
+    await ctx.send('How to troubleshoot seedminer based methods: https://3ds.eiphax.tech/issues.html')
+        
+@client.command()
 async def browserhax(ctx):
     await ctx.send('https://3ds.hacks.guide/homebrew-launcher-(browserhax-2020)')
         
@@ -292,7 +296,7 @@ async def snas(ctx):
 async def help(ctx):
     sent = 0
     if ctx.message.content == ".help assistance":
-        await ctx.send('```Assistance commands are: cartinstall, cfwusues, dump, guide, lumabug, lumacheck, nospace, notbricked, r4, sdlock, sdroot, luma, sd, ndsforwarders, ap, vc```')
+        await ctx.send('```Assistance commands are: cartinstall, cfwusues, dump, guide, lumabug, lumacheck, nospace, notbricked, r4, sdlock, sdroot, luma, sd, ndsforwarders, ap, vc. troubleshoot```')
         sent = 1
     if ctx.message.content == ".help cartinstall":
         await ctx.send('```Shows the guide for cartinstall```')
@@ -368,6 +372,9 @@ async def help(ctx):
         sent = 1
     if ctx.message.content == ".help local58":
         await ctx.send('<@664297659686715403> says: honestly i have no idea what this is')
+        sent = 1
+    if ctx.message.content == ".help troubleshoot":
+        await ctx.send('````Shows hot to troubleshoot seedminer based methods```')
         sent = 1
     if sent == 0:
         await ctx.send('```What can I help you with?\n\n assistance\n invite\n memes```')
