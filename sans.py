@@ -388,11 +388,11 @@ async def baninfo(ctx):
     sent = 0
     if ctx.message.content == ".baninfo 3ds":
         await ctx.send('''3DS Bans
-        Nintendo has shown a marked lack of care about bans on the 3DS lately.
-        However, such things as piracy and cheating online/cheating in multiplayer games have been known causes for NNID/console bans in the past.
-        eShop fraud (eg credit card chargebacks) will also get you banned.
+Nintendo has shown a marked lack of care about bans on the 3DS lately.
+However, such things as piracy and cheating online/cheating in multiplayer games have been known causes for NNID/console bans in the past.
+eShop fraud (eg credit card chargebacks) will also get you banned.
 
-        You can enable online status and Spotpass/Streetpass as these do not seem to be high risk at this time.''')
+You can enable online status and Spotpass/Streetpass as these do not seem to be high risk at this time.''')
         sent = 1
     if ctx.message.content == ".baninfo switch":
         await ctx.send('Bans on the Switch are complicated. Please read this to learn more about the matter: https://nx.eiphax.tech/ban')
