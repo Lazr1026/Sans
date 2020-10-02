@@ -160,6 +160,21 @@ async def twlmenu(ctx):
     await ctx.send('https://www.youtube.com/watch?v=07ZMSrrZwCQ')
     
 @client.command()
+async def twlfix(ctx):
+    sent = 0
+    if str(ctx.message.content).startswith('.twlfix cfw')
+        await ctx.send('```Use this tool to fix the dsiware on your 3ds!```\n <https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/>')
+        sent = 1
+    if str(ctx.message.content).startswith('.twlfix hbl')
+        await ctx.send('```Use this tool to fix the dsiware on your 3ds!```\n <https://github.com/MechanicalDragon0687/TWLFix-3DS/releases/')
+        sent = 1
+    if str(ctx.message.content).startswith('.twfix stock')
+        await ctx.send('```Use this tool to fix the dsiware on your 3ds!```\n <https://github.com/MechanicalDragon0687/TWLFix/wiki/Instructions>')
+        sent = 1
+    if sent == 0:
+        await ctx.send('```What twlfix would ya like? cfw, 3ds, stock```')
+    
+@client.command()
 async def ndsforwarders(ctx):
     await ctx.send('https://gbatemp.net/threads/nds-forwarder-cias-for-your-home-menu.426174/')
     
@@ -299,7 +314,7 @@ async def snas(ctx):
 async def help(ctx):
     sent = 0
     if ctx.message.content == ".help assistance":
-        await ctx.send('```Assistance commands are: cartinstall, cfwusues, dump, guide, lumabug, lumacheck, nospace, notbricked, r4, sdlock, sdroot, luma, sd, ndsforwarders, ap, vc, troubleshoot```')
+        await ctx.send('```Assistance commands are: cartinstall, cfwusues, dump, guide, lumabug, lumacheck, nospace, notbricked, r4, sdlock, sdroot, luma, sd, ndsforwarders, ap, vc, troubleshoot, twlfix```')
         sent = 1
     if ctx.message.content == ".help cartinstall":
         await ctx.send('```Shows the guide for cartinstall```')
@@ -381,6 +396,9 @@ async def help(ctx):
         sent = 1
     if ctx.message.content == ".help troubleshoot":
         await ctx.send('```Shows how to troubleshoot seedminer based methods```')
+        sent = 1
+    if ctx.message.content == ".help twlfix":
+        await ctx.send('```Shows how to fix the DSiWare from different vantage points```')
         sent = 1
     if sent == 0:
         await ctx.send('```What can I help you with?\n\n assistance\n invite\n memes```')
