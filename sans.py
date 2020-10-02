@@ -163,13 +163,13 @@ async def twlmenu(ctx):
 async def twlfix(ctx):
     sent = 0
     if str(ctx.message.content).startswith(".twlfix cfw"):
-        await ctx.send('```Use this tool to fix the dsiware on your 3ds!```\n <https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/>')
+        await ctx.send('```Use this tool to fix the dsiware on your 3ds!``` <https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/>')
         sent = 1
     if str(ctx.message.content).startswith(".twlfix hbl"):
-        await ctx.send('```Use this tool to fix the dsiware on your 3ds!```\n <https://github.com/MechanicalDragon0687/TWLFix-3DS/releases/')
+        await ctx.send('```Use this tool to fix the dsiware on your 3ds!``` <https://github.com/MechanicalDragon0687/TWLFix-3DS/releases/')
         sent = 1
     if str(ctx.message.content).startswith(".twlfix stock"):
-        await ctx.send('```Use this tool to fix the dsiware on your 3ds!```\n <https://github.com/MechanicalDragon0687/TWLFix/wiki/Instructions>')
+        await ctx.send('```Use this tool to fix the dsiware on your 3ds!``` <https://github.com/MechanicalDragon0687/TWLFix/wiki/Instructions>')
         sent = 1
     if sent == 0:
         await ctx.send('```What twlfix would ya like? cfw, 3ds, stock```')
