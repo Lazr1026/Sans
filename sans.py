@@ -19,6 +19,9 @@ client.remove_command('help')
 @client.event
 async def on_ready():
     print('Ready.')
+@client.command()
+async def pat(ctx):
+    await ctx.send("https://imgur.com/gallery/WyMHuyL")
 
 @client.command(name="7zip")
 async def _7zip(ctx):
