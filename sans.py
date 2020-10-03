@@ -166,7 +166,7 @@ async def twlfix(ctx):
         await ctx.send('```Use this tool to fix the dsiware on your 3ds!``` <https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/>, please note that you must do a system update after the process has finished')
         sent = 1
     if str(ctx.message.content).startswith(".twlfix 3ds"):
-        await ctx.send('```Use this tool to fix the dsiware on your 3ds!``` <https://github.com/MechanicalDragon0687/TWLFix-3DS/releases/, please note that you must do a system update after the process has finished')
+        await ctx.send('```Use this tool to fix the dsiware on your 3ds!``` <https://github.com/MechanicalDragon0687/TWLFix-3DS/releases/>, please note that you must do a system update after the process has finished')
         sent = 1
     if str(ctx.message.content).startswith(".twlfix stock"):
         await ctx.send('```Use this tool to fix the dsiware on your 3ds!``` <https://github.com/MechanicalDragon0687/TWLFix/wiki/Instructions>, please note that you must do a system update after the process has finished')
