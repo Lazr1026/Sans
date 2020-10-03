@@ -183,6 +183,10 @@ async def ap(ctx):
     await ctx.send('https://glazedbelmont.github.io/appatching/')
     
 @client.command()
+async def tinydb(ctx):
+    await ctx.send('https://tinydb.eiphax.tech/')
+    
+@client.command()
 async def meta(ctx):
     await ctx.send('you seem to be in <#759902836116160532>')
     
