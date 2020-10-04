@@ -191,6 +191,10 @@ async def meta(ctx):
     await ctx.send('you seem to be in <#759902836116160532>')
     
 @client.command()
+async def cbhc(ctx):
+    await ctx.send('```CBHC Rules:\n - The DS game has to be legitimately installed from the eShop!\n - Don’t format the system while CBHC is installed!\n - Don’t delete the user account that bought the DS VC game!\n - Don’t re-install the same game using WUP Installer or from the eShop!\n - Don’t install Haxchi over CBHC! (You will not brick, but it will cause a boot-loop! Hold A when booting to access the Homebrew Launcher and uninstall CBHC.)\n - Don’t uninstall the DS Virtual Console game without properly uninstalling CBHC first! <https://wiiu.hacks.guide/#/uninstall-cbhc>\n - Don’t move the DS Virtual Console game to a USB drive!')
+    
+@client.command()
 async def cfwuses(ctx):
     sent = 0
     if str(ctx.message.content).startswith(".cfwuses 3ds"):
