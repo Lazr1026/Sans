@@ -19,6 +19,7 @@ client.remove_command('help')
 @client.event
 async def on_ready():
     print('Ready.')
+    print('We have logged in as {0.user}'.format(client))
 @client.command()
 async def pat(ctx):
     await ctx.send("https://imgur.com/gallery/WyMHuyL")
