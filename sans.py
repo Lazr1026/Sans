@@ -48,11 +48,11 @@ async def guide(ctx):
     if str(ctx.message.content).startswith(".guide nx"):
         await ctx.send('https://nh-server.github.io/switch-guide/')
         sent = 1
-    if str(ctx.message.content).startswith(".guide wii"):
+    if str(ctx.message.content).startswith(".guide rvl"):
         await ctx.send('https://wii.guide')
         sent = 1
     if sent == 0:
-        await ctx.send('Options are: 3ds, wiiu, wii, nx')
+        await ctx.send('Options are: 3ds, wiiu, rvl, nx')
 
 @client.command()
 async def browserhax(ctx):
