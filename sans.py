@@ -289,7 +289,7 @@ def getLstmSample(checkpointName):
 
 @client.command()
 @commands.has_any_role('Owner', 'Owner 🍙', 'Staff', 'Admin👮‍')
-async def ban(self, ctx, member: typing.Union[discord.Member, int], *, reason=None):
+async def ban(ctx, member : discord.Member, *, reason=0):
     await member.ban(reason=reason, delete_message_days=0)
     send = "user " + str(member) + " has been banned."
     await ctx.send(send)
