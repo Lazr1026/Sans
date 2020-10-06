@@ -84,7 +84,7 @@ async def cartinstall(ctx):
 
 @client.command()
 async def gm9(ctx):
-    await ctx.send('https://github.com/d0k3/GodMode9/releases')
+    await ctx.send('https://3ds.hacks.guide/godmode9-usage.html')
 
 @client.command() 
 async def dump(ctx):
