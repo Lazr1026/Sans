@@ -81,6 +81,11 @@ async def troubleshoot(ctx):
 @client.command()
 async def cartinstall(ctx):
     await ctx.send('https://youtu.be/pzbfHQ6uTcU')
+
+@client.command()
+async def gm9(ctx):
+    await ctx.send('https://github.com/d0k3/GodMode9/releases')
+
 @client.command() 
 async def dump(ctx):
     sent = 0
