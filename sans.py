@@ -107,18 +107,28 @@ async def soundhax(ctx):
 @client.command()
 async def troubleshoot(ctx):
         """troubleshoot"""
-        embed = discord.Embed(title="troubleshoot", color=discord.Color.purple())
+        embed = discord.Embed(title="Troubleshoot", color=discord.Color.purple())
         embed.url = "https://3ds.eiphax.tech/issues.html"
         embed.description = "A simple troubleshooting guide for common CFW and homebrew installation issues when using popular recent 3DS hacking methods."
         await ctx.send(embed=embed)
         
 @client.command()
 async def cartinstall(ctx):
-    await ctx.send('https://youtu.be/pzbfHQ6uTcU')
+        embed = discord.Embed(title="CartInstall", color=discord.Color.default())
+        embed.set_author(name="Internet Ivan")
+        embed.set_thumbnail(url="https://i.imgur.com/CFp51Hb.jpg")
+        embed.url = "https://youtu.be/pzbfHQ6uTcU"
+        embed.description = "How to install 3DS cartridges to the SD card"
+        await ctx.send(embed=embed)
 
 @client.command()
 async def gm9(ctx):
-    await ctx.send('https://3ds.hacks.guide/godmode9-usage.html')
+        embed = discord.Embed(title="GodMode9 Usage", color=discord.Color.cyan())
+        embed.set_author(name="NH & Friends")
+        embed.set_thumbnail(url="https://nintendohomebrew.com/pics/nhplai.png")
+        embed.url = "https://3ds.hacks.guide/godmode9-usage"
+        embed.description = "GodMode9 usage guide"
+        await ctx.send(embed=embed)
 
 @client.command() 
 async def dump(ctx):
