@@ -70,7 +70,7 @@ async def browserhax(ctx):
         """browserhax"""
         embed = discord.Embed(title="Browserhax", color=discord.Color.blue())
         embed.url = "https://3ds.hacks.guide/homebrew-launcher-(browserhax-2020)"
-    await ctx.send(embed=embed)
+        await ctx.send(embed=embed)
 
     @client.command()
 async def fredtool(ctx):
