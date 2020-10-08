@@ -56,6 +56,16 @@ async def guide(ctx):
         await ctx.send('Options are: 3ds, wiiu, rvl, nx')
 
 @client.command()
+async def sans(ctx):
+        """About Kurisu"""
+        embed = discord.Embed(title="Sans", color=discord.Color.green())
+        embed.set_author(name="Maintained by Lazr, Radeon, and UwUham")
+        embed.set_thumbnail(url="https://i.imgur.com/AkOLH6q.png")
+        embed.url = "https://github.com/Lazr1026/Sans"
+        embed.description = "Sans, The discord bot that is kinda useful!"
+        await ctx.send(embed=embed)
+      
+@client.command()
 async def browserhax(ctx):
     await ctx.send('https://3ds.hacks.guide/homebrew-launcher-(browserhax-2020)')
         
@@ -231,10 +241,7 @@ async def nospace(ctx):
 @client.command()
 async def sd(ctx):
     await ctx.send('How to check your sd card for errors:\n <https://3ds.eiphax.tech/sd.html>')
-    
-@client.command()
-async def sans(ctx):
-    await ctx.send('Link to SANS source code \nhttps://github.com/Lazr1026/Sans')
+
 @client.command()
 async def profile(ctx, user: discord.User):
     await ctx.send("Profile image for user: " + str(user))
