@@ -72,22 +72,35 @@ async def browserhax(ctx):
         embed.set_author(name="Nintendo Homebrew and Friends")
         embed.set_thumbnail(url="https://3ds.eiphax.tech/pic/browserhaxfriends.png")
         embed.url = "https://3ds.hacks.guide/homebrew-launcher-(browserhax-2020)"
-        embed.description ="A guide on how to do BrowserHax 2020 for getting CFW on your 3DS"
+        embed.description = "A guide on how to do BrowserHax 2020 for getting CFW on your 3DS"
         await ctx.send(embed=embed)
 
 @client.command()
 async def fredtool(ctx):
-    await ctx.send('https://3ds.hacks.guide/installing-boot9strap-(fredtool)')
+        """fredtool"""
+        embed = discord.Embed(title="Fredtool", color=discord.Color.orange())
+        embed.set_author(name="3ds.hacks.guide")
+        embed.url = "https://3ds.hacks.guide/installing-boot9strap-(fredtool).html"
+        embed.description = "A guide on how to install CFW on your 3ds with the fredtool method"
+        await ctx.send(embed=embed)
         
 @client.command()
 async def soundhax(ctx):
     sent = 0
     if str(ctx.message.content).startswith(".soundhax hbl"):
-        await ctx.send('https://3ds.hacks.guide/homebrew-launcher-(soundhax)')
-        sent = 1
+            embed = discord.Embed(title="Soundhax HBL", color=discord.Color.red())
+            embed.set_author(name="3ds.hacks.guide")
+            embed.url = "https://3ds.hacks.guide/homebrew-launcher-(soundhax)"
+            embed.description = "A guide on getting the HBL through Soundhax"
+            await ctx.send(embed=embed)
+            sent = 1
     if str(ctx.message.content).startswith(".soundhax b9s"):
-        await ctx.send('https://3ds.hacks.guide/installing-boot9strap-(soundhax)')
-        sent = 1
+            embed = discord.Embed(title="Soundhax b9s", color=discord.Color.red())
+            embed.set_author(name="3ds.hacks.guide")
+            embed.url = "https://3ds.hacks.guide/installing-boot9strap-(soundhax)"
+            embed.description = "A guide on installing Boot9strap on your 3ds through Soundhax"
+            await ctx.send(embed=embed)
+            sent = 1
     if sent == 0:
         await ctx.send('What soundhax would you like? hbl, b9s')
         
