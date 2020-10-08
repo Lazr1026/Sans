@@ -66,9 +66,10 @@ async def sans(ctx):
         await ctx.send(embed=embed)
       
 @client.command()
-async def browserhax(ctx):
-    await ctx.send('https://3ds.hacks.guide/homebrew-launcher-(browserhax-2020)')
-        
+async def browserhax(self, ctx):
+    await self.simple_embed(ctx, """
+                    3DS Hacks Guide's [Browserhax](https://3ds.hacks.guide/homebrew-launcher-(browserhax-2020))
+                    """, title="Browserhax")
 @client.command()
 async def fredtool(ctx):
     await ctx.send('https://3ds.hacks.guide/installing-boot9strap-(fredtool)')
