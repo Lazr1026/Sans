@@ -72,6 +72,7 @@ async def browserhax(ctx):
         embed.set_author(name="Nintendo Homebrew and Friends")
         embed.set_thumbnail(url="https://3ds.eiphax.tech/pic/browserhaxfriends.png")
         embed.url = "https://3ds.hacks.guide/homebrew-launcher-(browserhax-2020)"
+        embed.description ="A guide on how to do BrowserHax 2020 for getting CFW on your 3DS:
         await ctx.send(embed=embed)
 
 @client.command()
