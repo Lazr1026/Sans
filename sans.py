@@ -68,7 +68,7 @@ async def sans(ctx):
 @client.command()
 async def browserhax(ctx):
         """browserhax"""
-        embed = discord.Embed(title="Browserhax, color=discord.Color.blue())
+        embed = discord.Embed(title="Browserhax", color=discord.Color.blue())
         embed.url = "https://3ds.hacks.guide/homebrew-launcher-(browserhax-2020)"
     await ctx.send(embed=embed)
 
