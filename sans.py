@@ -69,6 +69,8 @@ async def sans(ctx):
 async def browserhax(ctx):
         """browserhax"""
         embed = discord.Embed(title="Browserhax", color=discord.Color.blue())
+        embed.set_author(name="Nintendo Homebrew and Friends")
+        embed.set_thumbnail(url="https://3ds.eiphax.tech/pic/browserhaxfriends.png")
         embed.url = "https://3ds.hacks.guide/homebrew-launcher-(browserhax-2020)"
         await ctx.send(embed=embed)
 
