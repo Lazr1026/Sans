@@ -262,7 +262,7 @@ async def cfwuses(ctx):
 @client.command()
 async def vc(ctx):
     sent = 0
-    if ctx.message.content == ".vc 3ds":
+            if str(ctx.message.content).startswith(".vc 3ds"):
             embed = discord.Embed(title="Virtual Console Injects for 3DS", color=discord.Color(ff15105570))
             embed.set_author(name="Asdolo")
             embed.set_thumbnail(url="https://i.imgur.com/rHa76XM.png")
@@ -270,7 +270,7 @@ async def vc(ctx):
             embed.description = "The recommended way to play old classics on your 3DS. Usage guide [here](http://3ds.eiphax.tech/nsui.html)."
             await ctx.send(embed=embed)
             sent = 1
-    if ctx.message.content == ".vc wiiu":
+    if str(ctx.message.content).startswith(".vc wiiu"):
             embed = discord.Embed(title="Virtual Console Injects for Wii U", color=discord.Color(ff239bdb))
             embed.set_author(name="NicoAICP")
             embed.set_thumbnail(url="https://gbatemp.net/data/avatars/l/404/404553.jpg"
