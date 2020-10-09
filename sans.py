@@ -260,6 +260,28 @@ async def cfwuses(ctx):
         await ctx.send('Options are: 3ds, wiiu, nx')
 
 @client.command()
+async def vc(ctx):
+    sent = 0
+    if ctx.message.content == ".vc 3ds":
+            embed = discord.Embed(title="Virtual Console Injects for 3DS", color=discord.Color(15105570))
+            embed.set_author(name="Asdolo")
+            embed.set_thumbnail(url="https://i.imgur.com/rHa76XM.png")
+            embed.url = "https://mega.nz/#!qnAE1YjC!q3FRHgIAVEo4nRI2IfANHJr-r7Sil3YpPYE4w8ZbUPY"
+            embed.description = "The recommended way to play old classics on your 3DS. Usage guide [here](http://3ds.eiphax.tech/nsui.html)."
+            await ctx.send(embed=embed)
+            sent = 1
+    if ctx.message.content == ".vc wiiu":
+            embed = discord.Embed(title="Virtual Console Injects for Wii U", color=discord.Color(239bdb))
+            embed.set_author(name="NicoAICP")
+            embed.set_thumbnail(url="https://gbatemp.net/data/avatars/l/404/404553.jpg"
+            embed.url = "https://gbatemp.net/threads/release-uwuvci-injectiine.486781/')
+            embed.description = "The recommended way to play old classics on your Wii U. Usage guide [here](https://flumpster.github.io/instructions/index)."
+            await ctx.send(embed=embed)
+            sent = 1
+    if sent == 0:
+        await ctx.send('Invalid syntax. Options are: 3ds, wiiu.')
+
+@client.command()
 async def notbricked(ctx):
     await ctx.send('No, you are not bricked if your power LED turns on and off after you installed b9s, you are not bricked and are just missing a file called boot.firm in the root of your SD card to fix the issue\n 1. Check you inserted the SD card in your console\n 2. Place/replace the file, downloading it from <https://github.com/LumaTeam/Luma3DS/releases>')
 
@@ -457,18 +479,6 @@ async def help(ctx):
         sent = 1
     if sent == 0:
         await ctx.send('```What can I help you with?\n\n assistance\n invite\n memes```')
-
-@client.command()
-async def vc(ctx):
-    sent = 0
-    if ctx.message.content == ".vc 3ds":
-        await ctx.send('You can convert your roms to CIA format with this tool: https://mega.nz/#!qnAE1YjC!q3FRHgIAVEo4nRI2IfANHJr-r7Sil3YpPYE4w8ZbUPY \nUsage guide here: http://3ds.eiphax.tech/nsui.html')
-        sent = 1
-    if ctx.message.content == ".vc wiiu":
-        await ctx.send('You can play classics on your wiiu with this tool: https://gbatemp.net/threads/release-uwuvci-injectiine.486781/ \nUsage guide here: https://flumpster.github.io/instructions/index')
-        sent = 1
-    if sent == 0:
-        await ctx.send('Invalid syntax. Options are: 3ds, wiiu.')
 
 @client.command()
 async def baninfo(ctx):
