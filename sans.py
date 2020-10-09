@@ -262,7 +262,7 @@ async def cfwuses(ctx):
 @client.command()
 async def vc(ctx):
     sent = 0
-            if str(ctx.message.content).startswith(".vc 3ds"):
+    if str(ctx.message.content).startswith(".vc 3ds"):
             embed = discord.Embed(title="Virtual Console Injects for 3DS", color=discord.Color(ff15105570))
             embed.set_author(name="Asdolo")
             embed.set_thumbnail(url="https://i.imgur.com/rHa76XM.png")
