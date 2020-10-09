@@ -263,7 +263,7 @@ async def cfwuses(ctx):
 async def vc(ctx):
     sent = 0
     if ctx.message.content == ".vc 3ds":
-            embed = discord.Embed(title="Virtual Console Injects for 3DS", color=discord.Color(15105570))
+            embed = discord.Embed(title="Virtual Console Injects for 3DS", color=discord.Color(ff15105570))
             embed.set_author(name="Asdolo")
             embed.set_thumbnail(url="https://i.imgur.com/rHa76XM.png")
             embed.url = "https://mega.nz/#!qnAE1YjC!q3FRHgIAVEo4nRI2IfANHJr-r7Sil3YpPYE4w8ZbUPY"
@@ -271,7 +271,7 @@ async def vc(ctx):
             await ctx.send(embed=embed)
             sent = 1
     if ctx.message.content == ".vc wiiu":
-            embed = discord.Embed(title="Virtual Console Injects for Wii U", color=discord.Color(239bdb))
+            embed = discord.Embed(title="Virtual Console Injects for Wii U", color=discord.Color(ff239bdb))
             embed.set_author(name="NicoAICP")
             embed.set_thumbnail(url="https://gbatemp.net/data/avatars/l/404/404553.jpg"
             embed.url = "https://gbatemp.net/threads/release-uwuvci-injectiine.486781/')
