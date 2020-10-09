@@ -274,7 +274,6 @@ async def vc(ctx):
             embed = discord.Embed(title="Virtual Console Injects for Wii U", color=discord.Color(ff239bdb))
             embed.set_author(name="NicoAICP")
             embed.set_thumbnail(url="https://gbatemp.net/data/avatars/l/404/404553.jpg"
-            embed.url = "https://github.com/stuff-by-3-random-dudes/UWUVCI-AIO-WPF/releases/download/BT12/UWUVCI.AIO.BT12.Installer.exe"
             embed.description = "The recommended way to play old classics on your Wii U. Usage guide [here](https://flumpster.github.io/instructions/index)."
             await ctx.send(embed=embed)
             sent = 1
