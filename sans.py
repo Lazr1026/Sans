@@ -35,7 +35,7 @@ async def listhelpers(ctx):
 @client.command()
 async def liststaff(ctx):
     await ctx.send('Staff:\n Internet Ivan\n Nintenmike.3dsx\n Lazr')
-    
+
 @client.command()
 async def guide(ctx):
     sent = 0
@@ -356,7 +356,7 @@ async def kick(ctx, member : discord.Member, *,reason=0):
     await member.kick(reason=reason)
     send = "user "+str(member) + " has been kicked."
     await ctx.send(send)
-@client.command()
+@client.command(aliases=["speak"])
 @commands.has_any_role('Owner', 'Owner 🍙', 'Staff', 'Admin👮‍', 'Helper', 'OMEGAMOD')
 async def say(ctx, message):
     await ctx.message.delete()
