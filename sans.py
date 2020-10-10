@@ -75,7 +75,7 @@ async def browserhax(ctx):
         embed.description = "A guide on how to do BrowserHax 2020 for getting CFW on your 3DS"
         await ctx.send(embed=embed)
         
-@client.command()
+@client.command(aliases=["ctrtransfer"])
 async def ctr(ctx):
         """ctr"""
         embed = discord.Embed(title="CTRTransfer", color=discord.Color.orange())
