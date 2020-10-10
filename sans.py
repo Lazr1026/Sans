@@ -74,6 +74,16 @@ async def browserhax(ctx):
         embed.url = "https://3ds.hacks.guide/homebrew-launcher-(browserhax-2020)"
         embed.description = "A guide on how to do BrowserHax 2020 for getting CFW on your 3DS"
         await ctx.send(embed=embed)
+        
+@client.command()
+async def ctr(ctx):
+        """ctr"""
+        embed = discord.Embed(title="CTRTransfer", color=discord.Color.orange())
+        embed.set_author(name="Nintendo Homebrew and Friends")
+        embed.set_thumbnail(url="https://images-ext-1.discordapp.net/external/RTj66C6cF6VAI6TsnIcV9mw1zVuhkLuEfwNyBo_22O0/https/nintendohomebrew.com/pics/nhplai.png")
+        embed.url = "https://3ds.hacks.guide/ctrtransfer"
+        embed.description = "How to do the 11.5.0-38 ctrtransfer"
+        await ctx.send(embed=embed)
 
 @client.command()
 async def fredtool(ctx):
@@ -103,7 +113,8 @@ async def soundhax(ctx):
             sent = 1
     if sent == 0:
         await ctx.send('What soundhax would you like? hbl, b9s')
-        
+
+
 @client.command()
 async def troubleshoot(ctx):
         """troubleshoot"""
@@ -270,6 +281,10 @@ async def lumabug(ctx):
 @client.command()
 async def nospace(ctx):
     await ctx.send('How to make a NAND backup without enough space on your sd card:\n 1. Copy the Nintendo 3DS and the DCIM folder (if you have it) to your computer, then delete them from your SD CARD.\n 2. Boot into GodMode9 and perform the backup again. Once it’s done power off your system.\n 3. Copy all the files in the gm9/out folder on your sd card to a place on your pc. Then delete those files from the SD CARD.\n 4. Copy the Nintendo 3DS and DCIM folder (if you had it) back to your sd card and delete it from your computer.')
+    
+@client.command()
+async def hi(ctx):
+    await ctx.send('Pong!')
 
 @client.command()
 async def sd(ctx):
