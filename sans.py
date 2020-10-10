@@ -45,7 +45,7 @@ async def guide(ctx):
     if str(ctx.message.content).startswith(".guide wiiu"):
         await ctx.send('https://wiiu.hacks.guide')
         sent = 1
-    if str(ctx.message.content).startswith(".guide nx"):
+    if str(ctx.message.content).startswith(".guide nx", ".guide switch", ".guide ns"):
         await ctx.send('https://nh-server.github.io/switch-guide/')
         sent = 1
     if str(ctx.message.content).startswith(".guide wii") and str(ctx.message.content) != ".guide wiiu":
