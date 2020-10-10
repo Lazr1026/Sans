@@ -134,7 +134,7 @@ async def cartinstall(ctx):
 
 @client.command(aliases=["godmode9"])
 async def gm9(ctx):
-        embed = discord.Embed(title="GodMode9 Usage", color=discord.Color.default())
+        embed = discord.Embed(title="GodMode9 Usage", color=discord.Color(0x851111))
         embed.set_author(name="NH & Friends")
         embed.set_thumbnail(url="https://nintendohomebrew.com/pics/nhplai.png")
         embed.url = "https://3ds.hacks.guide/godmode9-usage"
