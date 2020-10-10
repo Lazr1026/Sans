@@ -132,7 +132,7 @@ async def cartinstall(ctx):
         embed.description = "How to install 3DS cartridges to the SD card"
         await ctx.send(embed=embed)
 
-@client.command()
+@client.command(aliases=["godmode9"])
 async def gm9(ctx):
         embed = discord.Embed(title="GodMode9 Usage", color=discord.Color.default())
         embed.set_author(name="NH & Friends")
@@ -196,7 +196,7 @@ async def luma(ctx):
         await ctx.send('```What luma version would you like?\n\n latest\n 7.0.5\n 7.1```')
 
 
-@client.command()
+@client.command(aliases=["r11"])
 async def pirate(ctx):
     await ctx.send('We do not support nor condone piracy as it is\n 1. Against Discord TOS\n 2. It is illegal, buy your damn games')
     
@@ -281,16 +281,12 @@ async def lumabug(ctx):
 @client.command()
 async def nospace(ctx):
     await ctx.send('How to make a NAND backup without enough space on your sd card:\n 1. Copy the Nintendo 3DS and the DCIM folder (if you have it) to your computer, then delete them from your SD CARD.\n 2. Boot into GodMode9 and perform the backup again. Once it’s done power off your system.\n 3. Copy all the files in the gm9/out folder on your sd card to a place on your pc. Then delete those files from the SD CARD.\n 4. Copy the Nintendo 3DS and DCIM folder (if you had it) back to your sd card and delete it from your computer.')
-    
-@client.command()
-async def hi(ctx):
-    await ctx.send('Pong!')
 
 @client.command()
 async def sd(ctx):
     await ctx.send('How to check your sd card for errors:\n <https://3ds.eiphax.tech/sd.html>')
 
-@client.command()
+@client.command(aliases=["pfp"])
 async def profile(ctx, user: discord.User):
     await ctx.send("Profile image for user: " + str(user))
     pfp = user.avatar_url
@@ -348,7 +344,7 @@ def getLstmSample(checkpointName):
     sample = "Sample: \n" + "```" + sample + "```"
     return sample
 
-@client.command()
+@client.command(aliases=["yeet"])
 @commands.has_any_role('Owner', 'Owner 🍙', 'Staff', 'Admin👮‍')
 async def ban(ctx, member : discord.Member, *, reason=0):
     await member.ban(reason=reason, delete_message_days=0)
