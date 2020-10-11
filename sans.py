@@ -37,6 +37,15 @@ async def liststaff(ctx):
     await ctx.send('Staff:\n Internet Ivan\n Nintenmike.3dsx\n Lazr')
 
 @client.command()
+async def ftp(ctx):
+        """FTP"""
+        embed = discord.Embed(title="FTP Guide", color=discord.Color(0x2aa8a0))
+        embed.set_author(name="Kreig (aka an asshole)")
+        embed.url = "https://3ds.eiphax.tech/ftp.html"
+        embed.description = "A guide on how to set up FTP on your 3ds, Note 3ds and switch are basically the same process"
+        await ctx.send(embed=embed)
+    
+@client.command()
 async def guide(ctx):
     sent = 0
     if str(ctx.message.content).startswith(".guide 3ds"):
