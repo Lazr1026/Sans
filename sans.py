@@ -65,7 +65,7 @@ async def sans(ctx):
         embed.description = "Sans, The discord bot that is kinda useful!"
         await ctx.send(embed=embed)
       
-@client.command()
+@client.command(aliases=["browserhack"])
 async def browserhax(ctx):
         """browserhax"""
         embed = discord.Embed(title="Browserhax", color=discord.Color.blue())
@@ -282,7 +282,7 @@ async def lumabug(ctx):
 async def nospace(ctx):
     await ctx.send('How to make a NAND backup without enough space on your sd card:\n 1. Copy the Nintendo 3DS and the DCIM folder (if you have it) to your computer, then delete them from your SD CARD.\n 2. Boot into GodMode9 and perform the backup again. Once it’s done power off your system.\n 3. Copy all the files in the gm9/out folder on your sd card to a place on your pc. Then delete those files from the SD CARD.\n 4. Copy the Nintendo 3DS and DCIM folder (if you had it) back to your sd card and delete it from your computer.')
 
-@client.command()
+@client.command(aliases=["sderrors"])
 async def sd(ctx):
     await ctx.send('How to check your sd card for errors:\n <https://3ds.eiphax.tech/sd.html>')
 
