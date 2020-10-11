@@ -123,6 +123,14 @@ async def soundhax(ctx):
     if sent == 0:
         await ctx.send('What soundhax would you like? hbl, b9s')
 
+@client.command()
+async def atob(ctx):
+        embed = discord.Embed(title="Upgrading a9lh to b9s", color=discord.Color(0xde3700))
+        embed.set_author(name="NH and Friends")
+        embed.set_thumbnail(url="https://nintendohomebrew.com/pics/nhplai.png")
+        embed.url = "https://3ds.hacks.guide/a9lh-to-b9s"
+        embed.description = "A guide for upgrading your device from arm9loaderhax to boot9strap."
+        await ctx.send(embed=embed)
 
 @client.command()
 async def troubleshoot(ctx):
