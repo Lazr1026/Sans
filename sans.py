@@ -219,7 +219,10 @@ async def pirate(ctx):
     
 @client.command()
 async def lumacheck(ctx):
-    await ctx.send('How to check your luma version\n\n 1. Power off your console\n 2. Press and hold the SELECT button, then press power while still holding SELECT\n 3. Send a picture of the luma configuration')
+        """Lumacheck"""
+        embed = discord.Embed(title="How to check your Luma version", color=discord.Color(0x2aa8a0))
+        embed.description = "1. Power off your console\n 2. Press and hold the SELECT button, then press power while still holding SELECT\n 3. Send a picture of the Luma configuration"
+        await ctx.send(embed=embed)
 
 @client.command()
 async def sdlock(ctx):
