@@ -44,7 +44,13 @@ async def ftp(ctx):
         embed.url = "https://3ds.eiphax.tech/ftp.html"
         embed.description = "A guide on how to set up FTP on your 3ds, Note 3ds and switch are basically the same process"
         await ctx.send(embed=embed)
-    
+@client.command()
+async def lumacheck(ctx):
+        """Lumacheck"""
+        embed = discord.Embed(title="How to check your Luma version", color=discord.Color(0x2aa8a0))
+        embed.description = "1. Power off your console\n 2. Press and hold the SELECT button, then press power while still holding SELECT\n 3. Send a picture of the Luma configuration"
+        await ctx.send(embed=embed)
+        
 @client.command()
 async def guide(ctx):
     sent = 0
@@ -216,10 +222,6 @@ async def luma(ctx):
 @client.command(aliases=["r11"])
 async def pirate(ctx):
     await ctx.send('We do not support nor condone piracy as it is\n 1. Against Discord TOS\n 2. It is illegal, buy your damn games')
-    
-@client.command()
-async def lumacheck(ctx):
-    await ctx.send('How to check your luma version\n\n 1. Power off your console\n 2. Press and hold the SELECT button, then press power while still holding SELECT\n 3. Send a picture of the luma configuration')
 
 @client.command()
 async def sdlock(ctx):
