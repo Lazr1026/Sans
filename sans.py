@@ -35,7 +35,22 @@ async def listhelpers(ctx):
 @client.command()
 async def liststaff(ctx):
     await ctx.send('Staff:\n Internet Ivan\n Nintenmike.3dsx\n Lazr')
-    
+
+@client.command()
+async def ftp(ctx):
+        """FTP"""
+        embed = discord.Embed(title="FTP Guide", color=discord.Color(0x2aa8a0))
+        embed.set_author(name="Kreig (aka an asshole)")
+        embed.url = "https://3ds.eiphax.tech/ftp.html"
+        embed.description = "A guide on how to set up FTP on your 3ds, Note 3ds and switch are basically the same process"
+        await ctx.send(embed=embed)
+@client.command()
+async def lumacheck(ctx):
+        """Lumacheck"""
+        embed = discord.Embed(title="How to check your Luma version", color=discord.Color(0x2aa8a0))
+        embed.description = "1. Power off your console\n 2. Press and hold the SELECT button, then press power while still holding SELECT\n 3. Send a picture of the Luma configuration"
+        await ctx.send(embed=embed)
+        
 @client.command()
 async def guide(ctx):
     sent = 0
@@ -53,7 +68,7 @@ async def guide(ctx):
         await ctx.send('https://wii.guide')
         sent = 1
     if sent == 0:
-        await ctx.send('Options are: 3ds, wiiu, rvl, nx')
+        await ctx.send('Options are: 3ds, wiiu, wii, nx')
 
 @client.command()
 async def sans(ctx):
@@ -65,7 +80,7 @@ async def sans(ctx):
         embed.description = "Sans, The discord bot that is kinda useful!"
         await ctx.send(embed=embed)
       
-@client.command()
+@client.command(aliases=["browserhack"])
 async def browserhax(ctx):
         """browserhax"""
         embed = discord.Embed(title="Browserhax", color=discord.Color.blue())
@@ -75,7 +90,7 @@ async def browserhax(ctx):
         embed.description = "A guide on how to do BrowserHax 2020 for getting CFW on your 3DS"
         await ctx.send(embed=embed)
         
-@client.command()
+@client.command(aliases=["ctrtransfer"])
 async def ctr(ctx):
         """ctr"""
         embed = discord.Embed(title="CTRTransfer", color=discord.Color.orange())
@@ -114,6 +129,14 @@ async def soundhax(ctx):
     if sent == 0:
         await ctx.send('What soundhax would you like? hbl, b9s')
 
+@client.command()
+async def atob(ctx):
+        embed = discord.Embed(title="Upgrading a9lh to b9s", color=discord.Color(0xde3700))
+        embed.set_author(name="NH and Friends")
+        embed.set_thumbnail(url="https://nintendohomebrew.com/pics/nhplai.png")
+        embed.url = "https://3ds.hacks.guide/a9lh-to-b9s"
+        embed.description = "A guide for upgrading your device from arm9loaderhax to boot9strap."
+        await ctx.send(embed=embed)
 
 @client.command()
 async def troubleshoot(ctx):
@@ -132,9 +155,9 @@ async def cartinstall(ctx):
         embed.description = "How to install 3DS cartridges to the SD card"
         await ctx.send(embed=embed)
 
-@client.command()
+@client.command(aliases=["godmode9"])
 async def gm9(ctx):
-        embed = discord.Embed(title="GodMode9 Usage", color=discord.Color.default())
+        embed = discord.Embed(title="GodMode9 Usage", color=discord.Color(0x851111))
         embed.set_author(name="NH & Friends")
         embed.set_thumbnail(url="https://nintendohomebrew.com/pics/nhplai.png")
         embed.url = "https://3ds.hacks.guide/godmode9-usage"
@@ -196,13 +219,9 @@ async def luma(ctx):
         await ctx.send('```What luma version would you like?\n\n latest\n 7.0.5\n 7.1```')
 
 
-@client.command()
+@client.command(aliases=["r11"])
 async def pirate(ctx):
     await ctx.send('We do not support nor condone piracy as it is\n 1. Against Discord TOS\n 2. It is illegal, buy your damn games')
-    
-@client.command()
-async def lumacheck(ctx):
-    await ctx.send('How to check your luma version\n\n 1. Power off your console\n 2. Press and hold the SELECT button, then press power while still holding SELECT\n 3. Send a picture of the luma configuration')
 
 @client.command()
 async def sdlock(ctx):
@@ -281,16 +300,12 @@ async def lumabug(ctx):
 @client.command()
 async def nospace(ctx):
     await ctx.send('How to make a NAND backup without enough space on your sd card:\n 1. Copy the Nintendo 3DS and the DCIM folder (if you have it) to your computer, then delete them from your SD CARD.\n 2. Boot into GodMode9 and perform the backup again. Once it’s done power off your system.\n 3. Copy all the files in the gm9/out folder on your sd card to a place on your pc. Then delete those files from the SD CARD.\n 4. Copy the Nintendo 3DS and DCIM folder (if you had it) back to your sd card and delete it from your computer.')
-    
-@client.command()
-async def hi(ctx):
-    await ctx.send('Pong!')
 
-@client.command()
+@client.command(aliases=["sderrors"])
 async def sd(ctx):
     await ctx.send('How to check your sd card for errors:\n <https://3ds.eiphax.tech/sd.html>')
 
-@client.command()
+@client.command(aliases=["pfp"])
 async def profile(ctx, user: discord.User):
     await ctx.send("Profile image for user: " + str(user))
     pfp = user.avatar_url
@@ -348,7 +363,7 @@ def getLstmSample(checkpointName):
     sample = "Sample: \n" + "```" + sample + "```"
     return sample
 
-@client.command()
+@client.command(aliases=["yeet"])
 @commands.has_any_role('Owner', 'Owner 🍙', 'Staff', 'Admin👮‍')
 async def ban(ctx, member : discord.Member, *, reason=0):
     await member.ban(reason=reason, delete_message_days=0)
@@ -477,7 +492,7 @@ async def help(ctx):
 async def vc(ctx):
     sent = 0
     if str(ctx.message.content).startswith(".vc 3ds"):
-            embed=discord.Embed(title="Virtual Console Injects for 3DS", color=discord.Color(1713131))
+            embed=discord.Embed(title="Virtual Console Injects for 3DS", color=discord.Color(0xab1f1f))
             embed.set_author(name="Asdolo")
             embed.set_thumbnail(url="https://i.imgur.com/rHa76XM.png")
             embed.url = "https://mega.nz/#!qnAE1YjC!q3FRHgIAVEo4nRI2IfANHJr-r7Sil3YpPYE4w8ZbUPY"
@@ -485,7 +500,7 @@ async def vc(ctx):
             await ctx.send(embed=embed)
             sent = 1
     if str(ctx.message.content).startswith(".vc wiiu"):
-            embed=discord.Embed(title="Virtual Console Injects for Wii U", color=discord.Color(15105570))
+            embed=discord.Embed(title="Virtual Console Injects for Wii U", color=discord.Color(0x3691b5))
             embed.set_author(name="NicoAICP")
             embed.set_thumbnail(url="https://gbatemp.net/data/avatars/l/404/404553.jpg")
             embed.url = "https://gbatemp.net/threads/release-uwuvci-injectiine.486781/"
