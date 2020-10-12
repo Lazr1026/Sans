@@ -31,6 +31,12 @@ async def _7zip(ctx):
         embed.description = "WinRAR is not a very good archiving utility. You should use 7-Zip instead \n which can be downloaded [here](https://www.7-zip.org)."
         await ctx.send(embed=embed)
         
+@client.command(aliases=["redscr"])
+async def boot3dsx(ctx):
+        embed = discord.Embed(title="The 3DS Homebrew Launcher", color=discord.Color(0x262626))
+        embed.description = "[boot.3dsx](https://github.com/fincs/new-hbmenu/releases/download/v2.1.0/boot.3dsx)"
+        await ctx.send(embed=embed)
+        
 @client.command()
 async def listhelpers(ctx):
         embed = discord.Embed(title="Here is our helpers:", color=discord.Color(0x20b339))
@@ -430,7 +436,7 @@ async def help(ctx):
         await ctx.send("ctl commands are for admin usage.\nupdate: update code from github\nreboot: reboot the host machine\nservice: restart the sans service")
         sent = 1
     if ctx.message.content == ".help assistance":
-        await ctx.send('```Assistance commands are: cartinstall, cfwusues, dump, guide, lumabug, lumacheck, nospace, notbricked, r4, sdlock, sdroot, luma, sd, ndsforwarders, ap, vc, troubleshoot, twlfix```')
+        await ctx.send('```Assistance commands are: cartinstall, cfwusues, dump, guide, lumabug, lumacheck, nospace, notbricked, r4, sdlock, sdroot, luma, sd, ndsforwarders, ap, vc, troubleshoot, twlfix, boot3dsx (or redscr)```')
         sent = 1
     if ctx.message.content == ".help cartinstall":
         await ctx.send('```Shows the guide for cartinstall```')
@@ -518,6 +524,9 @@ async def help(ctx):
         sent = 1
     if ctx.message.content == ".help brick":
         await ctx.send('Type it :wink:')
+        sent = 1
+    if ctx.message.content == ".help boot3dsx":
+        await ctx.send('Gives a download link to boot.3dsx')
         sent = 1
     if sent == 0:
         await ctx.send('```What can I help you with?\n\n assistance\n invite\n memes```')
