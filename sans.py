@@ -385,15 +385,15 @@ async def say(ctx, message):
 @commands.has_any_role('Owner')
 async def ctl(ctx):
     sent = 0
-    if ctx.message.content = ".ctl update":
+    if ctx.message.content == ".ctl update":
         await ctx.send("Updating code. The bot will be down for roughly 15 seconds.")
         subprocess.run(['sudo', '/home/pi/duckdns/sans.sh'])
         sent = 1
-    if ctx.message.content = ".ctl reboot":
+    if ctx.message.content == ".ctl reboot":
         await ctx.send("Rebooting host. Let\'s hope it comes back online.")
         subprocess.run(['sudo', 'reboot'])
         sent = 1
-    if ctx.messahe.content = ".ctl service":
+    if ctx.messahe.content == ".ctl service":
         await ctx.send("Restarting systemd service.")
         subprocess.run(['sudo', 'systemctl', 'restart', 'sans'])
         sent = 1
