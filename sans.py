@@ -402,7 +402,7 @@ async def ctl(ctx):
 
 @client.command()
 async def update(ctx):
-    await ctx.send("Moved to .ctl update"
+    await ctx.send("Moved to .ctl update")
 
 @client.command()
 async def local58(ctx):
@@ -416,6 +416,8 @@ async def snas(ctx):
 @client.command()
 async def help(ctx):
     sent = 0
+    if ctx.message.content == ".help ctl":
+        await ctx.send("ctl commands are for admin usage.\nupdate: update code from github\nreboot: reboot the host machine\nservice: restart the sans service")
     if ctx.message.content == ".help assistance":
         await ctx.send('```Assistance commands are: cartinstall, cfwusues, dump, guide, lumabug, lumacheck, nospace, notbricked, r4, sdlock, sdroot, luma, sd, ndsforwarders, ap, vc, troubleshoot, twlfix```')
         sent = 1
