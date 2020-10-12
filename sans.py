@@ -396,6 +396,9 @@ async def ctl(ctx):
     if sent == 0:
         await ctx.send("Invalid argument.")
 
+@client.command()
+async def update(ctx):
+    await ctx.send("Moved to .ctl update"
 
 @client.command()
 async def local58(ctx):
