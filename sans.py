@@ -26,8 +26,11 @@ async def pat(ctx):
 
 @client.command(name="7zip")
 async def _7zip(ctx):
-    await ctx.send("WinRAR is not a very good archiving utility. \nYou should use 7-Zip instead. \nhttps://www.7-zip.org/")
-
+        """7Zip"""
+        embed = discord.Embed(title="7Zip Info", color=discord.Color(0x2aa8a0))
+        embed.description = "WinRAR is not a very good archiving utility. You should use 7-Zip instead \n which can be downloaded [here](https://www.7-zip.org)."
+        await ctx.send(embed=embed)
+        
 @client.command()
 async def listhelpers(ctx):
     await ctx.send('Helpers:\n\n __3DS__\n Nintenmike.3dsx\n M1807\n UwUham\n radeon\n\n __Wii U__\n Lazr\n\n __Switch__\n jsjhax34')
@@ -44,13 +47,7 @@ async def ftp(ctx):
         embed.url = "https://3ds.eiphax.tech/ftp.html"
         embed.description = "A guide on how to set up FTP on your 3ds, Note 3ds and switch are basically the same process"
         await ctx.send(embed=embed)
-@client.command()
-async def lumacheck(ctx):
-        """Lumacheck"""
-        embed = discord.Embed(title="How to check your Luma version", color=discord.Color(0x2aa8a0))
-        embed.description = "1. Power off your console\n 2. Press and hold the SELECT button, then press power while still holding SELECT\n 3. Send a picture of the Luma configuration"
-        await ctx.send(embed=embed)
-        
+    
 @client.command()
 async def guide(ctx):
     sent = 0
@@ -222,6 +219,13 @@ async def luma(ctx):
 @client.command(aliases=["r11"])
 async def pirate(ctx):
     await ctx.send('We do not support nor condone piracy as it is\n 1. Against Discord TOS\n 2. It is illegal, buy your damn games')
+    
+@client.command()
+async def lumacheck(ctx):
+        """Lumacheck"""
+        embed = discord.Embed(title="How to check your Luma version", color=discord.Color(0x2aa8a0))
+        embed.description = "1. Power off your console\n 2. Press and hold the SELECT button, then press power while still holding SELECT\n 3. Send a picture of the Luma configuration"
+        await ctx.send(embed=embed)
 
 @client.command()
 async def sdlock(ctx):
@@ -382,9 +386,26 @@ async def say(ctx, message):
     await ctx.send(ctx.message.content[5:])
 @client.command()
 @commands.has_any_role('Owner')
+async def ctl(ctx):
+    sent = 0
+    if ctx.message.content == ".ctl update":
+        await ctx.send("Updating code. The bot will be down for roughly 15 seconds.")
+        subprocess.run(['sudo', '/home/pi/duckdns/sans.sh'])
+        sent = 1
+    if ctx.message.content == ".ctl reboot":
+        await ctx.send("Rebooting host. Let\'s hope it comes back online.")
+        subprocess.run(['sudo', 'reboot'])
+        sent = 1
+    if ctx.message.content == ".ctl service":
+        await ctx.send("Restarting systemd service.")
+        subprocess.run(['sudo', 'systemctl', 'restart', 'sans'])
+        sent = 1
+    if sent == 0:
+        await ctx.send("Invalid argument.")
+
+@client.command()
 async def update(ctx):
-    await ctx.send("Updating code. The bot will be down for roughly 15 seconds.")
-    subprocess.run(['sudo', '/home/pi/duckdns/sans.sh'])
+    await ctx.send("Moved to .ctl update")
 
 @client.command()
 async def local58(ctx):
@@ -398,6 +419,9 @@ async def snas(ctx):
 @client.command()
 async def help(ctx):
     sent = 0
+    if ctx.message.content == ".help ctl":
+        await ctx.send("ctl commands are for admin usage.\nupdate: update code from github\nreboot: reboot the host machine\nservice: restart the sans service")
+        sent = 1
     if ctx.message.content == ".help assistance":
         await ctx.send('```Assistance commands are: cartinstall, cfwusues, dump, guide, lumabug, lumacheck, nospace, notbricked, r4, sdlock, sdroot, luma, sd, ndsforwarders, ap, vc, troubleshoot, twlfix```')
         sent = 1
