@@ -383,9 +383,19 @@ async def say(ctx, message):
     await ctx.send(ctx.message.content[5:])
 @client.command()
 @commands.has_any_role('Owner')
-async def update(ctx):
-    await ctx.send("Updating code. The bot will be down for roughly 15 seconds.")
-    subprocess.run(['sudo', '/home/pi/duckdns/sans.sh'])
+async def ctl(ctx):
+    sent = 0
+    if ctx.message.content = ".ctl update":
+        await ctx.send("Updating code. The bot will be down for roughly 15 seconds.")
+        subprocess.run(['sudo', '/home/pi/duckdns/sans.sh'])
+        sent = 1
+    if ctx.message.content = ".ctl reboot":
+        await ctx.send("Rebooting host. Let\'s hope it comes back online.")
+        subprocess.run(['sudo', 'reboot'])
+        sent = 0
+    if sent == 0:
+        await ctx.send("Invalid argument.")
+
 
 @client.command()
 async def local58(ctx):
