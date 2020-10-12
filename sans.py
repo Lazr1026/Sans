@@ -383,9 +383,26 @@ async def say(ctx, message):
     await ctx.send(ctx.message.content[5:])
 @client.command()
 @commands.has_any_role('Owner')
+async def ctl(ctx):
+    sent = 0
+    if ctx.message.content == ".ctl update":
+        await ctx.send("Updating code. The bot will be down for roughly 15 seconds.")
+        subprocess.run(['sudo', '/home/pi/duckdns/sans.sh'])
+        sent = 1
+    if ctx.message.content == ".ctl reboot":
+        await ctx.send("Rebooting host. Let\'s hope it comes back online.")
+        subprocess.run(['sudo', 'reboot'])
+        sent = 1
+    if ctx.message.content == ".ctl service":
+        await ctx.send("Restarting systemd service.")
+        subprocess.run(['sudo', 'systemctl', 'restart', 'sans'])
+        sent = 1
+    if sent == 0:
+        await ctx.send("Invalid argument.")
+
+@client.command()
 async def update(ctx):
-    await ctx.send("Updating code. The bot will be down for roughly 15 seconds.")
-    subprocess.run(['sudo', '/home/pi/duckdns/sans.sh'])
+    await ctx.send("Moved to .ctl update")
 
 @client.command()
 async def local58(ctx):
@@ -399,6 +416,9 @@ async def snas(ctx):
 @client.command()
 async def help(ctx):
     sent = 0
+    if ctx.message.content == ".help ctl":
+        await ctx.send("ctl commands are for admin usage.\nupdate: update code from github\nreboot: reboot the host machine\nservice: restart the sans service")
+        sent = 1
     if ctx.message.content == ".help assistance":
         await ctx.send('```Assistance commands are: cartinstall, cfwusues, dump, guide, lumabug, lumacheck, nospace, notbricked, r4, sdlock, sdroot, luma, sd, ndsforwarders, ap, vc, troubleshoot, twlfix```')
         sent = 1
