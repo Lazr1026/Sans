@@ -33,7 +33,7 @@ async def _7zip(ctx):
         
 @client.command(aliases=["redscr"])
 async def boot3dsx(ctx):
-        embed = discord.Embed(title="The 3DS Homebrew Launcher", color=discord.Color(0x2F3136))
+        embed = discord.Embed(title="The 3DS Homebrew Launcher", color=discord.Color(0x262626))
         embed.description = "[boot.3dsx](https://github.com/fincs/new-hbmenu/releases/download/v2.1.0/boot.3dsx)"
         await ctx.send(embed=embed)
         
