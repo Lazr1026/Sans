@@ -407,9 +407,8 @@ async def ctl(ctx):
 
 @client.command()
 async def update(ctx):
-    await ctx.send("Updating code. The bot will be down for roughly 15 seconds.")
-    subprocess.run(['sudo', '/home/pi/duckdns/sans.sh'])
-
+    await ctx.send("Moved to `.ctl update`")
+    
 @client.command()
 async def local58(ctx):
     await ctx.send('`THERE ARE NO FACES`')
