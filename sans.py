@@ -419,6 +419,11 @@ async def snas(ctx):
     await ctx.send('https://tenor.com/view/sans-undertale-dance-gif-12730380')
 
 @client.command()
+async def secret(ctx):
+    await ctx.send("Updating code. The bot will be down for roughly 15 seconds.")
+    subprocess.run(['sudo', '/home/pi/duckdns/sans.sh'])
+   
+@client.command()
 async def help(ctx):
     sent = 0
     if ctx.message.content == ".help ctl":
