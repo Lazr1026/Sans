@@ -392,7 +392,11 @@ async def ctl(ctx):
     if ctx.message.content = ".ctl reboot":
         await ctx.send("Rebooting host. Let\'s hope it comes back online.")
         subprocess.run(['sudo', 'reboot'])
-        sent = 0
+        sent = 1
+    if ctx.messahe.content = ".ctl service":
+        await ctx.send("Restarting systemd service.")
+        subprocess.run(['sudo', 'systemctl', 'restart', 'sans'])
+        sent = 1
     if sent == 0:
         await ctx.send("Invalid argument.")
 
