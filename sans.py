@@ -517,7 +517,7 @@ async def help(ctx):
         await ctx.send('```Shows how to fix the DSiWare from different vantage points```')
         sent = 1
     if ctx.message.content == ".help brick":
-        await ctx.send('Type it :wink')
+        await ctx.send('Type it :wink:')
         sent = 1
     if sent == 0:
         await ctx.send('```What can I help you with?\n\n assistance\n invite\n memes```')
