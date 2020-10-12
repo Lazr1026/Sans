@@ -334,6 +334,9 @@ async def sdformat(ctx):
 @client.command()
 async def lazr(ctx):
     await ctx.send('lazr says she wants to hardmod, prepare to gain some brain cells')
+@client.command()
+async def brick(ctx):
+    await ctx.send('nah fuck you :wink:')
     
 @client.command()
 async def lstm(ctx):
@@ -472,7 +475,7 @@ async def help(ctx):
         await ctx.send('```An invite to Nintendo Homebrews discord server```')
         sent = 1
     if ctx.message.content == ".help memes":
-        await ctx.send('```Memes are: radeon, snas, uwuham, lazr, local58, pat```')
+        await ctx.send('```Memes are: radeon, snas, uwuham, lazr, local58, pat, brick```')
         sent = 1
     if ctx.message.content == ".help pat":
         await ctx.send('For when someone needs that extra bit of support.')
@@ -512,6 +515,9 @@ async def help(ctx):
         sent = 1
     if ctx.message.content == ".help twlfix":
         await ctx.send('```Shows how to fix the DSiWare from different vantage points```')
+        sent = 1
+    if ctx.message.content == ".help brick":
+        await ctx.send('Type it :wink')
         sent = 1
     if sent == 0:
         await ctx.send('```What can I help you with?\n\n assistance\n invite\n memes```')
