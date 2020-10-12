@@ -407,7 +407,8 @@ async def ctl(ctx):
 
 @client.command()
 async def update(ctx):
-    await ctx.send("Moved to .ctl update")
+    await ctx.send("Updating code. The bot will be down for roughly 15 seconds.")
+    subprocess.run(['sudo', '/home/pi/duckdns/sans.sh'])
 
 @client.command()
 async def local58(ctx):
@@ -417,11 +418,6 @@ async def local58(ctx):
 @client.command()
 async def snas(ctx):
     await ctx.send('https://tenor.com/view/sans-undertale-dance-gif-12730380')
-
-@client.command()
-async def secret(ctx):
-    await ctx.send("Updating code. The bot will be down for roughly 15 seconds.")
-    subprocess.run(['sudo', '/home/pi/duckdns/sans.sh'])
    
 @client.command()
 async def help(ctx):
