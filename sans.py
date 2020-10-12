@@ -418,6 +418,7 @@ async def help(ctx):
     sent = 0
     if ctx.message.content == ".help ctl":
         await ctx.send("ctl commands are for admin usage.\nupdate: update code from github\nreboot: reboot the host machine\nservice: restart the sans service")
+        sent = 1
     if ctx.message.content == ".help assistance":
         await ctx.send('```Assistance commands are: cartinstall, cfwusues, dump, guide, lumabug, lumacheck, nospace, notbricked, r4, sdlock, sdroot, luma, sd, ndsforwarders, ap, vc, troubleshoot, twlfix```')
         sent = 1
