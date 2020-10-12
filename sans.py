@@ -33,8 +33,8 @@ async def _7zip(ctx):
         
 @client.command()
 async def listhelpers(ctx):
-        embed = discord.Embed(title="Here is out helpers:", color=discord.Color(0x20b339))
-        embed.description = "__3DS__\n <@554832528238968883>\n <@578245729060126730>\n <@504564321716666368>\n <@505832724959985666>\n\n __WiiU U__\n <@664297659686715403>\n\n __Switch__\n <@591994499069116417>"
+        embed = discord.Embed(title="Here is our helpers:", color=discord.Color(0x20b339))
+        embed.description = "**__3DS__**\n <@554832528238968883>\n <@578245729060126730>\n <@504564321716666368>\n <@505832724959985666>\n\n **__WiiU U__**\n <@664297659686715403>\n\n **__Switch__**\n <@591994499069116417>"
         await ctx.send(embed=embed)
     
 @client.command()
