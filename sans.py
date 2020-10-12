@@ -26,8 +26,11 @@ async def pat(ctx):
 
 @client.command(name="7zip")
 async def _7zip(ctx):
-    await ctx.send("WinRAR is not a very good archiving utility. \nYou should use 7-Zip instead. \nhttps://www.7-zip.org/")
-
+        """7Zip"""
+        embed = discord.Embed(title="7Zip Info", color=discord.Color(0x2aa8a0))
+        embed.description = "WinRAR is not a very good archiving utility. You should use 7-Zip instead \n which can be downloaded [here](https://www.7-zip.org)."
+        await ctx.send(embed=embed)
+        
 @client.command()
 async def listhelpers(ctx):
     await ctx.send('Helpers:\n\n __3DS__\n Nintenmike.3dsx\n M1807\n UwUham\n radeon\n\n __Wii U__\n Lazr\n\n __Switch__\n jsjhax34')
