@@ -39,7 +39,9 @@ async def listhelpers(ctx):
     
 @client.command()
 async def liststaff(ctx):
-    await ctx.send('Staff:\n Internet Ivan\n Nintenmike.3dsx\n Lazr')
+        embed = discord.Embed(title="Here is a list of our staff:", color=discord.Color(0x132e91))
+        embed.description = "**__Owner__**\n <@505793682297978900>\n\n **__Admin__**\n <@554832528238968883>\n <@664297659686715403>"
+        await ctx.send(embed=embed)
 
 @client.command()
 async def ftp(ctx):
