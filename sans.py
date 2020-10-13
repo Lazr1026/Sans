@@ -26,7 +26,7 @@ async def pat(ctx):
 @client.command()
 
 async def finalizing(ctx):
-        embed = discord.Embed(title="3ds.hacks.guide Finalizing Setup" color=discord.Color(0x2aa8a0))
+        embed = discord.Embed(title="3ds.hacks.guide Finalizing Setup", color=discord.Color(0x2aa8a0))
         embed.description = "[Finalizing Setup](https://3ds.hacks.guide/finalizing-setup)"
         await ctx.send(embed=embed)
 
