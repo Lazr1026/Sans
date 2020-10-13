@@ -78,7 +78,7 @@ async def guide(ctx):
     if str(ctx.message.content).startswith(".guide wiiu"):
             embed = discord.Embed(title="Guide", color=discord.Color(0x2ddde3))
             embed.set_author(name="Nintendo Homebrew")
-            embed.set_thumbnail(url"https://i.imgur.com/CVSu1zc.png")
+            embed.set_thumbnail(url="https://i.imgur.com/CVSu1zc.png")
             embed.url = "https://wiiu.hacks.guide/"
             embed.description = "A complete Wii U custom firmware + coldboothax guide."
             await ctx.send(embed=embed)
