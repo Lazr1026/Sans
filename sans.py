@@ -72,7 +72,7 @@ async def guide(ctx):
             embed.set_author(name="Internet Ivan")
             embed.set_thumbnail(url="https://i.imgur.com/CFp51Hb.jpg")
             embed.url = "https://www.youtube.com/watch?v=tt1rUcng4OU"
-            embed.description = "A complete guide to 3DS custom firmware, from stock to boot9strap."
+            embed.description = "Guide on how to install B9S on your 3ds"
             await ctx.send(embed=embed)
             sent = 1
     if str(ctx.message.content).startswith(".guide wiiu"):
