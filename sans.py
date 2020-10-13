@@ -68,18 +68,38 @@ async def ftp(ctx):
 async def guide(ctx):
     sent = 0
     if str(ctx.message.content).startswith(".guide 3ds"):
-        await ctx.send('https://youtu.be/8yh6h_iwl6I')
-        sent = 1
+            embed = discord.Embed(title="Guide", color=discord.Color(0x56238c))
+            embed.set_author(name="Internet Ivan")
+            embed.set_thumbnail(url="https://i.imgur.com/CFp51Hb.jpg")
+            embed.url = "https://www.youtube.com/watch?v=tt1rUcng4OU"
+            embed.description = "A complete guide to 3DS custom firmware, from stock to boot9strap."
+            await ctx.send(embed=embed)
+            sent = 1
     if str(ctx.message.content).startswith(".guide wiiu"):
-        await ctx.send('https://wiiu.hacks.guide')
-        sent = 1
+            embed = discord.Embed(title="Guide", color=discord.Color(0x2ddde3))
+            embed.set_author(name="Nintendo Homebrew")
+            embed.set_thumbnail(url"https://i.imgur.com/CVSu1zc.png")
+            embed.url = "https://wiiu.hacks.guide/"
+            embed.description = "A complete Wii U custom firmware + coldboothax guide."
+            await ctx.send(embed=embed)
+            sent = 1
     if str(ctx.message.content).startswith(".guide nx"):
-        await ctx.send('https://nh-server.github.io/switch-guide/')
-        sent = 1
-    if str(ctx.message.content).startswith(".guide wii") and str(ctx.message.content) != ".guide wiiu" and str(ctx.message.content) != ".guide wiiu*":
+            embed = discord.Embed(title="Guide", color=discord.Color(0xff0000))
+            embed.set_author(name="NH Discord Server")
+            embed.set_thumbnail(url="https://i.imgur.com/CVSu1zc.png")
+            embed.url = "https://nh-server.github.io/switch-guide/"
+            embed.description = "A Switch guide from stock to Atmosphere."
+            await ctx.send(embed=embed)
+            sent = 1
+    if str(ctx.message.content).startswith(".guide wii") and str(ctx.message.content) != ".guide wiiu":
 #        if str(ctx.message.content) != ".guide wiiu":
-        await ctx.send('https://wii.guide')
-        sent = 1
+            embed = discord.Embed(title="Guide", color=discord.Color(0xdedede))
+            embed.set_author(name="RiiConnect24")
+            embed.set_thumbnail(url="https://i.imgur.com/KI6IXmm.png")
+            embed.url = "https://wii.guide/"
+            embed.description = "A complete original Wii softmod guide."
+            await ctx.send('https://wii.guide')
+            sent = 1
     if sent == 0:
         await ctx.send('Options are: 3ds, wiiu, wii, nx')
 
