@@ -23,6 +23,12 @@ async def on_ready():
 @client.command()
 async def pat(ctx):
     await ctx.send("https://imgur.com/gallery/WyMHuyL")
+@client.command()
+
+async def finalizing(ctx):
+        embed = discord.Embed(title="3ds.hacks.guide Finalizing Setup" color=discord.Color(0x2aa8a0))
+        embed.description = "[Finalizing Setup](https://3ds.hacks.guide/finalizing-setup)"
+        await ctx.send(embed=embed)
 
 @client.command(name="7zip")
 async def _7zip(ctx):
