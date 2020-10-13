@@ -98,7 +98,7 @@ async def guide(ctx):
             embed.set_thumbnail(url="https://i.imgur.com/KI6IXmm.png")
             embed.url = "https://wii.guide/"
             embed.description = "A complete original Wii softmod guide."
-            await ctx.send('https://wii.guide')
+            await ctx.send(embed=embed)
             sent = 1
     if sent == 0:
         await ctx.send('Options are: 3ds, wiiu, wii, nx')
