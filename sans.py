@@ -246,7 +246,9 @@ async def sdlock(ctx):
 
 @client.command()
 async def sdroot(ctx):
-    await ctx.send('https://cdn.discordapp.com/attachments/754753360132833431/757705163220713632/image0.png')
+        embed = discord.Embed(title="* *", color=discord.Color.default())
+        embed.set_image(url="https://cdn.discordapp.com/attachments/754753360132833431/757705163220713632/image0.png")
+        await ctx.send(embed=embed)
 
 @client.command()
 async def r4(ctx):
