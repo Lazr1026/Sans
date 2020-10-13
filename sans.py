@@ -239,7 +239,9 @@ async def lumacheck(ctx):
 
 @client.command()
 async def sdlock(ctx):
-    await ctx.send('https://cdn.discordapp.com/attachments/754753360132833431/757705136612180118/image0.png')
+        embed = discord.Embed(title="Disable write protection on an SD Card", color=discord.Color.default())
+        embed.description = "This switch on the SD Card should be facing upwards, as in this photo. Otherwise, your device will refuse to write to it.\n *If it is write locked, your console and other applications may behave unexpectedly.*\n https://cdn.discordapp.com/attachments/754753360132833431/757705136612180118/image0.png"
+        await ctx.send(embed=embed)
 
 @client.command()
 async def sdroot(ctx):
