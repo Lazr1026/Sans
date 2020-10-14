@@ -421,7 +421,7 @@ async def ban (ctx, member:discord.User=None, reason =None):
         reason = "[no reason specified]"
     message = f"You have been banned from {ctx.guild.name} for {reason}"
     await ctx.guild.ban(member, reason=reason, delete_message_days=0)
-    await ctx.channel.send(f"{member} is now banned.")
+    await ctx.channel.send(f"{member} is now banned for reason {reason}.")
     await member.send(message)
 @client.command()
 @commands.has_any_role('Owner', 'Owner 🍙', 'Staff', 'Admin👮‍', 'Helper')
