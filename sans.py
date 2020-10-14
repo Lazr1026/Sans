@@ -412,10 +412,10 @@ def getLstmSample(checkpointName):
     return sample
 
 @client.command(aliases=["yeet"])
-@commands.has_any_role('Owner', 'Owner 🍙', 'Staff', 'Admin👮‍')
+@commands.has_any_role('Owner', 'Staff', 'Admin')
 async def ban (ctx, member:discord.User=None, reason =None):
     if member == None or member == ctx.message.author:
-        await ctx.channel.send("you can't ban yourself dumbass")
+        await ctx.channel.send("You cannot ban yourself.")
         return
     if reason == None:
         reason = "[no reason specified]"
@@ -424,13 +424,13 @@ async def ban (ctx, member:discord.User=None, reason =None):
     await ctx.channel.send(f"{member} is now banned, for reason {reason}.")
     await member.send(message)
 @client.command()
-@commands.has_any_role('Owner', 'Owner 🍙', 'Staff', 'Admin👮‍', 'Helper')
+@commands.has_any_role('Owner', 'Staff', 'Admin', 'Helper')
 async def kick(ctx, member : discord.Member, *,reason=0):
     await member.kick(reason=reason, delete_message_days=0)
     send = "user "+str(member) + " has been kicked."
     await ctx.send(send)
 @client.command()
-@commands.has_any_role('Owner', 'Owner 🍙', 'Staff', 'Admin👮‍', 'Helper', 'OMEGAMOD')
+@commands.has_any_role('Owner', 'Staff', 'Admin', 'Helper')
 async def say(ctx, message):
     await ctx.message.delete()
     await ctx.send(ctx.message.content[5:])
