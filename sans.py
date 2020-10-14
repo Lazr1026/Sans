@@ -413,7 +413,7 @@ def getLstmSample(checkpointName):
 
 @client.command(aliases=["yeet"])
 @commands.has_any_role('Owner', 'Owner 🍙', 'Staff', 'Admin👮‍')
-async def ban_member(self, ctx, days: typing.Optional[int] = 0, *, reason=""):
+async def ban(ctx, member: typing.Union[discord.Member, int], *, reason=None):
     """Bans a user from the server. OP+ only. Optional: [days] Specify up to 7 days of messages to delete."""
     if await check_bot_or_staff(ctx, member, "ban"):
         return
