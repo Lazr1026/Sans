@@ -375,25 +375,25 @@ async def lazr(ctx):
 async def brick(ctx):
     await ctx.send('nah fuck you :wink:')
     
-@client.command()
-async def lstm(ctx):
-    sent = 0
-    cmd = ctx.message.content[6:]
-    send = "LSTM: " + cmd
-    await ctx.send(send)
-    if cmd == "list":
-        checkpointList = getLstmCheckpoint()
-        await ctx.send(checkpointList)
-        sent = 1
-    if cmd.startswith('sample'):
-        checkpointName = cmd[7:]
-        send = "Sampling " + checkpointName + "..."
-        await ctx.send(send)
-        sample = getLstmSample(checkpointName)
-        await ctx.send(sample)
-        sent = 1
-    if sent == 0:
-        await ctx.send('Invalid LSTM directive.')
+#@client.command()
+#async def lstm(ctx):
+#    sent = 0
+#    cmd = ctx.message.content[6:]
+#    send = "LSTM: " + cmd
+#    await ctx.send(send)
+#    if cmd == "list":
+#        checkpointList = getLstmCheckpoint()
+#        await ctx.send(checkpointList)
+#        sent = 1
+#    if cmd.startswith('sample'):
+#        checkpointName = cmd[7:]
+#        send = "Sampling " + checkpointName + "..."
+#        await ctx.send(send)
+#        sample = getLstmSample(checkpointName)
+#        await ctx.send(sample)
+#        sent = 1
+#    if sent == 0:
+#        await ctx.send('Invalid LSTM directive.')
 
 def getLstmCheckpoint():
     checkpoints = subprocess.run(['bash', '/home/pi/checkpoints.sh'], stdout=subprocess.PIPE)
