@@ -7,7 +7,7 @@ print('stage1')
 from discord.ext import commands
 from discord.ext.commands import MemberConverter
 print('stage2')
-client = commands.Bot(command_prefix = '.', '!')
+client = commands.Bot(command_prefix = ".", "!")
 print('botStage')
 
 tokenfile = open("/home/pi/Sans/token", "r")
