@@ -63,6 +63,16 @@ async def ftp(ctx):
         embed.url = "https://3ds.eiphax.tech/ftp.html"
         embed.description = "A guide on how to set up FTP on your 3ds, Note 3ds and switch are basically the same process"
         await ctx.send(embed=embed)
+        
+@client.command()
+async def db(ctx):
+    sent = 0
+    if str(ctx.message.content).startswith(".db 3ds"):
+            embed = discord.Embed(title="3DS Database", color=discord.Color.dark_orange())
+            embed.url = "http://3dsdb.com/"
+            embed.description = "3DS database for game releases."
+            await ctx.send(embed=embed)
+            sent = 1
     
 @client.command()
 async def guide(ctx):
