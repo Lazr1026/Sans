@@ -27,42 +27,42 @@ async def pat(ctx):
 @client.command()
 
 async def finalizing(ctx):
-        '''links 3DS finalizing setup'''
+        '''Links 3DS Finalizing Setup'''
         embed = discord.Embed(title="3ds.hacks.guide Finalizing Setup", color=discord.Color(0x2aa8a0))
         embed.description = "[Finalizing Setup](https://3ds.hacks.guide/finalizing-setup)"
         await ctx.send(embed=embed)
 
 @client.command(name="7zip")
 async def _7zip(ctx):
-        '''links 7-zip download'''
+        '''Links 7-zip download'''
         embed = discord.Embed(title="7Zip Info", color=discord.Color(0x2aa8a0))
         embed.description = "WinRAR is not a very good archiving utility. You should use 7-Zip instead \n which can be downloaded [here](https://www.7-zip.org)."
         await ctx.send(embed=embed)
         
 @client.command(aliases=["redscr"])
 async def boot3dsx(ctx):
-        '''links boot.3dsx'''
+        '''Links boot.3dsx'''
         embed = discord.Embed(title="The 3DS Homebrew Launcher", color=discord.Color(0x262626))
         embed.description = "[boot.3dsx](https://github.com/fincs/new-hbmenu/releases/download/v2.1.0/boot.3dsx)"
         await ctx.send(embed=embed)
         
 @client.command()
 async def listhelpers(ctx):
-        '''lists helpers in internet ivan's discord guild'''
+        '''Lists helpers in Internet Ivan's discord guild'''
         embed = discord.Embed(title="Here is our helpers:", color=discord.Color(0x20b339))
         embed.description = "**__3DS__**\n <@554832528238968883>\n <@578245729060126730>\n <@504564321716666368>\n <@505832724959985666>\n <@334102523365425163>\n\n **__Wii U__**\n <@664297659686715403>\n\n **__Switch__**\n <@591994499069116417>"
         await ctx.send(embed=embed)
     
 @client.command()
 async def liststaff(ctx):
-        '''lists staff in internet ivan's discord guild'''
+        '''Lists staff in Internet Ivan's discord guild'''
         embed = discord.Embed(title="Here is a list of our staff:", color=discord.Color(0x132e91))
         embed.description = "**__Owner__**\n <@505793682297978900>\n\n **__Admin__**\n <@554832528238968883>\n <@664297659686715403>"
         await ctx.send(embed=embed)
 
 @client.command()
 async def ftp(ctx):
-        '''links FTPD guide'''
+        '''Links FTPD guide'''
         embed = discord.Embed(title="FTP Guide", color=discord.Color(0x2aa8a0))
         embed.set_author(name="Kreig")
         embed.url = "https://3ds.eiphax.tech/ftp.html"
@@ -82,7 +82,7 @@ async def db(ctx):
     
 @client.command()
 async def guide(ctx):
-    '''links the CFW guide for various consoles'''
+    '''Links the CFW guide for various consoles'''
     sent = 0
     if str(ctx.message.content).startswith(".guide 3ds"):
             embed = discord.Embed(title="Guide", color=discord.Color(0x56238c))
@@ -122,7 +122,7 @@ async def guide(ctx):
 
 @client.command()
 async def sans(ctx):
-        '''link the github repo for Sans'''
+        '''Links the github repo for Sans'''
         embed = discord.Embed(title="Sans", color=discord.Color.green())
         embed.set_author(name="Maintained by Lazr, Radeon, and UwUham")
         embed.set_thumbnail(url="https://i.imgur.com/AkOLH6q.png")
@@ -132,7 +132,7 @@ async def sans(ctx):
       
 @client.command(aliases=["browserhack"])
 async def browserhax(ctx):
-        '''link the guide for browserhax 2020'''
+        '''Links the guide for BrowserHax2020'''
         embed = discord.Embed(title="Browserhax", color=discord.Color.blue())
         embed.set_author(name="Nintendo Homebrew and Friends")
         embed.set_thumbnail(url="https://3ds.eiphax.tech/pic/browserhaxfriends.png")
@@ -142,7 +142,7 @@ async def browserhax(ctx):
         
 @client.command(aliases=["ctrtransfer"])
 async def ctr(ctx):
-        '''link the guide for a CTRtransfer'''
+        '''Link the guide for a CTRtransfer'''
         embed = discord.Embed(title="CTRTransfer", color=discord.Color.orange())
         embed.set_author(name="Nintendo Homebrew and Friends")
         embed.set_thumbnail(url="https://images-ext-1.discordapp.net/external/RTj66C6cF6VAI6TsnIcV9mw1zVuhkLuEfwNyBo_22O0/https/nintendohomebrew.com/pics/nhplai.png")
@@ -152,7 +152,7 @@ async def ctr(ctx):
 
 @client.command()
 async def fredtool(ctx):
-        '''link the guide for fredtool'''
+        '''Link the guide for Fredtool'''
         embed = discord.Embed(title="Fredtool", color=discord.Color.orange())
         embed.set_author(name="3ds.hacks.guide")
         embed.url = "https://3ds.hacks.guide/installing-boot9strap-(fredtool).html"
@@ -161,7 +161,7 @@ async def fredtool(ctx):
         
 @client.command()
 async def soundhax(ctx):
-    '''link the guide for soundhax'''
+    '''Link the guide for SoundHax'''
     sent = 0
     if str(ctx.message.content).startswith(".soundhax hbl"):
             embed = discord.Embed(title="Soundhax HBL", color=discord.Color.red())
@@ -182,7 +182,7 @@ async def soundhax(ctx):
 
 @client.command()
 async def atob(ctx):
-        '''link the a9lh to b9s guide'''
+        '''Link the A9LH to B9S guide'''
         embed = discord.Embed(title="Upgrading a9lh to b9s", color=discord.Color(0xde3700))
         embed.set_author(name="NH and Friends")
         embed.set_thumbnail(url="https://nintendohomebrew.com/pics/nhplai.png")
@@ -192,7 +192,7 @@ async def atob(ctx):
 
 @client.command()
 async def troubleshoot(ctx):
-        '''link the 3DS CFW troubleshooting guide'''
+        '''Link the 3DS CFW troubleshooting guide'''
         embed = discord.Embed(title="Troubleshoot", color=discord.Color.purple())
         embed.url = "https://3ds.eiphax.tech/issues.html"
         embed.description = "A simple troubleshooting guide for common CFW and homebrew installation issues when using popular recent 3DS hacking methods."
@@ -200,7 +200,7 @@ async def troubleshoot(ctx):
         
 @client.command()
 async def cartinstall(ctx):
-        '''link the cartinstall guide'''
+        '''Link the CartInstall guide'''
         embed = discord.Embed(title="CartInstall", color=discord.Color.default())
         embed.set_author(name="Internet Ivan")
         embed.set_thumbnail(url="https://i.imgur.com/CFp51Hb.jpg")
@@ -210,7 +210,7 @@ async def cartinstall(ctx):
 
 @client.command(aliases=["godmode9"])
 async def gm9(ctx):
-        '''link the godmode9 usage guide'''
+        '''Link the GodMode9 usage guide'''
         embed = discord.Embed(title="GodMode9 Usage", color=discord.Color(0x851111))
         embed.set_author(name="NH & Friends")
         embed.set_thumbnail(url="https://nintendohomebrew.com/pics/nhplai.png")
@@ -220,7 +220,7 @@ async def gm9(ctx):
 
 @client.command() 
 async def dump(ctx):
-    '''link the dumping guide for various game types'''
+    '''Link the dumping guide for various game types'''
     sent = 0
     if str(ctx.message.content).startswith(".dump ds"):
         await ctx.send('https://youtu.be/x-Et2zkl3Ek')
@@ -237,12 +237,15 @@ async def dump(ctx):
     if str(ctx.message.content).startswith(".dump wii"):
         await ctx.send('https://wii.guide/dump-games')
         sent = 1
+    if str(ctx.message.content).startswith(".dump nx"):
+        await ctx.send('https://suchmememanyskill.github.io/guides/switchdumpguide/')
+        sent = 1
     if sent == 0:
-        await ctx.send('Options are: 3ds, ds, wiiu, vwii, wii')
+        await ctx.send('Options are: 3ds, ds, wiiu, vwii, wii, nx')
 
 @client.command()
 async def invite(ctx):
-    '''show the invites for various discord guilds'''
+    '''Show the invites for various discord guilds'''
     sent = 0
     if str(ctx.message.content).startswith(".invite ivan"):
         await ctx.send('https://discord.gg/NM85JqJ')
@@ -261,7 +264,7 @@ async def invite(ctx):
         
 @client.command()
 async def luma(ctx):
-    '''link the download to various luma3ds versions'''
+    '''Link the download to various Luma3DS versions'''
     sent = 0
     if str(ctx.message.content).startswith(".luma latest"):
         await ctx.send('https://github.com/LumaTeam/Luma3DS/releases/tag/v10.2')
@@ -283,7 +286,7 @@ async def pirate(ctx):
     
 @client.command()
 async def lumacheck(ctx):
-        '''instructions to check a 3DS luma version'''
+        '''Instructions to check a 3DS luma version'''
         embed = discord.Embed(title="How to check your Luma version", color=discord.Color(0x2aa8a0))
         embed.description = "1. Power off your console\n 2. Press and hold the SELECT button, then press power while still holding SELECT\n 3. Send a picture of the Luma configuration"
         await ctx.send(embed=embed)
@@ -298,7 +301,7 @@ async def sdlock(ctx):
 
 @client.command()
 async def sdroot(ctx):
-        '''a visual guide to what in the heck the root means'''
+        '''A visual guide to what in the heck the root means'''
         embed = discord.Embed(title="", color=discord.Color.default())
         embed.set_image(url="https://cdn.discordapp.com/attachments/754753360132833431/757705163220713632/image0.png")
         await ctx.send(embed=embed)
@@ -315,7 +318,7 @@ async def twlmenu(ctx):
     
 @client.command()
 async def twlfix(ctx):
-    '''instructions for fixing a broken TWLNand'''
+    '''Instructions for fixing a broken TWLNand'''
     sent = 0
     if str(ctx.message.content).startswith(".twlfix cfw"):
         await ctx.send('```Use this tool to fix the dsiware on your 3ds!``` <https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/>, please note that you must do a system update after the process has finished')
@@ -341,7 +344,7 @@ async def ap(ctx):
     
 @client.command()
 async def tinydb(ctx):
-    '''links eiphax's 3DS tinydb'''
+    '''Links eiphax's 3DS tinydb'''
     await ctx.send('https://tinydb.eiphax.tech/')
     
 @client.command()
@@ -351,12 +354,12 @@ async def meta(ctx):
     
 @client.command()
 async def cbhc(ctx):
-    '''show some CBHC rules that should be followed'''
+    '''Show some CBHC rules that should be followed'''
     await ctx.send('CBHC Rules:\n - The DS game has to be legitimately installed from the eShop!\n - Don’t format the system while CBHC is installed!\n - Don’t delete the user account that bought the DS VC game!\n - Don’t re-install the same game using WUP Installer or from the eShop!\n - Don’t install Haxchi over CBHC! (You will not brick, but it will cause a boot-loop! Hold A when booting to access the Homebrew Launcher and uninstall CBHC.)\n - Don’t uninstall the DS Virtual Console game without properly uninstalling CBHC first! <https://wiiu.hacks.guide/#/uninstall-cbhc>\n - Don’t move the DS Virtual Console game to a USB drive!')
     
 @client.command()
 async def cfwuses(ctx):
-    '''link a page showing some things you can use CFW for'''
+    '''Link a page showing some things you can use CFW for'''
     sent = 0
     if str(ctx.message.content).startswith(".cfwuses 3ds"):
         await ctx.send('https://3ds.eiphax.tech/tips.html')
@@ -372,29 +375,29 @@ async def cfwuses(ctx):
 
 @client.command()
 async def notbricked(ctx):
-        '''don't worry, you haven't broken it'''
+        ''''Don't worry, you haven't broken it'''
         embed = discord.Embed(title="No you are not bricked")
         embed.description = "if your power LED turns on and off after you installed b9s, you are not bricked and are just missing a file called boot.firm in the root of your SD card to fix the issue\n 1. Check you inserted the SD card in your console\n 2. Place/replace the file, downloading it from [here](https://github.com/LumaTeam/Luma3DS/releases)."
         await ctx.send(embed=embed)
 
 @client.command()
 async def lumabug(ctx):
-    '''show instructions to fix the luma black screen bug'''
+    '''Show instructions to fix the luma black screen bug'''
     await ctx.send('Luma Black Screen Bug If you have Luma3DS and your console is stuck on a black screen after you power it on, follow these steps:\n 1. Power off the console.\n 2. Take out any game cartridge, but leave the SD card in.\n 3. Power on the console.\n 4. Leave the console open and powered on for 10-15 minutes. Do not touch the console during this time.\n If the console boots successfully in that time, the bug is now fixed and is unlikely to happen again. If the console still fails to boot to home menu, come back and ask for more help. Mention that you have already tried the Luma black screen process.')
 
 @client.command()
 async def nospace(ctx):
-    '''instructions on making a 3DS nand backup without enough space'''
+    '''Instructions on making a 3DS nand backup without enough space'''
     await ctx.send('How to make a NAND backup without enough space on your sd card:\n 1. Copy the Nintendo 3DS and the DCIM folder (if you have it) to your computer, then delete them from your SD CARD.\n 2. Boot into GodMode9 and perform the backup again. Once it’s done power off your system.\n 3. Copy all the files in the gm9/out folder on your sd card to a place on your pc. Then delete those files from the SD CARD.\n 4. Copy the Nintendo 3DS and DCIM folder (if you had it) back to your sd card and delete it from your computer.')
 
 @client.command(aliases=["sderrors"])
 async def sd(ctx):
-    '''link a guide to test SD cards for failures'''
+    '''Link a guide to test SD cards for failures'''
     await ctx.send('How to check your sd card for errors:\n <https://3ds.eiphax.tech/sd.html>')
 
 @client.command(aliases=["pfp"])
 async def profile(ctx, user: discord.User):
-    '''fetch a user's profile icon'''
+    '''Fetch a user's profile icon'''
     await ctx.send("Profile image for user: " + str(user))
     pfp = user.avatar_url
     await ctx.send(pfp)
@@ -413,7 +416,7 @@ async def credits(ctx):
     await ctx.send('Lazr: creator and programmer \nRadeon: programmer \nUwUham: telling us discord.js is better')
 @client.command()
 async def sdformat(ctx):
-    '''list tools to format your SD card'''
+    '''List tools to format your SD card'''
     await ctx.send('Common sd formatting tools:\n\n Windows-<http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm>\n\n Linux-<https://gparted.org/download.php> + <https://github.com/dosfstools/dosfstools>\n\n MacOS-<https://support.apple.com/guide/disk-utility/format-a-disk-for-windows-computers-dskutl1010>\n\n MacOS: Always select "MS-DOS (FAT)", even if the card is larger than 32GB.')
 @client.command()
 async def lazr(ctx):
@@ -421,7 +424,7 @@ async def lazr(ctx):
     await ctx.send('lazr says she wants to hardmod, prepare to gain some brain cells')
 @client.command()
 async def brick(ctx):
-    '''why does this even exist'''
+    '''why does this even exist (note from lazr: it exists because yes)'''
     await ctx.send('nah fuck you :wink:')
     
 #@client.command()
@@ -511,7 +514,7 @@ async def snas(ctx):
 
 @client.command()
 async def vc(ctx):
-    '''link a guide for Virtual Console injects'''
+    '''Link a guide for Virtual Console injects'''
     sent = 0
     if str(ctx.message.content).startswith(".vc 3ds"):
             embed=discord.Embed(title="Virtual Console Injects for 3DS", color=discord.Color(0xab1f1f))
@@ -534,7 +537,7 @@ async def vc(ctx):
 
 @client.command()
 async def baninfo(ctx):
-    '''show information about ban risk on various consoles'''
+    '''Show information about Ban Risk on various consoles'''
     sent = 0
     if ctx.message.content == ".baninfo 3ds":
         await ctx.send('''3DS Bans
@@ -543,9 +546,12 @@ However, such things as piracy and cheating online/cheating in multiplayer games
 eShop fraud (eg credit card chargebacks) will also get you banned.
 You can enable online status and Spotpass/Streetpass as these do not seem to be high risk at this time.''')
         sent = 1
+    if ctx.message.content == ".baninfo wiiu":
+        await ctx.send('Just like 3ds, Nintendo has shown such lack of care for the wiiu, so the only ways to get banned are:\n -Cheat in online games\n (I\'ll think of a list later, im tired when writing this)')
+        sent = 1
     if ctx.message.content == ".baninfo switch":
         await ctx.send('Bans on the Switch are complicated. Please read this to learn more about the matter: https://nx.eiphax.tech/ban')
         sent = 1
     if sent == 0:
-        await ctx.send('Invalid syntax. Options are: 3ds, switch.')
+        await ctx.send('Invalid syntax. Options are: 3ds, wiiu, switch')
 client.run(token)
