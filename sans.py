@@ -413,7 +413,7 @@ async def uwuham(ctx):
 @client.command()
 async def credits(ctx):
     '''stuff like this takes time and effort, you know'''
-    await ctx.send('Lazr: creator and programmer \nRadeon: programmer \nUwUham: telling us discord.js is better')
+    await ctx.send('Lazr: creator and programmer \nRadeon: programmer \nUwUham: telling us discord.js is better\n techmuse: PR\'d useful shit\n ItsPizzaTime: helped with proper licensing')
 @client.command()
 async def sdformat(ctx):
     '''List tools to format your SD card'''
