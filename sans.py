@@ -1,25 +1,20 @@
-print('init')
+print('Loading...')
 import discord
 import subprocess
-print('stage0')
 import asyncio 
-print('stage1')
 from discord.ext import commands
 from discord.ext.commands import MemberConverter
-print('stage2')
 client = commands.Bot(command_prefix = '.')
-print('botStage')
 
 tokenfile = open("/home/pi/Sans/token", "r")
 token = tokenfile.read()
 tokenfile.close()
 
-#client.remove_command('help')
-
 @client.event
 async def on_ready():
     print('Ready.')
     print('We have logged in as {0.user}'.format(client))
+
 @client.command()
 async def pat(ctx):
     '''*pats*'''
@@ -109,7 +104,6 @@ async def guide(ctx):
             await ctx.send(embed=embed)
             sent = 1
     if str(ctx.message.content).startswith(".guide wii") and str(ctx.message.content) != ".guide wiiu":
-#        if str(ctx.message.content) != ".guide wiiu":
             embed = discord.Embed(title="Guide", color=discord.Color(0xdedede))
             embed.set_author(name="RiiConnect24")
             embed.set_thumbnail(url="https://i.imgur.com/KI6IXmm.png")
@@ -406,62 +400,31 @@ async def profile(ctx, user: discord.User):
 async def radeon(ctx):
     '''can relate'''
     await ctx.send('you ever just want to sleep? for like a week?')
+
 @client.command()
 async def uwuham(ctx):
     '''something is very wrong here, get the node.js juice'''
     await ctx.send('guys somethings wrong with uwuham hes using python')
+
 @client.command()
 async def credits(ctx):
     '''stuff like this takes time and effort, you know'''
     await ctx.send('Lazr: creator and programmer \nRadeon: programmer \nUwUham: telling us discord.js is better \ntechmuse: PR\'d useful shit \nItsPizzaTime: helped with proper licensing')
+
 @client.command()
 async def sdformat(ctx):
     '''List tools to format your SD card'''
     await ctx.send('Common sd formatting tools:\n\n Windows-<http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm>\n\n Linux-<https://gparted.org/download.php> + <https://github.com/dosfstools/dosfstools>\n\n MacOS-<https://support.apple.com/guide/disk-utility/format-a-disk-for-windows-computers-dskutl1010>\n\n MacOS: Always select "MS-DOS (FAT)", even if the card is larger than 32GB.')
+
 @client.command()
 async def lazr(ctx):
     '''my brain is expanding by the second'''
     await ctx.send('lazr says she wants to hardmod, prepare to gain some brain cells')
+
 @client.command()
 async def brick(ctx):
     '''why does this even exist (note from lazr: it exists because yes)'''
     await ctx.send('nah fuck you :wink:')
-    
-#@client.command()
-#async def lstm(ctx):
-#    sent = 0
-#    cmd = ctx.message.content[6:]
-#    send = "LSTM: " + cmd
-#    await ctx.send(send)
-#    if cmd == "list":
-#        checkpointList = getLstmCheckpoint()
-#        await ctx.send(checkpointList)
-#        sent = 1
-#    if cmd.startswith('sample'):
-#        checkpointName = cmd[7:]
-#        send = "Sampling " + checkpointName + "..."
-#        await ctx.send(send)
-#        sample = getLstmSample(checkpointName)
-#        await ctx.send(sample)
-#        sent = 1
-#    if sent == 0:
-#        await ctx.send('Invalid LSTM directive.')
-
-def getLstmCheckpoint():
-    checkpoints = subprocess.run(['bash', '/home/pi/checkpoints.sh'], stdout=subprocess.PIPE)
-    checkpoints = checkpoints.stdout
-    checkpoints = str(checkpoints)
-    checkpoints = checkpoints.replace('\\n', '\n')
-    checkpoints = "Checkpoints: \n" + "```" + checkpoints + "```"
-    return checkpoints
-
-def getLstmSample(checkpointName):
-    sample = subprocess.run(['bash', '/home/pi/sample.sh', checkpointName], stdout=subprocess.PIPE)
-    sample = sample.stdout
-    sample = str(sample)
-    sample = sample.replace('\\n', '\n')
-    sample = "Sample: \n" + "```" + sample + "```"
-    return sample
 
 @client.command(aliases=["yeet"])
 @commands.has_any_role('Owner', 'Staff', 'Admin')
@@ -476,6 +439,7 @@ async def ban (ctx, member:discord.User=None, reason =None):
     await ctx.guild.ban(member, reason=reason, delete_message_days=0)
     await ctx.channel.send(f"{member} has been b&. 👍")
     await member.send(message)
+
 @client.command()
 @commands.has_any_role('Owner', 'Staff', 'Admin', 'Helper')
 async def kick(ctx, member : discord.Member, *,reason=0):
@@ -483,11 +447,13 @@ async def kick(ctx, member : discord.Member, *,reason=0):
     await member.kick(reason=reason, delete_message_days=0)
     send = "user "+str(member) + " has been kicked."
     await ctx.send(send)
+
 @client.command()
 @commands.has_any_role('Owner', 'Staff', 'Admin', 'Helper')
 async def say(ctx, message):
     await ctx.message.delete()
     await ctx.send(ctx.message.content[5:])
+
 @client.command()
 @commands.has_any_role('Owner')
 async def ctl(ctx):
@@ -507,6 +473,7 @@ async def ctl(ctx):
         sent = 1
     if sent == 0:
         await ctx.send("Invalid argument.")
+
 @client.command()
 async def snas(ctx):
     '''fortnite battle royale'''
@@ -554,4 +521,5 @@ You can enable online status and Spotpass/Streetpass as these do not seem to be 
         sent = 1
     if sent == 0:
         await ctx.send('Invalid syntax. Options are: 3ds, wiiu, switch')
+
 client.run(token)
