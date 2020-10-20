@@ -461,7 +461,7 @@ async def say(ctx, message):
     await ctx.send(ctx.message.content[5:])
 
 @client.command()
-@commands.has_any_role('Owner')
+@commands.has_any_role('Owner', 'Admin')
 async def ctl(ctx):
     '''for use by admins'''
     sent = 0
