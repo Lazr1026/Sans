@@ -58,7 +58,7 @@ async def listhelpers(ctx):
 async def liststaff(ctx):
         '''Lists staff in Internet Ivan's discord guild'''
         embed = discord.Embed(title="Here is a list of our staff:", color=discord.Color(0x132e91))
-        embed.description = "**__Owner__**\n <@505793682297978900>\n\n **__Admin__**\n <@554832528238968883>\n <@664297659686715403>"
+        embed.description = "**__Owner__**\n <@505793682297978900>\n\n **__Admin__**\n <@554832528238968883>\n <@664297659686715403>\n <@505832724959985666>"
         await ctx.send(embed=embed)
 
 @client.command()
