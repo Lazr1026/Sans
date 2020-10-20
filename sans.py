@@ -24,7 +24,7 @@ async def pat(ctx):
 @client.command()
 async def pirate2(ctx):
     '''oi m8 buy your gams (alternative to pirate)'''
-    ctx.send('yeah you just need to go to the eShop, put in the magic numbers on your credit card, and then go and press download on the game you want.')
+    await ctx.send('yeah you just need to go to the eShop, put in the magic numbers on your credit card, and then go and press download on the game you want.')
 
 @client.command()
 async def finalizing(ctx):
