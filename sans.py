@@ -2,6 +2,7 @@ print('Loading...')
 import discord
 import subprocess
 import asyncio 
+from typing import Union
 from discord.ext import commands
 from discord.ext.commands import MemberConverter
 client = commands.Bot(command_prefix = '.')
@@ -521,5 +522,29 @@ You can enable online status and Spotpass/Streetpass as these do not seem to be 
         sent = 1
     if sent == 0:
         await ctx.send('Invalid syntax. Options are: 3ds, wiiu, switch')
+
+@client.command()
+@commands.has_any_role('Owner', 'Staff', 'Admin', 'Helper')
+async def proxyuser(ctx, user: Union[discord.Member, discord.User, int, str], *, message):
+    await ctx.message.delete()
+    if isinstance(user, int):
+        try:    user = await self.bot.fetch_user(user)
+        except: user = str(user)
+    if isinstance(user, str):
+        name = user
+        avatar = "https://cdn.discordapp.com/avatars/689564772512825363/f05524fd9e011108fd227b85c53e3d87.png"
+    else:
+        name = user.display_name
+        avatar = user.avatar_url
+    if message == "@everyone":
+        message = "everyone"
+    webhooks = await ctx.channel.webhooks()
+    if len(webhooks) == 0:
+        webhook = await ctx.channel.create_webhook(name="Temp Webhook For -sudo")
+        await webhook.send(message, username=name, avatar_url=avatar)
+        await webhook.delete()
+    else:
+        webhook = webhooks[0]
+        await webhook.send(message, username=name, avatar_url=avatar)
 
 client.run(token)
