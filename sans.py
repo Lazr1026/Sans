@@ -536,7 +536,7 @@ async def proxyuser(ctx, user: Union[discord.Member, discord.User, int, str], *,
     else:
         name = user.display_name
         avatar = user.avatar_url
-    if message == "@everyone":
+    if message == "@everyone" or message == "@here":
         message = "everyone"
     webhooks = await ctx.channel.webhooks()
     if len(webhooks) == 0:
