@@ -2,7 +2,7 @@ print('Loading...')
 import subprocess
 from inspect import cleandoc
 from typing import Union
-
+import os
 import discord
 from discord.ext import commands
 
@@ -10,7 +10,8 @@ from functions import make_embed
 
 bot = commands.Bot(command_prefix = '.')
 
-with open("/home/pi/Sans/token") as tokenfile:
+tokendir = os.path.dirname(os.path.realpath(__file__))
+with open(tokendir + "/token") as tokenfile:
     token = tokenfile.read()
 
 @bot.event
