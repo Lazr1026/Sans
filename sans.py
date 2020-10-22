@@ -10,7 +10,7 @@ from functions import make_embed
 
 bot = commands.Bot(command_prefix = '.')
 
-with open("token") as tokenfile:
+with open("/home/pi/Sans/token") as tokenfile:
     token = tokenfile.read()
 
 @bot.event
