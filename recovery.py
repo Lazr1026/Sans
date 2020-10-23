@@ -2,7 +2,6 @@ print('Loading...')
 import discord
 import subprocess
 import os
-#from os import system
 import asyncio 
 from discord.ext import commands
 bot = commands.Bot(command_prefix = '.')
@@ -58,7 +57,7 @@ async def reboot(ctx):
 async def service(ctx):
     await ctx.send("Restarting systemd service.")
     subprocess.run(['sudo', 'systemctl', 'restart', 'sans'])
-
+    subprocess.run(['sudo', 'systemctl', 'restart', 'sansrecovery'])
 @bot.command()
 async def code(ctx):
     await ctx.send("https://github.com/Lazr1026/Sans")
