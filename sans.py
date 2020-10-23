@@ -351,7 +351,7 @@ async def luma(ctx, version):
     luma_versions = {
         "latest": "https://github.com/LumaTeam/Luma3DS/releases/latest",
         "7.0.5": "https://github.com/LumaTeam/Luma3DS/releases/tag/v7.0.5",
-        "7.1": "https://github.com/Lazr1026/Sans/edit/master/sans.py"
+        "7.1": "https://github.com/LumaTeam/Luma3DS/releases/tag/v7.1"
     }
     try:    await ctx.send(luma_versions[version])
     except: await ctx.send('```What luma version would you like?\n\n latest\n 7.0.5\n 7.1```')
