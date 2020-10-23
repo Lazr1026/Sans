@@ -2,6 +2,7 @@ print('Loading...')
 import discord
 import subprocess
 import os
+#from os import system
 import asyncio 
 from discord.ext import commands
 bot = commands.Bot(command_prefix = '.')
@@ -27,12 +28,12 @@ async def recover(ctx):
 async def showerr(ctx):
     await ctx.send("Please wait while the error status is obtained. This will take around 10 seconds.")
     cmd = "bash /home/pi/duckdns/err.sh"
-    system(cmd)
+    os.system(cmd)
     errfile = open("/home/pi/ram/err", "r")
     err = errfile.read()
     errfile.close()
     cmd = "bash /home/pi/duckdns/del.sh"
-    system(cmd)
+    os.system(cmd)
     err = "Error (or command output): \n" + "```" + err + "```"
     await ctx.send(err)
 
