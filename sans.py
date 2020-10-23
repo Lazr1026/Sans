@@ -575,28 +575,6 @@ async def say(ctx, message):
     await ctx.message.delete()
     await ctx.send(ctx.message.content[5:])
 
-@bot.group()
-@commands.has_any_role('Owner', 'Admin')
-async def ctl(ctx):
-    '''for use by admins'''
-    if ctx.invoked_subcommand is None:
-        await ctx.send("Invalid argument.")
-
-@ctl.command()
-async def update(ctx):
-    await ctx.send("Updating code. The bot will be down for roughly 15 seconds.")
-    subprocess.run(['sudo', '/home/pi/duckdns/sans.sh'])
-
-@ctl.command()
-async def reboot(ctx):
-    await ctx.send("Rebooting host. Let\'s hope it comes back online.")
-    subprocess.run(['sudo', 'reboot'])
-
-@ctl.command()
-async def service(ctx):
-    await ctx.send("Restarting systemd service.")
-    subprocess.run(['sudo', 'systemctl', 'restart', 'sans'])
-
 @bot.command()
 async def snas(ctx):
     '''fortnite battle royale'''
