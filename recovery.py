@@ -38,5 +38,8 @@ async def showerr(ctx):
     system(cmd)
     err = "Error (or command output): \n" + "```" + err + "```"
     await ctx.send(err)
+@client.command()
+async def code(ctx):
+    await ctx.send("https://github.com/Lazr1026/Sans")
 
 client.run(token)
