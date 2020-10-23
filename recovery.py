@@ -1,7 +1,7 @@
 print('Loading...')
 import discord
 import subprocess
-from os import system
+import os
 import asyncio 
 from discord.ext import commands
 bot = commands.Bot(command_prefix = '.')
