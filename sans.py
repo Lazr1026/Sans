@@ -33,8 +33,10 @@ with open(tokendir + "/token") as tokenfile:
 async def on_ready():
     print('Ready.')
     print(f'We have logged in as {bot.user}')
+
 @bot.command()
 async def amiapirate(ctx):
+    '''Explains what piracy is and how it is bad'''
     await ctx.send("https://3ds.eiphax.tech/piracy")
 
 @bot.command()
