@@ -33,6 +33,9 @@ with open(tokendir + "/token") as tokenfile:
 async def on_ready():
     print('Ready.')
     print(f'We have logged in as {bot.user}')
+@bot.command()
+async def amiapirate(ctx):
+    await ctx.send("https://3ds.eiphax.tech/piracy")
 
 @bot.command()
 async def ping(ctx):
