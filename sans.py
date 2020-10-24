@@ -35,6 +35,10 @@ async def on_ready():
     print(f'We have logged in as {bot.user}')
 
 @bot.command()
+async def ping(ctx):
+    await ctx.send(f'Pong! Latency is {bot.latency}!')
+
+@bot.command()
 async def pat(ctx):
     '''*pats*'''
     await ctx.send("https://imgur.com/gallery/WyMHuyL")
