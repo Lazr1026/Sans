@@ -36,7 +36,7 @@ async def on_ready():
 
 @bot.command()
 async def ping(ctx):
-    await ctx.send(f'Pong! Latency is {bot.latency}!')
+    await ctx.send(f':ping_pong: Pong! Latency is {bot.latency * 1000} ms!')
 
 @bot.command()
 async def pat(ctx):
