@@ -655,7 +655,7 @@ async def proxyuser(ctx, user: Union[discord.Member, discord.User, int, str], *,
         message = message.replace("@here", "here")
     webhooks = await ctx.channel.webhooks()
     if len(webhooks) == 0:
-        webhook = await ctx.channel.create_webhook(name="Temp Webhook For -sudo")
+        webhook = await ctx.channel.create_webhook(name="Webhook for bullshit")
         await webhook.send(message, username=name, avatar_url=avatar)
         await webhook.delete()
     else:
