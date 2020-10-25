@@ -1,5 +1,5 @@
 # Sans
-A discord bot for internet ivans and Lazr's discord servers
+A discord bot for [internet ivans](https://discord.com/invite/5WamMCC) and [Lazr's](https://discord.gg/7ECUWDp) discord guilds
 # Instructions
 1. Install Python3.8 or newer.
 2. Install everything in requirements.txt with `pip install -r path/to/requirements.txt`
