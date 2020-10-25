@@ -69,7 +69,7 @@ async def emptysd(ctx):
     '''For when you lose your sd card after a cfw installation'''
     embed = make_embed(
         name="Have an Empty SD Card?"
-        color=0x000000,
+        color=0x4ceb34,
         description="If you have lost the sd card contents after a CFW installation you need to get `boot.firm` and `boot.3dsx` from [here](https://github.com/LumaTeam/Luma3DS/releases) than follow [Finalizing Setup](https://3ds.hacks.guide/finalizing-setup.html)"
     )
     
