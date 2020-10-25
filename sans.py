@@ -64,17 +64,6 @@ async def finalizing(ctx):
 
     await ctx.send(embed=embed)
 
-@bot.command()
-async def emptysd(ctx):
-    '''For when you lose your sd card after a cfw installation'''
-    embed = make_embed(
-        name="Have an Empty SD Card?"
-        color=0x4ceb34,
-        description="If you have lost the sd card contents after a CFW installation you need to get `boot.firm` and `boot.3dsx` from [here](https://github.com/LumaTeam/Luma3DS/releases) than follow [Finalizing Setup](https://3ds.hacks.guide/finalizing-setup.html)"
-    )
-    
-    await ctx.send(embed=embed)
-    
 @bot.command(name="7zip")
 async def _7zip(ctx):
     '''Links 7-zip download'''
@@ -108,7 +97,6 @@ async def listhelpers(ctx):
             <@504564321716666368>
             <@505832724959985666>
             <@334102523365425163>
-
             **__Wii U__**
             <@664297659686715403>
         """)
@@ -125,7 +113,6 @@ async def liststaff(ctx):
         description=cleandoc("""
             **__Owner__**
             <@505793682297978900>
-
             **__Admin__**
             <@554832528238968883>
             <@664297659686715403>
@@ -650,29 +637,29 @@ async def switch(ctx):
 
 # Gnome: Hey look, it is my code :GWcorbintopkek:
 
-#@bot.command()
-#@commands.has_any_role('Owner', 'Staff', 'Admin', 'Helper')
-#async def proxyuser(ctx, user: Union[discord.Member, discord.User, int, str], *, message):
-#    await ctx.message.delete()
-#    if isinstance(user, int):
-#        try:    user = await self.bot.fetch_user(user)
-#        except: user = str(user)
-#    if isinstance(user, str):
-#        name = user
-#        avatar = "https://cdn.discordapp.com/avatars/689564772512825363/f05524fd9e011108fd227b85c53e3d87.png"
-#    else:
-#        name = user.display_name
-#        avatar = user.avatar_url
-#    if "@everyone" in message or "@here" in message:
-#        message = message.replace("@everyone", "everyone")
-#        message = message.replace("@here", "here")
-#    webhooks = await ctx.channel.webhooks()
-#    if len(webhooks) == 0:
-#        webhook = await ctx.channel.create_webhook(name="Temp Webhook For -sudo")
-#        await webhook.send(message, username=name, avatar_url=avatar)
-#        await webhook.delete()
-#    else:
-#        webhook = webhooks[0]
-#        await webhook.send(message, username=name, avatar_url=avatar)
+@bot.command()
+@commands.has_any_role('Owner', 'Admin')
+async def proxyuser(ctx, user: Union[discord.Member, discord.User, int, str], *, message):
+    await ctx.message.delete()
+    if isinstance(user, int):
+        try:    user = await self.bot.fetch_user(user)
+        except: user = str(user)
+    if isinstance(user, str):
+        name = user
+        avatar = "https://cdn.discordapp.com/avatars/689564772512825363/f05524fd9e011108fd227b85c53e3d87.png"
+    else:
+        name = user.display_name
+        avatar = user.avatar_url
+    if "@everyone" in message or "@here" in message:
+        message = message.replace("@everyone", "everyone")
+        message = message.replace("@here", "here")
+    webhooks = await ctx.channel.webhooks()
+    if len(webhooks) == 0:
+        webhook = await ctx.channel.create_webhook(name="Temp Webhook For -sudo")
+        await webhook.send(message, username=name, avatar_url=avatar)
+        await webhook.delete()
+    else:
+        webhook = webhooks[0]
+        await webhook.send(message, username=name, avatar_url=avatar)
 
 bot.run(token)
