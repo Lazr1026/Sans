@@ -464,7 +464,7 @@ async def meta(ctx):
     '''meta? don't you mean off-topic 2?'''
     await ctx.send('you seem to be in <#759902836116160532>')
 
-@bot.command()
+@bot.command(aliases=["cbhcrules"])
 async def cbhc(ctx):
     '''Show some CBHC rules that should be followed'''
     embed = discord.Embed(
