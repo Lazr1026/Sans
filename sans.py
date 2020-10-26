@@ -512,7 +512,17 @@ async def lumabug(ctx):
 @bot.command()
 async def nospace(ctx):
     '''Instructions on making a 3DS nand backup without enough space'''
-    await ctx.send('How to make a NAND backup without enough space on your sd card:\n 1. Copy the Nintendo 3DS and the DCIM folder (if you have it) to your computer, then delete them from your SD CARD.\n 2. Boot into GodMode9 and perform the backup again. Once it’s done power off your system.\n 3. Copy all the files in the gm9/out folder on your sd card to a place on your pc. Then delete those files from the SD CARD.\n 4. Copy the Nintendo 3DS and DCIM folder (if you had it) back to your sd card and delete it from your computer.')
+    embed = discord.Embed(
+        title="How to make a NAND backup without enough space on your sd card:",
+        description=cleandoc("""
+            1. Copy the Nintendo 3DS and the DCIM folder (if you have it) to your computer, then delete them from your SD CARD.
+            2. Boot into GodMode9 and perform the backup again. Once it’s done power off your system.
+            3. Copy all the files in the gm9/out folder on your sd card to a place on your pc. Then delete those files from the SD CARD.
+            4. Copy the Nintendo 3DS and DCIM folder (if you had it) back to your sd card and delete it from your computer.
+        """)
+    )
+    
+    await ctx.send(embed=embed)
 
 @bot.command(aliases=["sderrors"])
 async def sd(ctx):
