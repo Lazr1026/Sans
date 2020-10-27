@@ -5,4 +5,4 @@ if you want to invite this shit of a bot to your server invite link is [here](ht
 # Instructions
 1. Install [Python3.8](https://www.python.org/downloads/) or newer.
 2. Install everything in requirements.txt with `pip install -r path/to/requirements.txt`
-3. Place the token in a file called `token` in the same directory as `sans.py`, then run `sans.py`.
+3. Place the token in a file called `token` in the same directory as `sans.py`, then run `sans.py`. (note this is the same process with `recovery.py`)
