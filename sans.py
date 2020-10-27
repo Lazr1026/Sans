@@ -373,7 +373,7 @@ async def emptysd(ctx):
     embed = make_embed(
         title="",
         color=0xc99400,
-        description="If you have lost the contents of your SD card with CFW, you will need in SD root: boot.firm and boot.3dsx from luma3ds [latest release](https://github.com/LumaTeam/Luma3DS/releases) Then repeat [finalizing setup](https://3ds.hacks.guide/finalizing-setup)
+        description="If you have lost the contents of your SD card with CFW, you will need in SD root: boot.firm and boot.3dsx from luma3ds [latest release](https://github.com/LumaTeam/Luma3DS/releases) Then repeat [finalizing setup](https://3ds.hacks.guide/finalizing-setup)"
     )
 
     await ctx.send(embed=embed)
