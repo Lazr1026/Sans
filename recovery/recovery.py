@@ -4,7 +4,7 @@ import subprocess
 import os
 import asyncio 
 from discord.ext import commands
-bot = commands.Bot(command_prefix = '.')
+bot = commands.Bot(command_prefix = '!')
 
 tokendir = os.path.dirname(os.path.realpath(__file__))
 with open(tokendir + "/recoverytoken") as tokenfile:
