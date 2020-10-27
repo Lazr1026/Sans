@@ -362,10 +362,23 @@ async def invite(ctx, invite):
         "chill": "7ECUWDp",
         "analog": "7bXpJSh",
         "homebrew": "C29hYvh"
+        "twl": "yD3spjv"
+        "ndsbrew": "XRXjzY5"
     }
 
     try:    await ctx.send(f"https://discord.gg/{invites[invite.lower()]}")
-    except: await ctx.send('Options are: ivan, homebrew, analog, chill.')
+    except: await ctx.send('Options are: ivan, homebrew, analog, chill, twl, ndsbrew.')
+        
+@bot.command()
+async def emptysd(ctx):
+    '''Shows what to do when you\'ve lost the sd contents with a cfw installation'''
+    embed = make_embed(
+        title="",
+        color=0xc99400,
+        description="If you have lost the contents of your SD card with CFW, you will need in SD root: boot.firm and boot.3dsx from luma3ds [latest release](https://github.com/LumaTeam/Luma3DS/releases) Then repeat [finalizing setup](https://3ds.hacks.guide/finalizing-setup)
+    )
+
+    await ctx.send(embed=embed)
 
 @bot.command()
 async def luma(ctx, version):
