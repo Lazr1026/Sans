@@ -362,8 +362,6 @@ async def invite(ctx, invite):
         "chill": "7ECUWDp",
         "analog": "7bXpJSh",
         "homebrew": "C29hYvh"
-        "twl": "yD3spjv"
-        "ndsbrew": "XRXjzY5"
     }
 
     try:    await ctx.send(f"https://discord.gg/{invites[invite.lower()]}")
