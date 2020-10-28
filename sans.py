@@ -542,9 +542,13 @@ async def cfwinstalled(ctx):
     embed = discord.Embed(
         title="No, you are not bricked",
         description=cleandoc("""
-            If you try to install CFW but get a pink screen in the process, no you are not bricked. You already have CFW.
+            If you try to install CFW but get a pink screen in the process, there are two things that might've happened.
+            1. You already have CFW.
+            2. You messed up the file placement somewhere, and need to change it.
             To check if you have CFW, turn off the console, then press and hold select and boot the system while still holding select.
-            You should try finalizing it now, as you probably don't have any software right now. Lucky for you, we have a command for that. Say, .finalize
+            If you boot into Luma, then you have it.
+            If not, you messed up file placement. Did you place things in the ROOT of the sd card? Say, .sdroot
+            If you booted into luma, you should try finalizing it now, as you probably don't have any software right now. Lucky for you, we have a command for that. Say, .finalize
         """)
     )
     
