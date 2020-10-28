@@ -427,6 +427,7 @@ async def sdroot(ctx):
     '''A visual guide to what in the heck the root means'''
     embed = make_embed(
         title="",
+        color=discord.Color.default(),
         image="https://cdn.discordapp.com/attachments/754753360132833431/757705163220713632/image0.png"
     )
 
