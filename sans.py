@@ -537,7 +537,7 @@ async def nospace(ctx):
     await ctx.send(embed=embed)
 
 @bot.command()
-async def cfwinstalled(ctx):
+async def pinkscreen(ctx):
     '''No, you aren't bricked this time, either'''
     embed = discord.Embed(
         title="No, you are not bricked",
