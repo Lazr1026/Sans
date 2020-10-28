@@ -36,7 +36,7 @@ async def on_ready():
 
 @bot.command()
 async def amiapirate(ctx):
-    '''Explains what piracy is and how it is bad'''
+    '''Explains what piracy is and how it's bad'''
     await ctx.send("https://3ds.eiphax.tech/piracy")
 
 @bot.command()
@@ -70,7 +70,7 @@ async def _7zip(ctx):
     embed = make_embed(
         title="7Zip Info",
         color=0x2aa8a0,
-        description="WinRAR is not a very good archiving utility. You should use 7-Zip instead \n which can be downloaded [here](https://www.7-zip.org)."
+        description="WinRAR isn't a very good archiving utility. You should use 7-Zip instead \n which can be downloaded [here](https://www.7-zip.org)."
     )
     await ctx.send(embed=embed)
 
@@ -88,7 +88,7 @@ async def boot3dsx(ctx):
 async def listhelpers(ctx):
     '''Lists helpers in Internet Ivan's discord guild'''
     embed = make_embed(
-        title="Here is our helpers:",
+        title="Here are our helpers:",
         color=0x20b339,
         description=cleandoc("""
             **__3DS__**
@@ -183,7 +183,7 @@ async def wiiu(ctx):
 async def switch(ctx):
     embed = make_embed(
         title="Guide",
-        author="NH Discord Server",
+        author="Nintendo Homebrew",
         color=0xff0000,
         thumbnail="https://i.imgur.com/CVSu1zc.png",
         url="https://nh-server.github.io/switch-guide/",
@@ -222,7 +222,7 @@ async def browserhax(ctx):
     '''Links the guide for BrowserHax2020'''
     embed = make_embed(
         title="Browserhax",
-        author="Nintendo Homebrew and Friends",
+        author="Nintendo Homebrew",
         color=discord.Color.blue(),
         thumbnail="https://3ds.eiphax.tech/pic/browserhaxfriends.png",
         url="https://3ds.hacks.guide/homebrew-launcher-(browserhax-2020)",
@@ -236,7 +236,7 @@ async def ctr(ctx):
     '''Link the guide for a CTRtransfer'''
     embed = make_embed(
         title="CTRTransfer",
-        author="Nintendo Homebrew and Friends",
+        author="Nintendo Homebrew",
         color=discord.Color.orange(),
         thumbnail="https/nintendohomebrew.com/pics/nhplai.png",
         url="https://3ds.hacks.guide/ctrtransfer",
@@ -287,7 +287,7 @@ async def b9s(ctx):
 
 @bot.command()
 async def atob(ctx):
-    '''Link the A9LH to B9S guide'''
+    '''Links the A9LH to B9S guide'''
     embed = make_embed(
         title="Upgrading a9lh to b9s",
         author="NH and Friends",
@@ -301,7 +301,7 @@ async def atob(ctx):
 
 @bot.command()
 async def troubleshoot(ctx):
-    '''Link the 3DS CFW troubleshooting guide'''
+    '''Links the 3DS CFW troubleshooting guide'''
     embed = make_embed(
         title="Troubleshoot",
         color=discord.Color.purple(),
@@ -313,7 +313,7 @@ async def troubleshoot(ctx):
 
 @bot.command()
 async def cartinstall(ctx):
-    '''Link the CartInstall guide'''
+    '''Links the CartInstall guide'''
     embed = make_embed(
         title="CartInstall",
         author="Internet Ivan",
@@ -327,10 +327,10 @@ async def cartinstall(ctx):
 
 @bot.command(aliases=["godmode9"])
 async def gm9(ctx):
-    '''Link the GodMode9 usage guide'''
+    '''Links the GodMode9 usage guide'''
     embed = make_embed(
         title="GodMode9 Usage",
-        author="NH & Friends",
+        author="Nintendo Homebrew",
         color=0x851111,
         thumbnail="https://nintendohomebrew.com/pics/nhplai.png",
         url="https://3ds.hacks.guide/godmode9-usage",
@@ -341,7 +341,7 @@ async def gm9(ctx):
 
 @bot.command()
 async def dump(ctx, console):
-    '''Link the dumping guide for various game types'''
+    '''Links the dumping guide for various game types'''
     dump_guides = {
         "ds": "https://youtu.be/x-Et2zkl3Ek",
         "nx": "https://suchmememanyskill.github.io/guides/switchdumpguide/",
@@ -356,7 +356,7 @@ async def dump(ctx, console):
 
 @bot.command()
 async def invite(ctx, invite):
-    '''Show the invites for various discord guilds'''
+    '''Shows the invites for various discord guilds'''
     invites = {
         "ivan": "NM85JqJ",
         "chill": "7ECUWDp",
@@ -369,7 +369,7 @@ async def invite(ctx, invite):
         
 @bot.command()
 async def emptysd(ctx):
-    '''Shows what to do when you\'ve lost the sd contents with a cfw installation'''
+    '''Shows what to do when you've lost the sd contents with CFW installed.'''
     embed = make_embed(
         title="",
         color=0xc99400,
@@ -380,7 +380,7 @@ async def emptysd(ctx):
 
 @bot.command()
 async def luma(ctx, version):
-    '''Link the download to various Luma3DS versions'''
+    '''Links the download to various Luma3DS versions'''
     luma_versions = {
         "latest": "https://github.com/LumaTeam/Luma3DS/releases/latest",
         "7.0.5": "https://github.com/LumaTeam/Luma3DS/releases/tag/v7.0.5",
@@ -396,7 +396,7 @@ async def pirate(ctx):
 
 @bot.command()
 async def lumacheck(ctx):
-    '''Instructions to check a 3DS luma version'''
+    '''Instructions on how to check a 3DS luma version'''
     embed = make_embed(
         title="How to check your Luma version",
         color=0x2aa8a0,
