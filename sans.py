@@ -547,8 +547,8 @@ async def pinkscreen(ctx):
             2. You messed up the file placement somewhere, and need to change it.
             To check if you have CFW, turn off the console, then press and hold select and boot the system while still holding select.
             If you boot into Luma, then you have it.
-            If not, you messed up file placement. Did you place things in the ROOT of the sd card? Say, .sdroot
-            If you booted into luma, you should try finalizing it now, as you probably don't have any software right now. Lucky for you, we have a command for that. Say, .finalize
+            If not, you messed up file placement. Did you place things in the ROOT of the sd card?
+            If you booted into luma, you should try [finalizing](https://3ds.hacks.guide/finalizing-setup) it now, as you probably don't have any software right now.
         """)
     )
     
