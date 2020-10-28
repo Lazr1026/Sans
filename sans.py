@@ -536,6 +536,20 @@ async def nospace(ctx):
     
     await ctx.send(embed=embed)
 
+@bot.command()
+async def cfwinstalled(ctx):
+    '''No, you aren't bricked this time, either'''
+    embed = discord.Embed(
+        title="No, you are not bricked",
+        description=cleandoc("""
+            If you try to install CFW but get a pink screen in the process, no you are not bricked. You already have CFW.
+            To check if you have CFW, turn off the console, then press and hold select and boot the system while still holding select.
+            You should try finalizing it now, as you probably don't have any software right now. Lucky for you, we have a command for that. Say, .finalize
+        """)
+    )
+    
+    await ctx.send(embed=embed)
+    
 @bot.command(aliases=["sderrors"])
 async def sd(ctx):
     '''Link a guide to test SD cards for failures'''
