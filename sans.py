@@ -539,9 +539,9 @@ async def nospace(ctx):
 
 @bot.command()
 async def pinkscreen(ctx):
-    '''No, you aren't bricked this time, either'''
+    '''No, you didn't break it this time, either'''
     embed = discord.Embed(
-        title="No, you are not bricked",
+        title="No, it's not broken",
         description=cleandoc("""
             If you try to install CFW but get a pink screen in the process, there are two things that might've happened.
             1. You already have CFW.
