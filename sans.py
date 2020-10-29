@@ -651,6 +651,11 @@ async def vc(ctx):
     if sent == 0:
         await ctx.send('Invalid syntax. Options are: 3ds, wiiu.')
 
+@bot.commands()
+async def update(ctx):
+    await ctx.send("Updating code. The bot will be down for roughly 15 seconds.")
+    subprocess.run(['sudo', '/home/lucas/Documents/Sans', 'bash sans.sh'])
+        
 @bot.group()
 async def baninfo(ctx):
     '''Show information about Ban Risk on various consoles'''
