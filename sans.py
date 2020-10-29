@@ -655,7 +655,7 @@ async def vc(ctx):
 @commands.has_any_role('Owner', 'Staff', 'Admin', 'Helper')
 async def update(ctx):
     await ctx.send("Updating code. The bot will be down for roughly 15 seconds.")
-    subprocess.run(['/home/lucas/Documents/Sans', 'bash sans.sh'])
+    subprocess.run(['sudo', '/home/lucas/Documents/Sans', 'bash sans.sh'])
         
 @bot.group()
 async def baninfo(ctx):
