@@ -686,7 +686,7 @@ async def wiiu(ctx):
             Just like 3DS, Nintendo has shown a marked lack of care about bans on the Wii U lately.
             However, such things as piracy and cheating online/cheating in multiplayer games have been known causes for NNID/console bans in the past.
             eShop fraud (eg credit card chargebacks) will also get you banned.
-            It is not recommended to enable online status and Spotpass/Streetpass as there have been [banwaves](https://gbatemp.net/threads/update-regarding-the-recent-3ds-banwave.471781/) most likely due to these.
+            You can enable online status and Spotpass/Streetpass as these do not seem to be high risk at this time.
         """)
     )
     
