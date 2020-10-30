@@ -590,7 +590,7 @@ async def sdformat(ctx):
 @bot.command()
 async def lazr(ctx):
     '''my brain is expanding by the second'''
-    await ctx.send('lazr says she wants to hardmod, prepare to gain some brain cells')
+    await ctx.send('brain expansion\n\n\n bottom text')
 
 @bot.command()
 async def brick(ctx):
