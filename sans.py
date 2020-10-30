@@ -682,7 +682,6 @@ async def _3ds(ctx):
 async def wiiu(ctx):
     embed = discord.Embed(
         title="**WiiU Bans**"
-        color=discord.Color.default(),
         description="Just like 3ds, Nintendo has shown such lack of care for the wiiu, so the only ways to get banned are:\n -Cheat in online games\n -Pirate\n -eshop fraud (eg credit card chargebacks)"
     )
     
@@ -692,7 +691,6 @@ async def wiiu(ctx):
 async def switch(ctx):
     embed = discord.Embed(
         title="**Switch Bans**",
-        color=discord.Color.default(),
         thumbnail="https://eiphax.tech/assets/gunther.png",
         url="https://nx.eiphax.tech/ban",
         description="Bans on the Switch are complicated. Please click the embed header link and read the linked page to learn more."
