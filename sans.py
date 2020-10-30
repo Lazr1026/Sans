@@ -662,26 +662,43 @@ async def update(ctx):
 async def baninfo(ctx):
     '''Show information about Ban Risk on various consoles'''
     if ctx.invoked_subcommand is None:
-        await ctx.send('Invalid syntax. Options are: 3ds, wiiu, switch')
+        await ctx.send('Invalid syntax. Options are: 3ds, wiiu, nx, ns, switch')
 
 @baninfo.command(name="3ds")
 async def _3ds(ctx):
-    await ctx.send(cleandoc('''
-        3DS Bans
-        Nintendo has shown a marked lack of care about bans on the 3DS lately.
-        However, such things as piracy and cheating online/cheating in multiplayer games have been known causes for NNID/console bans in the past.
-        eShop fraud (eg credit card chargebacks) will also get you banned.
-        You can enable online status and Spotpass/Streetpass as these do not seem to be high risk at this time.
-        ''')
+    embed = discord.Embed(
+        title="**3DS Bans**",
+        description=cleandoc("""
+            Nintendo has shown a marked lack of care about bans on the 3DS lately.
+            However, such things as piracy and cheating online/cheating in multiplayer games have been known causes for NNID/console bans in the past.
+            eShop fraud (eg credit card chargebacks) will also get you banned.
+            You can enable online status and Spotpass/Streetpass as these do not seem to be high risk at this time.
+        """)
     )
+    
+    await ctx.send(embed=embed)
 
 @baninfo.command()
 async def wiiu(ctx):
-    await ctx.send('Just like 3ds, Nintendo has shown such lack of care for the wiiu, so the only ways to get banned are:\n -Cheat in online games\n (I\'ll think of a list later, im tired when writing this)')
+    embed = discord.Embed(
+        title="**WiiU Bans**"
+        color=discord.Color.default(),
+        description="Just like 3ds, Nintendo has shown such lack of care for the wiiu, so the only ways to get banned are:\n -Cheat in online games\n -Pirate\n -eshop fraud (eg credit card chargebacks)"
+    )
+    
+    await ctx.send(embed=embed)
 
 @baninfo.command(aliases=("nx", "ns"))
 async def switch(ctx):
-    await ctx.send('Bans on the Switch are complicated. Please read this to learn more about the matter: https://nx.eiphax.tech/ban')
+    embed = discord.Embed(
+        title="**Switch Bans**",
+        color=discord.Color.default(),
+        thumbnail="https://eiphax.tech/assets/gunther.png",
+        url="https://nx.eiphax.tech/ban",
+        description="Bans on the Switch are complicated. Please click the embed header link and read the linked page to learn more."
+    )
+
+    await ctx.send(embed=embed)
 
 # Gnome: Hey look, it is my code :GWcorbintopkek:
 
