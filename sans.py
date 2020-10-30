@@ -49,7 +49,7 @@ async def pat(ctx):
     await ctx.send("https://media1.tenor.com/images/da8f0e8dd1a7f7db5298bda9cc648a9a/tenor.gif?itemid=12018819")
 
 @bot.command()
-async def pirate2(ctx)
+async def pirate2(ctx):
     '''oi m8 buy your gams (alternative to pirate)'''
     await ctx.send('yeah you just need to go to the eShop, put in the magic numbers on your credit card, and then go and press download on the game you want.')
 
