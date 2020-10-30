@@ -702,20 +702,6 @@ async def switch(ctx):
     )
 
     await ctx.send(embed=embed)
-    
-@baninfo.command()
-async def retro(ctx):
-    embed = discord.Embed(
-        title="**DS/Wii Bans**"
-        description=cleandoc("""
-            Retro Nintendo servers are no longer hosted by Nintendo themselves. For the most part they are hosted by Wiimfi. This does not, however, mean that you are free from getting banned.
-            Bans are usually for hacking in games, or having inapropriate names.
-            For a list of current bans and reasons, check [here](https://wiimmfi.de/show-bans).
-            And as a forewarning, do not contact Wiim himself for a ban removal. This may in fact prolong your ban.
-        """)
-    )
-    
-    await ctx.send(embed=embed)
 
 # Gnome: Hey look, it is my code :GWcorbintopkek:
 
