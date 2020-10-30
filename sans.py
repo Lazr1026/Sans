@@ -46,7 +46,7 @@ async def ping(ctx):
 @bot.command()
 async def pat(ctx):
     '''*pats*'''
-    await ctx.send("https://imgur.com/gallery/WyMHuyL")
+    await ctx.send("https://media1.tenor.com/images/da8f0e8dd1a7f7db5298bda9cc648a9a/tenor.gif?itemid=12018819")
 
 @bot.command()
 async def pirate2(ctx):
