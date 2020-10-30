@@ -86,10 +86,10 @@ async def boot3dsx(ctx):
 
 @bot.command(aliases=["ipaddress"])
 async def ip(ctx):
-    '''shows how to get the ip address of your 3ds'''
+    '''Shows how to get the ip address of your 3ds'''
     embed = make_embed(
         title="How to get your 3DS's IP Address (CFW)"
-        color=0xF5F5DC,
+        color=discord.Color.default,
         description=cleandoc("""
             1. FBI
             2. Remote Install
