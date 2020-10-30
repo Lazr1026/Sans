@@ -89,7 +89,6 @@ async def ip(ctx):
     '''Shows how to get the ip address of your 3ds'''
     embed = make_embed(
         title="How to get your 3DS's IP Address (CFW)"
-        color=discord.Color.default(),
         description=cleandoc("""
             1. FBI
             2. Remote Install
