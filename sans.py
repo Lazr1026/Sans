@@ -84,23 +84,6 @@ async def boot3dsx(ctx):
     )
     await ctx.send(embed=embed)
 
-@bot.command(aliases=["ipaddress"])
-async def ip(ctx):
-    '''Shows how to get the ip address of your 3ds'''
-    embed = make_embed(
-        title="How to get your 3DS's IP Address (CFW)"
-        description=cleandoc("""
-            1. FBI
-            2. Remote Install
-            3. Receive URLs over the network
-            **Check your 3DSs IP (Homebrew)**
-            1. Open Homebrew Launcher
-            2. Press Y
-        """)
-    )
-    
-    await ctx.send(embed=embed)
-    
 @bot.command()
 async def listhelpers(ctx):
     '''Lists helpers in Internet Ivan's discord guild'''
