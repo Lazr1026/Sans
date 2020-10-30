@@ -657,6 +657,7 @@ async def vc(ctx):
 async def update(ctx):
     await ctx.send("Updating code. The bot will be down for roughly 15 seconds.")
     subprocess.run(['bash', '/home/lucas/Documents/Sans/sans.sh'])
+    subprocess.run(['python3', '/home/lucas/Documents/sans/sans.py'])
         
 @bot.group()
 async def baninfo(ctx):
