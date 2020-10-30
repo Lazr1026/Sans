@@ -662,7 +662,7 @@ async def update(ctx):
 async def baninfo(ctx):
     '''Show information about Ban Risk on various consoles'''
     if ctx.invoked_subcommand is None:
-        await ctx.send('Invalid syntax. Options are: 3ds, wiiu, nx, ns, switch')
+        await ctx.send('Invalid syntax. Options are: 3ds, wiiu, nx, ns, switch, retro')
 
 @baninfo.command(name="3ds")
 async def _3ds(ctx):
@@ -701,20 +701,6 @@ async def switch(ctx):
         description="Bans on the Switch are complicated. Please click the embed header link and read the linked page to learn more."
     )
 
-    await ctx.send(embed=embed)
-    
-@baninfo.command()
-async def retro(ctx):
-    embed = discord.Embed(
-        title="**DS/Wii Bans**"
-        description=cleandoc("""
-            Retro Nintendo servers are no longer hosted by Nintendo themselves. For the most part they are hosted by Wiimfi. This does not, however, mean that you are free from getting banned.
-            Bans are usually for hacking in games, or having inapropriate names.
-            For a list of current bans and reasons, check [here](https://wiimmfi.de/show-bans).
-            And as a forewarning, do not contact Wiim himself for a ban removal. This may in fact prolong your ban.
-        """)
-    )
-    
     await ctx.send(embed=embed)
 
 # Gnome: Hey look, it is my code :GWcorbintopkek:
