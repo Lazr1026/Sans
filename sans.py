@@ -683,24 +683,6 @@ async def wiiu(ctx):
 async def switch(ctx):
     await ctx.send('Bans on the Switch are complicated. Please read this to learn more about the matter: https://nx.eiphax.tech/ban')
 
-@bot.command(aliases=["ipaddress"])
-async def ip(ctx):
-    '''Shows how to get the ip address of your 3ds'''
-    embed = make_embed(
-        title="How to get your 3DS's IP Address (CFW)"
-        color=discord.Color.default,
-        description=cleandoc("""
-            1. FBI
-            2. Remote Install
-            3. Receive URLs over the network
-            **Check your 3DSs IP (Homebrew)**
-            1. Open Homebrew Launcher
-            2. Press Y
-        """)
-    )
-    
-    await ctx.send(embed=embed)
-    
 # Gnome: Hey look, it is my code :GWcorbintopkek:
 
 @bot.command()
