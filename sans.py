@@ -686,7 +686,7 @@ async def wiiu(ctx):
             Just like 3DS, Nintendo has shown a marked lack of care about bans on the Wii U lately.
             However, such things as piracy and cheating online/cheating in multiplayer games have been known causes for NNID/console bans in the past.
             eShop fraud (eg credit card chargebacks) will also get you banned.
-            You can enable online status and Spotpass/Streetpass as these do not seem to be high risk at this time.
+            It is not recommended to enable online status and Spotpass/Streetpass as there have been [banwaves](https://gbatemp.net/threads/update-regarding-the-recent-3ds-banwave.471781/) most likely due to these.
         """)
     )
     
@@ -701,6 +701,20 @@ async def switch(ctx):
         description="Bans on the Switch are complicated. Please click the embed header link and read the linked page to learn more."
     )
 
+    await ctx.send(embed=embed)
+    
+@baninfo.command()
+async def retro(ctx):
+    embed = discord.Embed(
+        title="**DS/Wii Bans**"
+        description=cleandoc("""
+            Retro Nintendo servers are no longer hosted by Nintendo themselves. For the most part they are hosted by Wiimfi. This does not, however, mean that you are free from getting banned.
+            Bans are usually for hacking in games, or having inapropriate names.
+            For a list of current bans and reasons, check [here](https://wiimmfi.de/show-bans).
+            And as a forewarning, do not contact Wiim himself for a ban removal. This may in fact prolong your ban.
+        """)
+    )
+    
     await ctx.send(embed=embed)
 
 # Gnome: Hey look, it is my code :GWcorbintopkek:
