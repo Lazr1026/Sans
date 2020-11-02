@@ -193,6 +193,7 @@ async def switch(ctx):
 @guide.command()
 async def wii(ctx):
     embed = make_embed(
+        title="Guide"
         author="RiiConnect24",
         color=0xdedede,
         thumbnail="https://i.imgur.com/KI6IXmm.png",
