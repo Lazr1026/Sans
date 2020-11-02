@@ -662,7 +662,7 @@ async def update(ctx):
 @commands.has_any_role('Owner', 'Staff', 'Admin')
 async def reboot(ctx):
     await ctx.send("Rebooting bot. Bot will be down for a few seconds.")
-    subprocess.run(['bash', '/home/lucas/Documents/Sans/reboot.sh])
+    subprocess.run(['bash', '/home/lucas/Documents/Sans/reboot.sh]')
         
 @bot.group()
 async def baninfo(ctx):
