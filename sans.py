@@ -193,10 +193,12 @@ async def switch(ctx):
 @guide.command()
 async def wii(ctx):
     embed = make_embed(
-        author="RiiConnect24",
-        color=0xdedede,
+        title="Guide",
+        author="RiiConnect 24",
+        color=discord.Color.default(),
         thumbnail="https://i.imgur.com/KI6IXmm.png",
-        description="A complete original Wii softmod guide."
+        url="https://wii.guide/",
+        description="A complete Wii custom firmware guide"
     )
 
     await ctx.send(embed=embed)
@@ -612,6 +614,38 @@ async def sd(ctx):
     '''Link a guide to test SD cards for failures'''
     await ctx.send('How to check your sd card for errors:\n <https://3ds.eiphax.tech/sd.html>')
 
+@bot.command(aliases=["formatsd"])
+async def sdformat(ctx):
+    embed = make_embed(
+        title="**Common SD Formatting tools**",
+        color=0x2aa8a0,
+        description=cleandoc("""
+            Windows-[guiformat](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm)
+
+            Linux-[gparted](https://gparted.org/download.php) + [dosfstools](https://github.com/dosfstools/dosfstools)
+
+            MacOS-[Disk Utility](https://support.apple.com/guide/disk-utility/format-a-disk-for-windows-computers-dskutl1010)
+            
+            MacOS: Always select "MS-DOS (FAT)", even if the card is larger than 32GB.
+        """)
+    )
+
+    await ctx.send(embed=embed)
+    
+@bot.command()
+async def serial(ctx):
+    '''Shows how to check your Switch's serial number'''
+    embed = make_embed(
+        title="**Switch Serial Number**",
+        color=discord.Color.default(),
+        image="https://i.imgur.com/03NfeFN.png",
+        description=cleandoc("""
+           Dont know where your switch serial number is? Look at this image to help ya out
+        """)
+    )
+
+    await ctx.send(embed=embed)
+    
 @bot.command(aliases=["pfp"])
 async def profile(ctx, user: discord.User):
     '''Fetch a user's profile icon'''
@@ -633,11 +667,6 @@ async def uwuham(ctx):
 async def credits(ctx):
     '''stuff like this takes time and effort, you know'''
     await ctx.send('Lazr: creator and programmer \nRadeon: programmer \nUwUham: telling us discord.js is better \ntechmuse: PR\'d useful shit \nItsPizzaTime: helped with proper licensing\n Gnome: Cleaned everything up massively')
-
-@bot.command()
-async def sdformat(ctx):
-    '''List tools to format your SD card'''
-    await ctx.send('Common sd formatting tools:\n\n Windows-<http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm>\n\n Linux-<https://gparted.org/download.php> + <https://github.com/dosfstools/dosfstools>\n\n MacOS-<https://support.apple.com/guide/disk-utility/format-a-disk-for-windows-computers-dskutl1010>\n\n MacOS: Always select "MS-DOS (FAT)", even if the card is larger than 32GB.')
 
 @bot.command()
 async def lazr(ctx):
