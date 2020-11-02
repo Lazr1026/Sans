@@ -577,6 +577,20 @@ async def sd(ctx):
     '''Link a guide to test SD cards for failures'''
     await ctx.send('How to check your sd card for errors:\n <https://3ds.eiphax.tech/sd.html>')
 
+@bot.command()
+async def serial(ctx):
+    '''Shows how to check your Switch's serial number'''
+    embed = make_embed(
+        title="**Switch Serial Number**",
+        color=discord.Color.default(),
+        image="https://i.imgur.com/03NfeFN.png",
+        description=cleandoc("""
+           Dont know where your switch serial number is? Look at this image to help ya out
+        """)
+    )
+
+    await ctx.send(embed=embed)
+    
 @bot.command(aliases=["pfp"])
 async def profile(ctx, user: discord.User):
     '''Fetch a user's profile icon'''
