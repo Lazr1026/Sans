@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const Guild = new Discord.Guild(client, data);
+const Guild = new Discord.Guild(client);
 const prefix = "."
 const token = require("./token.json")
 
