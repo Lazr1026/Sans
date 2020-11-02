@@ -556,18 +556,19 @@ async def pinkscreen(ctx):
     
     await ctx.send(embed=embed)
     
-@bot.command()	
-async def neworold(ctx):	
-    '''Which one is which?'''	
-    embed = make_embed(	
-        title="How to tell a New 3DS from an Old 3DS",	
-        color=discord.Color.default(),	
-        image="https://sagamer.co.za/wp-content/uploads/2014/10/New-3DS-vs-3DS-SA-Gamer.jpg"	
-        description=cleandoc("""	
-        If you are confused on how to determine a New3DS from an old one, just look above the abxy buttons.	
-            If it is a New3DS, then there will be a c-stick. If it's an old 3DS, then there will be nothing above the abxy buttons.	
-        """)	
-    )	
+@bot.command()
+async def sdlock(ctx):
+    '''Which one is which?'''
+    embed = make_embed(
+        title="How to tell what type of 3DS you have",
+        color=discord.Color.default(),
+        image="https://sagamer.co.za/wp-content/uploads/2014/10/New-3DS-vs-3DS-SA-Gamer.jpg",
+        description=cleandoc("""
+            Telling apart a New3DS from an old one is pretty simple. All you need to do is look above the abxy buttons.
+            If there is a c-stick above the abxy buttons, then you have a New3DS.
+            If there isn't, then you have an old 3DS.
+        """)
+    )
 
     await ctx.send(embed=embed)
     
