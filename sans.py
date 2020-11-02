@@ -196,6 +196,7 @@ async def wii(ctx):
         author="RiiConnect24",
         color=0xdedede,
         thumbnail="https://i.imgur.com/KI6IXmm.png",
+        url="https://wii.guide/",
         description="A complete original Wii softmod guide."
     )
 
