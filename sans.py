@@ -614,6 +614,22 @@ async def sd(ctx):
     '''Link a guide to test SD cards for failures'''
     await ctx.send('How to check your sd card for errors:\n <https://3ds.eiphax.tech/sd.html>')
 
+@bot.command(aliases=["formatsd"])
+async def sdformat(ctx):
+    embed = make_embed(
+        title="**Common SD Formatting tools**",
+        color=0x2aa8a0,
+        description=cleandoc("""
+            Windows-[guiformat](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm)
+
+            Linux-[gparted](https://gparted.org/download.php) + [dosfstools](https://github.com/dosfstools/dosfstools)
+
+            MacOS-[Disk Utility](https://support.apple.com/guide/disk-utility/format-a-disk-for-windows-computers-dskutl1010)
+        """)
+    )
+
+    await ctx.send(embed=embed)
+    
 @bot.command()
 async def serial(ctx):
     '''Shows how to check your Switch's serial number'''
@@ -649,11 +665,6 @@ async def uwuham(ctx):
 async def credits(ctx):
     '''stuff like this takes time and effort, you know'''
     await ctx.send('Lazr: creator and programmer \nRadeon: programmer \nUwUham: telling us discord.js is better \ntechmuse: PR\'d useful shit \nItsPizzaTime: helped with proper licensing\n Gnome: Cleaned everything up massively')
-
-@bot.command()
-async def sdformat(ctx):
-    '''List tools to format your SD card'''
-    await ctx.send('Common sd formatting tools:\n\n Windows-<http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm>\n\n Linux-<https://gparted.org/download.php> + <https://github.com/dosfstools/dosfstools>\n\n MacOS-<https://support.apple.com/guide/disk-utility/format-a-disk-for-windows-computers-dskutl1010>\n\n MacOS: Always select "MS-DOS (FAT)", even if the card is larger than 32GB.')
 
 @bot.command()
 async def lazr(ctx):
