@@ -197,7 +197,7 @@ async def wii(ctx):
         author="RiiConnect 24",
         color=discord.Color.default(),
         thumbnail="https://i.imgur.com/KI6IXmm.png",
-        url="https://wii.guide/,
+        url="https://wii.guide/",
         description="A complete Wii custom firmware guide"
     )
 
