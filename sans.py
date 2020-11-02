@@ -625,6 +625,8 @@ async def sdformat(ctx):
             Linux-[gparted](https://gparted.org/download.php) + [dosfstools](https://github.com/dosfstools/dosfstools)
 
             MacOS-[Disk Utility](https://support.apple.com/guide/disk-utility/format-a-disk-for-windows-computers-dskutl1010)
+            
+            MacOS: Always select "MS-DOS (FAT)", even if the card is larger than 32GB.
         """)
     )
 
