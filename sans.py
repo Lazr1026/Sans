@@ -437,7 +437,7 @@ async def sdroot(ctx):
 async def neworold(ctx):
     '''Which one is which?'''
     embed = make_embed(
-        title="How to tell a New3DS from an Old 3DS",
+        title="How to tell a New 3DS from an Old 3DS",
         color=discord.Color.default(),
         image="https://sagamer.co.za/wp-content/uploads/2014/10/New-3DS-vs-3DS-SA-Gamer.jpg"
         description=cleandoc("""
