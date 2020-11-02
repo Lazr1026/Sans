@@ -193,12 +193,12 @@ async def switch(ctx):
 @guide.command()
 async def wii(ctx):
     embed = make_embed(
-        title="Guide"
-        #author="RiiConnect24",
-        color=0xdedede,
+        title="Guide",
+        author="RiiConnect 24",
+        color=discord.Color.default(),
         thumbnail="https://i.imgur.com/KI6IXmm.png",
-        url="https://wii.guide/",
-        description="A complete original Wii softmod guide."
+        url="https://wii.guide/,
+        description="A complete Wii custom firmware guide"
     )
 
     await ctx.send(embed=embed)
