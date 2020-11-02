@@ -663,6 +663,12 @@ async def update(ctx):
 async def reboot(ctx):
     await ctx.send("Rebooting bot. Bot will be down for a few seconds.")
     subprocess.run(['bash', '/home/lucas/Documents/Sans/recovery/reboot.sh'])
+    
+@bot.command()
+@command.has_any_role('Owner', 'Staff', 'Admin')
+async def load(ctx):
+    await ctx.send("Loading the JS Code, wont take very long.")
+    subprocess.run(['bash', '/home/lucas/Documents/Sans/recovery/load.sh'])
         
 @bot.group()
 async def baninfo(ctx):
