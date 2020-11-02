@@ -443,6 +443,7 @@ async def neworold(ctx):
         description=cleandoc("""
             If you are confused on how to determine a New3DS from an old one, just look above the abxy buttons.
             If it is a New3DS, then there will be a c-stick. If it's an old 3DS, then there will be nothing above the abxy buttons.
+        """)
     )
     
     await ctx.send(embed=embed)
