@@ -665,7 +665,7 @@ async def reboot(ctx):
     subprocess.run(['bash', '/home/lucas/Documents/Sans/recovery/reboot.sh'])
     
 @bot.command()
-@command.has_any_role('Owner', 'Staff', 'Admin')
+@commands.has_any_role('Owner', 'Staff', 'Admin')
 async def load(ctx):
     await ctx.send("Loading the JS Code, wont take very long.")
     subprocess.run(['bash', '/home/lucas/Documents/Sans/recovery/load.sh'])
