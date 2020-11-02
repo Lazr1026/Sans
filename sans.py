@@ -433,20 +433,6 @@ async def sdroot(ctx):
 
     await ctx.send(embed=embed)
     
-@bot.command()
-async def neworold(ctx):
-    '''Which one is which?'''
-    embed = make_embed(
-        title="How to tell a New 3DS from an Old 3DS",
-        color=discord.Color.default(),
-        image="https://sagamer.co.za/wp-content/uploads/2014/10/New-3DS-vs-3DS-SA-Gamer.jpg"
-        description=cleandoc("""
-        If you are confused on how to determine a New3DS from an old one, just look above the abxy buttons.
-            If it is a New3DS, then there will be a c-stick. If it's an old 3DS, then there will be nothing above the abxy buttons.
-        """)
-    )
-    
-    await ctx.send(embed=embed)
 
 @bot.command()
 async def r4(ctx):
