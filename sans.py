@@ -557,7 +557,7 @@ async def pinkscreen(ctx):
     await ctx.send(embed=embed)
     
 @bot.command()
-async def sdlock(ctx):
+async def neworold(ctx):
     '''Which one is which?'''
     embed = make_embed(
         title="How to tell what type of 3DS you have",
