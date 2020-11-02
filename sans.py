@@ -26,7 +26,7 @@ def make_embed(title=None, description=None, author=None, thumbnail=None, url=No
 bot = commands.Bot(command_prefix = '.', allowed_mentions=discord.AllowedMentions(everyone=False, roles=False, users=True))
 
 tokendir = os.path.dirname(os.path.realpath(__file__))
-with open(tokendir + "/token") as tokenfile:
+with open(tokendir + "/token.json") as tokenfile:
     token = tokenfile.read()
 
 @bot.event
