@@ -556,11 +556,16 @@ async def pinkscreen(ctx):
     
     await ctx.send(embed=embed)
     
-@bot.command()
+@bot.group()
 async def neworold(ctx):
-    '''Which one is which?'''
+    '''Shows which version of console you have'''
+    if ctx.invoked_subcommand is None:
+        await ctx.send('Invalid syntax. Options are: 3ds, wii, nx, ns, switch')
+        
+@neworold.command(name="3ds")
+async def _3ds(ctx):
     embed = make_embed(
-        title="How to tell what type of 3DS you have",
+        title="**3DS Versions**",
         color=discord.Color.default(),
         image="https://sagamer.co.za/wp-content/uploads/2014/10/New-3DS-vs-3DS-SA-Gamer.jpg",
         description=cleandoc("""
@@ -572,6 +577,36 @@ async def neworold(ctx):
 
     await ctx.send(embed=embed)
     
+@neworold.command(aliases=("nx","ns"))
+async def switch(ctx):
+    embed = make_embed(
+        title="**Switch Versions**",
+        color=discord.Color.default(),
+        image="https://www.imore.com/sites/imore.com/files/styles/large/public/field/image/2019/08/switch-packaging-comparison.jpg",
+        description=cleandoc("""
+            Telling apart a new switch from an old one isn't like how you would do it with the 3DS.
+            One way is by looking at the serial numbers on the switch. These can tell you exactly which version you have.
+            If you just want a generalization of which version you have, just look at the box.
+        """)
+    )
+
+    await ctx.send(embed=embed)
+
+@neworold.command()
+async def wii(ctx):
+    embed = make_embed(
+        title="**Wii Versions**",
+        color=discord.Color.default(),
+        image="https://retrogamebuyer.com/wp-content/uploads/2020/03/RVL-001-vs-101.png?ezimgfmt=rs:372x186/rscb1/ng:webp/ngcb1",
+        description=cleandoc("""
+            Telling apart the different Wii versions is by far the easiest.
+            If your Wii has slots for Gamecube memory cards and controllers, then you have an original Wii
+            If it doesn't, then you have a newer one.
+        """)
+    )
+
+    await ctx.send(embed=embed)
+
 @bot.command(aliases=["sderrors"])
 async def sd(ctx):
     '''Link a guide to test SD cards for failures'''
