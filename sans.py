@@ -359,7 +359,7 @@ async def invite(ctx, invite):
     '''Shows the invites for various discord guilds'''
     invites = {
         "ivan": "NM85JqJ",
-        "chill": "7ECUWDp",
+        "chill": "eTS6yym",
         "analog": "7bXpJSh",
         "homebrew": "C29hYvh"
     }
