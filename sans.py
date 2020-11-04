@@ -34,6 +34,28 @@ async def on_ready():
     print('Ready.')
     print(f'We have logged in as {bot.user}')
 
+#If you want to get recognized for your contributions, add to the command below.
+
+@bot.command()
+async def contributors(ctx):
+    '''Lists currect Sans contributors'''
+    embed = discord.Embed(
+        title="List of current Sans contributors",
+        description=cleandoc("""
+            Lazr1026
+            476MHz (Radeon)
+            Uwuham
+            Techmuse
+            Gnome!
+            ItsPizzaTime1501
+            bleck9999
+            Maretu (ray)
+            Meganium97 (Dire)
+        """)
+    )
+    
+    await ctx.send(embed=embed)
+
 @bot.command()
 async def amiapirate(ctx):
     '''Explains what piracy is and how it's bad'''
