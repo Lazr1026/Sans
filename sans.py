@@ -57,6 +57,11 @@ async def contributors(ctx):
     await ctx.send(embed=embed)
 
 @bot.command()
+async def halp(ctx):
+    '''Halp'''
+    await ctx.send("no")
+
+@bot.command()
 async def amiapirate(ctx):
     '''Explains what piracy is and how it's bad'''
     await ctx.send("https://3ds.eiphax.tech/piracy")
