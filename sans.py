@@ -42,15 +42,15 @@ async def contributors(ctx):
     embed = discord.Embed(
         title="List of current Sans contributors",
         description=cleandoc("""
-            Lazr1026
-            476MHz (Radeon)
-            Uwuham
-            Techmuse
-            Gnome!
-            ItsPizzaTime1501
-            bleck9999
-            Maretu (ray)
-            Meganium97 (Dire)
+            Lazr1026 - Creator and programmer
+            476MHz (Radeon) - Programmer
+            Uwuham - Telling us discord.js is better
+            Techmuse - PR'd useful shit
+            Gnome! - Cleaned everything up massively
+            ItsPizzaTime1501 - Helped with proper licensing
+            bleck9999 - (I'm not sure what bleck did, feel free to edit this part - Meganium97)
+            Maretu (ray) - Fixed our terrible grammar
+            Meganium97 (Dire) - Idk, what are you asking me for?
         """)
     )
     
@@ -684,11 +684,6 @@ async def radeon(ctx):
 async def uwuham(ctx):
     '''something is very wrong here, get the node.js juice'''
     await ctx.send('guys somethings wrong with uwuham hes using python')
-
-@bot.command()
-async def credits(ctx):
-    '''stuff like this takes time and effort, you know'''
-    await ctx.send('Lazr: creator and programmer \nRadeon: programmer \nUwUham: telling us discord.js is better \ntechmuse: PR\'d useful shit \nItsPizzaTime: helped with proper licensing\n Gnome: Cleaned everything up massively')
 
 @bot.command()
 async def lazr(ctx):
