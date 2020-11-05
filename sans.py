@@ -252,7 +252,7 @@ async def switch(ctx):
     embed = make_embed(
         title="What?",
         color=0x006f9e,
-        url"https://nx.eiphax.tech/nutshell.html",
+        url="https://nx.eiphax.tech/nutshell.html",
         description="Confused? Click the link above, it'll show you some basic things about the Switch and CFW"
     )
     
