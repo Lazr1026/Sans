@@ -708,22 +708,22 @@ async def profile(ctx, user: discord.User):
     pfp = user.avatar_url
     await ctx.send(pfp)
 
-@bot.command(aliases=["Radeon"])
+@bot.command()
 async def radeon(ctx):
     '''can relate'''
     await ctx.send('you ever just want to sleep? for like a week?')
 
-@bot.command(aliases=["Uwuham"])
+@bot.command()
 async def uwuham(ctx):
     '''something is very wrong here, get the node.js juice'''
     await ctx.send('guys somethings wrong with uwuham hes using python')
 
-@bot.command(aliases=["Lazr"])
+@bot.command()
 async def lazr(ctx):
     '''my brain is expanding by the second'''
     await ctx.send('brain expansion\n\n\n bottom text')
     
-@bot.command(aliases=["Mega97"])
+@bot.command()
 async def mega97(ctx):
     '''Bro it makes so sense'''
     await ctx.send("y'all ever just want to 🏱︎☜︎☞︎☟︎𓋴𓂧𓈖𓋴𓊪𓅱𓄿👌︎✞︎👍︎👎︎𓅓𓎡𓈖𓄿𓊃☜︎🕈︎✌︎☪︎💧︎☜︎👎︎☞︎✞︎𓋴𓆑𓂧𓈖☟︎☠︎☟︎☝︎☞︎👍︎✠︎☞︎☝︎☝︎☞︎👍︎")
