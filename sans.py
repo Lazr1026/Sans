@@ -57,11 +57,6 @@ async def contributors(ctx):
     await ctx.send(embed=embed)
 
 @bot.command()
-async def Mega97(ctx):
-    '''Bro it makes so sense'''
-    await ctx.send("y'all ever just want to 🏱︎☜︎☞︎☟︎𓋴𓂧𓈖𓋴𓊪𓅱𓄿👌︎✞︎👍︎👎︎𓅓𓎡𓈖𓄿𓊃☜︎🕈︎✌︎☪︎💧︎☜︎👎︎☞︎✞︎𓋴𓆑𓂧𓈖☟︎☠︎☟︎☝︎☞︎👍︎✠︎☞︎☝︎☝︎☞︎👍︎")
-
-@bot.command()
 async def halp(ctx):
     '''Halp'''
     await ctx.send("no")
@@ -713,20 +708,25 @@ async def profile(ctx, user: discord.User):
     pfp = user.avatar_url
     await ctx.send(pfp)
 
-@bot.command()
+@bot.command(aliases=["Radeon"])
 async def radeon(ctx):
     '''can relate'''
     await ctx.send('you ever just want to sleep? for like a week?')
 
-@bot.command()
+@bot.command(aliases=["Uwuham"])
 async def uwuham(ctx):
     '''something is very wrong here, get the node.js juice'''
     await ctx.send('guys somethings wrong with uwuham hes using python')
 
-@bot.command()
+@bot.command(aliases=["Lazr"])
 async def lazr(ctx):
     '''my brain is expanding by the second'''
     await ctx.send('brain expansion\n\n\n bottom text')
+    
+@bot.command(aliases=["Mega97"])
+async def mega97(ctx):
+    '''Bro it makes so sense'''
+    await ctx.send("y'all ever just want to 🏱︎☜︎☞︎☟︎𓋴𓂧𓈖𓋴𓊪𓅱𓄿👌︎✞︎👍︎👎︎𓅓𓎡𓈖𓄿𓊃☜︎🕈︎✌︎☪︎💧︎☜︎👎︎☞︎✞︎𓋴𓆑𓂧𓈖☟︎☠︎☟︎☝︎☞︎👍︎✠︎☞︎☝︎☝︎☞︎👍︎")
 
 @bot.command()
 async def brick(ctx):
