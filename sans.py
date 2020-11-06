@@ -260,12 +260,7 @@ async def switch(ctx):
     
 @bot.command()
 async def bootnds(ctx):
-    embed = make_embed(
-        title="boot.nds",
-        color=0x64128c,
-        description="[boot.nds](https://github.com/zoogie/b9stool/releases/download/v6.0.0/release_6.0.0.zip)"
-    )
-    await ctx.send(embed=embed)
+    await ctx.send('https://github.com/zoogie/b9stool/releases/download/v6.0.0/release_6.0.0.zip')
     
 @bot.command()
 async def sans(ctx):
