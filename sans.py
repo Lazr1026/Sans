@@ -57,6 +57,11 @@ async def contributors(ctx):
     await ctx.send(embed=embed)
 
 @bot.command()
+async def Mega97(ctx):
+    '''Bro it makes so sense'''
+    await ctx.send("y'all ever just want to 🏱︎☜︎☞︎☟︎𓋴𓂧𓈖𓋴𓊪𓅱𓄿👌︎✞︎👍︎👎︎𓅓𓎡𓈖𓄿𓊃☜︎🕈︎✌︎☪︎💧︎☜︎👎︎☞︎✞︎𓋴𓆑𓂧𓈖☟︎☠︎☟︎☝︎☞︎👍︎✠︎☞︎☝︎☝︎☞︎👍︎")
+
+@bot.command()
 async def halp(ctx):
     '''Halp'''
     await ctx.send("no")
