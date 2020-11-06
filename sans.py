@@ -263,7 +263,7 @@ async def bootnds(ctx):
     embed = make_embed(
         title="boot.nds",
         color=0x64128c,
-        url="https://github.com/zoogie/b9stool/releases/download/v6.0.0/release_6.0.0.zip"
+        description="[boot.nds](https://github.com/zoogie/b9stool/releases/download/v6.0.0/release_6.0.0.zip)"
     )
     await ctx.send(embed=embed)
     
