@@ -405,7 +405,6 @@ async def ap(ctx):
     '''Anti-Piracy patching guide for DS titles'''
     await ctx.send('https://glazedbelmont.github.io/appatching/')
 
-
 @bot.command(aliases=["sderrors"])
 async def sd(ctx):
     '''Link a guide to test SD cards for failures'''
@@ -637,7 +636,6 @@ async def ping(ctx):
 
 #other
 
-
 @bot.command()
 async def listhelpers(ctx):
     '''Lists helpers in Internet Ivan's discord guild'''
@@ -768,6 +766,9 @@ async def invite(ctx, invite):
         "analog": "7bXpJSh",
         "homebrew": "C29hYvh"
     }
+    try:    await ctx.send(f"https://discord.gg/{invites[invite.lower()]}")
+    except: await ctx.send('Options are: ivan, homebrew, analog, chill.')
+
 @bot.command()
 async def serial(ctx):
     '''Shows how to check your Switch's serial number'''
@@ -781,8 +782,6 @@ async def serial(ctx):
     )
 
     await ctx.send(embed=embed)
-    try:    await ctx.send(f"https://discord.gg/{invites[invite.lower()]}")
-    except: await ctx.send('Options are: ivan, homebrew, analog, chill.')
 
 @bot.command()
 async def r4(ctx):
