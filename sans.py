@@ -826,13 +826,13 @@ async def say(ctx, message):
 @commands.has_any_role('Owner', 'Staff', 'Admin',)
 async def update(ctx):
     await ctx.send("Updating code. The bot will be down for roughly 15 seconds.")
-    subprocess.run(['bash', '/home/lucas/Documents/Sans/recovery/sans.sh'])
+    subprocess.run(['bash', '/home/lazr/Documents/Sans/recovery/sans.sh'])
     
 @bot.command()
 @commands.has_any_role('Owner', 'Staff', 'Admin')
 async def reboot(ctx):
     await ctx.send("Rebooting bot. Bot will be down for a few seconds.")
-    subprocess.run(['bash', '/home/lucas/Documents/Sans/recovery/reboot.sh'])
+    subprocess.run(['bash', '/home/lazr/Documents/Sans/recovery/reboot.sh'])
 
 #piracy related things
 
