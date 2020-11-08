@@ -772,7 +772,7 @@ async def wii(ctx):
 
 @bot.command()
 async def invite(ctx, invite):
-    '''Shows the invites for various discord guilds'''
+    '''Shows the invites for various discord guilds (ivan, homebrew, analog, chill)'''
     invites = {
         "ivan": "NM85JqJ",
         "chill": "eTS6yym",
