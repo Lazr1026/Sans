@@ -13,6 +13,9 @@ const author = msg.author;
 if (author) {
     member = msg.member;
     if (member) {
+  if (msg.content.startsWith(`${prefix}jsping`)) {
+        var ping = Date.now() - msg.createdTimestamp + " ms";
+        msg.channel.send(":ping_pong: Pong! Node.js ping is `" + `${Date.now() - msg.createdTimestamp}` + " ms`");}
         if (member.roles.cache.some(role => role.name === 'Helper')) {
   if (msg.content.startsWith(`${prefix}takehelp`)) {
     let memberrole = msg.guild.roles.cache.get('759887735699275837')
