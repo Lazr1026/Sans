@@ -137,6 +137,19 @@ async def ctr(ctx):
 
     await ctx.send(embed=embed)
 
+@bot.command(aliases=["browserhack"])
+async def browserhax(ctx):
+    '''Links the guide for BrowserHax2020'''
+    embed = make_embed(
+        title="Browserhax",
+        author="Nintendo Homebrew",
+        color=discord.Color.blue(),
+        thumbnail="https://3ds.eiphax.tech/pic/browserhaxfriends.png",
+        url="https://3ds.hacks.guide/homebrew-launcher-(browserhax-2020)",
+        description="A guide on how to do BrowserHax 2020 for getting CFW on your 3DS"
+    )
+
+    await ctx.send(embed=embed)
 
 @bot.command()
 async def fredtool(ctx):
