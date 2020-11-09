@@ -579,8 +579,8 @@ async def pat(ctx):
 
 @bot.command()
 async def lazr(ctx):
-    '''my brain is expanding by the second'''
-    await ctx.send('brain expansion\n\n\n bottom text')
+    '''bottom gear mates'''
+    await ctx.send('YOU SODDING TICTAC')
 
 @bot.command()
 async def radeon(ctx):
