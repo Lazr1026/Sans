@@ -703,6 +703,7 @@ async def profile(ctx, user: discord.User):
 @bot.command()
 @commands.has_any_role('Owner', 'Admin')
 async def proxyuser(ctx, user: Union[discord.Member, discord.User, int, str], *, message):
+    '''bulshit, BULLSHIT!'''
     await ctx.message.delete()
     if isinstance(user, int):
         try:    user = await self.bot.fetch_user(user)
