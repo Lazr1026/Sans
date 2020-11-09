@@ -597,6 +597,11 @@ async def mega97(ctx):
     '''Bro it makes so sense'''
     await ctx.send("y'all ever just want to 🏱︎☜︎☞︎☟︎𓋴𓂧𓈖𓋴𓊪𓅱𓄿👌︎✞︎👍︎👎︎𓅓𓎡𓈖𓄿𓊃☜︎🕈︎✌︎☪︎💧︎☜︎👎︎☞︎✞︎𓋴𓆑𓂧𓈖☟︎☠︎☟︎☝︎☞︎👍︎✠︎☞︎☝︎☝︎☞︎👍︎")
 
+@bot.command(aliases=["siconoo"])
+async def siconove(ctx):
+    '''sodding tictac'''
+    await ctx.send("MAKE YOUR OWN COMMAND YOU SODDING TICTAC")
+	
 @bot.command()
 async def snas(ctx):
     '''fortnite battle royale'''
