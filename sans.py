@@ -779,15 +779,14 @@ async def wii(ctx):
 
 @bot.command()
 async def invite(ctx, invite):
-    '''Shows the invites for various discord guilds (ivan, homebrew, analog, chill)'''
+    '''Shows the invites for various discord guilds (ivan, homebrew, chill)'''
     invites = {
         "ivan": "NM85JqJ",
         "chill": "eTS6yym",
-        "analog": "7bXpJSh",
         "homebrew": "C29hYvh"
     }
     try:    await ctx.send(f"https://discord.gg/{invites[invite.lower()]}")
-    except: await ctx.send('Options are: ivan, homebrew, analog, chill.')
+    except: await ctx.send('Options are: ivan, homebrew, chill.')
 
 @bot.command()
 async def serial(ctx):
