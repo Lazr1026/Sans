@@ -34,143 +34,7 @@ async def on_ready():
     print('Ready.')
     print(f'We have logged in as {bot.user}')
 
-#If you want to get recognized for your contributions, add to the command below.
-
-@bot.command()
-async def contributors(ctx):
-    '''Lists currect Sans contributors'''
-    embed = discord.Embed(
-        title="List of current Sans contributors",
-        description=cleandoc("""
-            Lazr1026 - Creator and programmer
-            476MHz (Radeon) - Programmer
-            Uwuham - Telling us discord.js is better
-            Techmuse - PR'd useful shit
-            Gnome! - Cleaned everything up massively
-            ItsPizzaTime1501 - Helped with proper licensing
-            bleck9999 - (I'm not sure what bleck did, feel free to edit this part - Meganium97)
-            Maretu (ray) - Fixed our terrible grammar
-            Meganium97 (Dire) - Idk, what are you asking me for?
-        """)
-    )
-    
-    await ctx.send(embed=embed)
-
-@bot.command()
-async def halp(ctx):
-    '''Halp'''
-    await ctx.send("no")
-
-@bot.command()
-async def amiapirate(ctx):
-    '''Explains what piracy is and how it's bad'''
-    await ctx.send("https://3ds.eiphax.tech/piracy")
-
-@bot.command()
-async def ping(ctx):
-    await ctx.send(f':ping_pong: Pong! Latency is {int(bot.latency * 1000)} ms!')
-
-@bot.command()
-async def pat(ctx):
-    '''*pats*'''
-    await ctx.send("https://media1.tenor.com/images/da8f0e8dd1a7f7db5298bda9cc648a9a/tenor.gif?itemid=12018819")
-
-@bot.command()
-async def pirate2(ctx):
-    '''oi m8 buy your gams (alternative to pirate)'''
-    await ctx.send('yeah you just need to go to the eShop, put in the magic numbers on your credit card, and then go and press download on the game you want.')
-
-@bot.command(aliases=["finalize"])
-async def finalizing(ctx):
-    '''Links 3DS Finalizing Setup'''
-    embed = make_embed(
-        name="3ds.hacks.guide Finalizing Setup",
-        color=0x2aa8a0,
-        description="[Finalizing Setup](https://3ds.hacks.guide/finalizing-setup)",
-    )
-
-    await ctx.send(embed=embed)
-
-@bot.command(name="7zip")
-async def _7zip(ctx):
-    '''Links 7-zip download'''
-    embed = make_embed(
-        title="7Zip Info",
-        color=0x2aa8a0,
-        description="WinRAR isn't a very good archiving utility. You should use 7-Zip instead \n which can be downloaded [here](https://www.7-zip.org)."
-    )
-    await ctx.send(embed=embed)
-
-@bot.command(aliases=["redscr"])
-async def boot3dsx(ctx):
-    '''Links boot.3dsx'''
-    embed = make_embed(
-        title="The 3DS Homebrew Launcher",
-        color=0x262626,
-        description="[boot.3dsx](https://github.com/fincs/new-hbmenu/releases/download/v2.1.0/boot.3dsx)"
-    )
-    await ctx.send(embed=embed)
-
-@bot.command()
-async def listhelpers(ctx):
-    '''Lists helpers in Internet Ivan's discord guild'''
-    embed = make_embed(
-        title="Here are our helpers:",
-        color=0x20b339,
-        description=cleandoc("""
-            **__3DS__**
-            <@554832528238968883>
-            <@578245729060126730>
-            <@504564321716666368>
-            <@334102523365425163>
-            **__Wii U__**
-            <@664297659686715403>
-        """)
-    )
-
-    await ctx.send(embed=embed)
-
-@bot.command()
-async def liststaff(ctx):
-    '''Lists staff in Internet Ivan's discord guild'''
-    embed = make_embed(
-        title="Here is a list of our staff:",
-        color=0x132e91,
-        description=cleandoc("""
-            **__Owner__**
-            <@505793682297978900>
-            **__Admin__**
-            <@554832528238968883>
-            <@664297659686715403>
-        """)
-    )
-    await ctx.send(embed=embed)
-
-@bot.command()
-async def ftp(ctx):
-    '''Links FTPD guide'''
-    embed = make_embed(
-        title="FTP Guide",
-        author="Kreig",
-        color=0x2aa8a0,
-        url="https://3ds.eiphax.tech/ftp.html",
-        description="A guide on how to set up FTP on your 3ds, Note 3ds and switch are basically the same process",
-    )
-    await ctx.send(embed=embed)
-
-@bot.command()
-async def db(ctx, console):
-    '''Links 3DS title database'''
-    if console.lower() == "3ds":
-        embed = make_embed(
-            title="3DS Database",
-            url="http://3dsdb.com/",
-            color=discord.Color.dark_orange(),
-            description="3DS database for game releases."
-        )
-        await ctx.send(embed=embed)
-    else:
-        raise commands.BadArgument
+#assistance
 
 @bot.group()
 async def guide(ctx):
@@ -257,17 +121,18 @@ async def switch(ctx):
     )
     
     await ctx.send(embed=embed)
-    
-@bot.command()
-async def sans(ctx):
-    '''Links the github repo for Sans'''
+
+
+@bot.command(aliases=["ctrtransfer"])
+async def ctr(ctx):
+    '''Link the guide for a CTRtransfer'''
     embed = make_embed(
-        title="Sans",
-        author="Maintained by Lazr, Radeon, and UwUham",
-        color=discord.Color.green(),
-        thumbnail="https://i.imgur.com/AkOLH6q.png",
-        url="https://github.com/Lazr1026/Sans",
-        description="Sans, The discord bot that is kinda useful!"
+        title="CTRTransfer",
+        author="Nintendo Homebrew",
+        color=discord.Color.orange(),
+        thumbnail="https/nintendohomebrew.com/pics/nhplai.png",
+        url="https://3ds.hacks.guide/ctrtransfer",
+        description="How to do the 11.5.0-38 ctrtransfer"
     )
 
     await ctx.send(embed=embed)
@@ -286,20 +151,6 @@ async def browserhax(ctx):
 
     await ctx.send(embed=embed)
 
-@bot.command(aliases=["ctrtransfer"])
-async def ctr(ctx):
-    '''Link the guide for a CTRtransfer'''
-    embed = make_embed(
-        title="CTRTransfer",
-        author="Nintendo Homebrew",
-        color=discord.Color.orange(),
-        thumbnail="https/nintendohomebrew.com/pics/nhplai.png",
-        url="https://3ds.hacks.guide/ctrtransfer",
-        description="How to do the 11.5.0-38 ctrtransfer"
-    )
-
-    await ctx.send(embed=embed)
-
 @bot.command()
 async def fredtool(ctx):
     '''Link the guide for Fredtool'''
@@ -308,9 +159,10 @@ async def fredtool(ctx):
         author="3ds.hacks.guide",
         color=discord.Color.orange(),
         url="https://3ds.hacks.guide/installing-boot9strap-(fredtool).html",
-        description="A guide on how to install CFW on your 3ds with the fredtool method")
-
+        description="A guide on how to install CFW on your 3ds with the fredtool method"
+    )
     await ctx.send(embed=embed)
+
 
 @bot.group()
 async def soundhax(ctx):
@@ -340,6 +192,16 @@ async def b9s(ctx):
     )
     await ctx.send(embed=embed)
 
+@bot.command(aliases=["finalize"])
+async def finalizing(ctx):
+    '''Links 3DS Finalizing Setup'''
+    embed = make_embed(
+        name="3ds.hacks.guide Finalizing Setup",
+        color=0x2aa8a0,
+        description="[Finalizing Setup](https://3ds.hacks.guide/finalizing-setup)",
+    )
+    await ctx.send(embed=embed)
+	
 @bot.command()
 async def atob(ctx):
     '''Links the A9LH to B9S guide'''
@@ -351,7 +213,6 @@ async def atob(ctx):
         url="https://3ds.hacks.guide/a9lh-to-b9s",
         description="A guide for upgrading your device from arm9loaderhax to boot9strap."
     )
-
     await ctx.send(embed=embed)
 
 @bot.command()
@@ -367,62 +228,6 @@ async def troubleshoot(ctx):
     await ctx.send(embed=embed)
 
 @bot.command()
-async def cartinstall(ctx):
-    '''Links the CartInstall guide'''
-    embed = make_embed(
-        title="CartInstall",
-        author="Internet Ivan",
-        color=discord.Color.default(),
-        thumbnail="https://i.imgur.com/CFp51Hb.jpg",
-        url="https://youtu.be/pzbfHQ6uTcU",
-        description="How to install 3DS cartridges to the SD card"
-    )
-
-    await ctx.send(embed=embed)
-
-@bot.command(aliases=["godmode9"])
-async def gm9(ctx):
-    '''Links the GodMode9 usage guide'''
-    embed = make_embed(
-        title="GodMode9 Usage",
-        author="Nintendo Homebrew",
-        color=0x851111,
-        thumbnail="https://nintendohomebrew.com/pics/nhplai.png",
-        url="https://3ds.hacks.guide/godmode9-usage",
-        description="GodMode9 usage guide"
-    )
-
-    await ctx.send(embed=embed)
-
-@bot.command()
-async def dump(ctx, console):
-    '''Links the dumping guide for various game types'''
-    dump_guides = {
-        "ds": "https://youtu.be/x-Et2zkl3Ek",
-        "nx": "https://suchmememanyskill.github.io/guides/switchdumpguide/",
-        "wii": "https://wii.guide/dump-games",
-        "3ds": "https://youtu.be/b1Ng-b0fnpg",
-        "wiiu": "https://wiiu.hacks.guide/#/dump-games",
-        "vwii": "https://wiiu.hacks.guide/#/dump-wii-games"
-    }
-
-    try:    await ctx.send(dump_guides[console.lower()])
-    except: await ctx.send('Options are: 3ds, ds, wiiu, vwii, wii, nx')
-
-@bot.command()
-async def invite(ctx, invite):
-    '''Shows the invites for various discord guilds'''
-    invites = {
-        "ivan": "NM85JqJ",
-        "chill": "eTS6yym",
-        "analog": "7bXpJSh",
-        "homebrew": "C29hYvh"
-    }
-
-    try:    await ctx.send(f"https://discord.gg/{invites[invite.lower()]}")
-    except: await ctx.send('Options are: ivan, homebrew, analog, chill, twl, ndsbrew.')
-        
-@bot.command()
 async def emptysd(ctx):
     '''Shows what to do when you've lost the sd contents with CFW installed.'''
     embed = make_embed(
@@ -432,22 +237,6 @@ async def emptysd(ctx):
     )
 
     await ctx.send(embed=embed)
-
-@bot.command()
-async def luma(ctx, version):
-    '''Links the download to various Luma3DS versions'''
-    luma_versions = {
-        "latest": "https://github.com/LumaTeam/Luma3DS/releases/latest",
-        "7.0.5": "https://github.com/LumaTeam/Luma3DS/releases/tag/v7.0.5",
-        "7.1": "https://github.com/LumaTeam/Luma3DS/releases/tag/v7.1"
-    }
-    try:    await ctx.send(luma_versions[version])
-    except: await ctx.send('```What luma version would you like?\n\n latest\n 7.0.5\n 7.1```')
-
-@bot.command(aliases=["r11"])
-async def pirate(ctx):
-    '''oi buy your games m8 (tells why piracy is bad)'''
-    await ctx.send('We do not support nor condone piracy as it is\n 1. Against Discord TOS\n 2. It is illegal, buy your damn games')
 
 @bot.command()
 async def lumacheck(ctx):
@@ -462,6 +251,43 @@ async def lumacheck(ctx):
         """)
     )
 
+    await ctx.send(embed=embed)
+
+@bot.command()
+async def notbricked(ctx):
+    ''''Don't worry, you haven't broken it'''
+    embed = discord.Embed(
+        title="No you are not bricked",
+        description=cleandoc("""
+            If your power LED turns on and off after you installed b9s, you are not bricked and are just missing a file called boot.firm in the root of your SD card to fix the issue
+            1. Check you inserted the SD card in your console
+            2. Place/replace the file, downloading it from [here](https://github.com/LumaTeam/Luma3DS/releases).
+        """)
+    )
+
+    await ctx.send(embed=embed)
+
+@bot.command()
+async def lumabug(ctx):
+    '''Show instructions to fix the luma black screen bug'''
+    await ctx.send('Luma Black Screen Bug If you have Luma3DS and your console is stuck on a black screen after you power it on, follow these steps:\n 1. Power off the console.\n 2. Take out any game cartridge, but leave the SD card in.\n 3. Power on the console.\n 4. Leave the console open and powered on for 10-15 minutes. Do not touch the console during this time.\n If the console boots successfully in that time, the bug is now fixed and is unlikely to happen again. If the console still fails to boot to home menu, come back and ask for more help. Mention that you have already tried the Luma black screen process.')
+
+@bot.command()
+async def pinkscreen(ctx):
+    '''No, you didn't break it this time, either'''
+    embed = discord.Embed(
+        title="No, it's not broken",
+        description=cleandoc("""
+            If you try to install CFW but get a pink screen in the process, there are two things that might've happened.
+            1. You already have CFW.
+            2. You messed up the file placement somewhere, and need to change it.
+            To check if you have CFW, turn off the console, then press and hold select and boot the system while still holding select.
+            If you boot into Luma, then you have it.
+            If not, you messed up file placement. Did you place things in the [ROOT](https://cdn.discordapp.com/attachments/754753360132833431/757705163220713632/image0.png) of the sd card?
+            If you booted into luma, you should try [finalizing](https://3ds.hacks.guide/finalizing-setup) it now, as you probably don't have any software right now.
+        """)
+    )
+    
     await ctx.send(embed=embed)
 
 @bot.command()
@@ -489,12 +315,82 @@ async def sdroot(ctx):
     )
 
     await ctx.send(embed=embed)
+
+@bot.command(name="7zip")
+async def _7zip(ctx):
+    '''Links 7-zip download'''
+    embed = make_embed(
+        title="7Zip Info",
+        color=0x2aa8a0,
+        description="WinRAR isn't a very good archiving utility. You should use 7-Zip instead \n which can be downloaded [here](https://www.7-zip.org)."
+    )
+    await ctx.send(embed=embed)
     
+@bot.command(aliases=["redscr"])
+async def boot3dsx(ctx):
+    '''Links boot.3dsx'''
+    embed = make_embed(
+        title="The 3DS Homebrew Launcher",
+        color=0x262626,
+        description="[boot.3dsx](https://github.com/fincs/new-hbmenu/releases/download/v2.1.0/boot.3dsx)"
+    )
+    await ctx.send(embed=embed)
+    
+@bot.command()
+async def luma(ctx, version):
+    '''Links the download to various Luma3DS versions'''
+    luma_versions = {
+        "latest": "https://github.com/LumaTeam/Luma3DS/releases/latest",
+        "7.0.5": "https://github.com/LumaTeam/Luma3DS/releases/tag/v7.0.5",
+        "7.1": "https://github.com/LumaTeam/Luma3DS/releases/tag/v7.1"
+    }
+    try:    await ctx.send(luma_versions[version])
+    except: await ctx.send('```What luma version would you like?\n\n latest\n 7.0.5\n 7.1```')
 
 @bot.command()
-async def r4(ctx):
-    '''R4? that sounds like a kind of breakfast cereal (tells what an R4(i) cartridge is)'''
-    await ctx.send('An R4 is a Flashcart that can or cannot be used for ntrboot (unbrick and cfw installation tool I guess you can call it). Its also used to play gaems (hopefully dumped from carts).')
+async def bootnds(ctx):
+    await ctx.send('https://github.com/zoogie/b9stool/releases/download/v6.0.0/release_6.0.0.zip')
+
+@bot.command()
+async def cartinstall(ctx):
+    '''Links the CartInstall guide'''
+    embed = make_embed(
+        title="CartInstall",
+        author="Internet Ivan",
+        color=discord.Color.default(),
+        thumbnail="https://i.imgur.com/CFp51Hb.jpg",
+        url="https://youtu.be/pzbfHQ6uTcU",
+        description="How to install 3DS cartridges to the SD card"
+    )
+
+    await ctx.send(embed=embed)
+
+@bot.command()
+async def dump(ctx, console):
+    '''Links the dumping guide for various game consoles'''
+    dump_guides = {
+        "ds": "https://youtu.be/x-Et2zkl3Ek",
+        "nx": "https://suchmememanyskill.github.io/guides/switchdumpguide/",
+        "wii": "https://wii.guide/dump-games",
+        "3ds": "https://youtu.be/b1Ng-b0fnpg",
+        "wiiu": "https://wiiu.hacks.guide/#/dump-games",
+        "vwii": "https://wiiu.hacks.guide/#/dump-wii-games"
+    }
+
+    try:    await ctx.send(dump_guides[console.lower()])
+    except: await ctx.send('Options are: 3ds, ds, wiiu, vwii, wii, nx')
+
+@bot.command()
+async def ftp(ctx):
+    '''Links FTPD guide'''
+    embed = make_embed(
+        title="FTP Guide",
+        author="Kreig",
+        color=0x2aa8a0,
+        url="https://3ds.eiphax.tech/ftp.html",
+        description="A guide on how to set up FTP on your 3ds, Note 3ds and switch are basically the same process",
+    )
+    await ctx.send(embed=embed)
 
 @bot.command()
 async def twlmenu(ctx):
@@ -522,152 +418,10 @@ async def ap(ctx):
     '''Anti-Piracy patching guide for DS titles'''
     await ctx.send('https://glazedbelmont.github.io/appatching/')
 
-@bot.command()
-async def tinydb(ctx):
-    '''Links eiphax's 3DS tinydb'''
-    await ctx.send('https://tinydb.eiphax.tech/')
-
-@bot.command()
-async def meta(ctx):
-    '''meta? don't you mean off-topic 2?'''
-    await ctx.send('you seem to be in <#759902836116160532>')
-
-@bot.command(aliases=["cbhcrules"])
-async def cbhc(ctx):
-    '''Show some CBHC rules that should be followed'''
-    embed = discord.Embed(
-        title="CBHC Rules:",
-        description=cleandoc("""
-            - The DS game has to be legitimately installed from the eShop!
-            - Don’t format the system while CBHC is installed!
-            - Don’t delete the user account that bought the DS VC game!
-            - Don’t re-install the same game using WUP Installer or from the eShop!
-            - Don’t install Haxchi over CBHC! (You will not brick, but it will cause a boot-loop! Hold A when booting to access the Homebrew Launcher and uninstall CBHC.)
-            - Don’t uninstall the DS Virtual Console game without properly uninstalling CBHC first! <https://wiiu.hacks.guide/#/uninstall-cbhc>
-            - Don’t move the DS Virtual Console game to a USB drive!
-        """)
-    )
-    
-    await ctx.send(embed=embed)
-
-@bot.command()
-async def cfwuses(ctx, console):
-    '''Link a page showing some things you can use CFW for'''
-    cfwuses_images = {
-        "3ds": "https://3ds.eiphax.tech/tips.html",
-        "wiiu": "https://cdn.discordapp.com/attachments/754753360132833431/757744237440794654/wiiu_cfw.PNG",
-        "nx": "https://cdn.discordapp.com/attachments/744815170626519062/758814416992075816/Screenshot_20200924-151725_Discord.jpg"
-    }
-    try:    await ctx.send(cfwuses_images[console.lower()])
-    except: await ctx.send('Options are: 3ds, wiiu, nx')
-
-@bot.command()
-async def notbricked(ctx):
-    ''''Don't worry, you haven't broken it'''
-    embed = discord.Embed(
-        title="No you are not bricked",
-        description=cleandoc("""
-            If your power LED turns on and off after you installed b9s, you are not bricked and are just missing a file called boot.firm in the root of your SD card to fix the issue
-            1. Check you inserted the SD card in your console
-            2. Place/replace the file, downloading it from [here](https://github.com/LumaTeam/Luma3DS/releases).
-        """)
-    )
-
-    await ctx.send(embed=embed)
-
-@bot.command()
-async def lumabug(ctx):
-    '''Show instructions to fix the luma black screen bug'''
-    await ctx.send('Luma Black Screen Bug If you have Luma3DS and your console is stuck on a black screen after you power it on, follow these steps:\n 1. Power off the console.\n 2. Take out any game cartridge, but leave the SD card in.\n 3. Power on the console.\n 4. Leave the console open and powered on for 10-15 minutes. Do not touch the console during this time.\n If the console boots successfully in that time, the bug is now fixed and is unlikely to happen again. If the console still fails to boot to home menu, come back and ask for more help. Mention that you have already tried the Luma black screen process.')
-
-@bot.command()
-async def nospace(ctx):
-    '''Instructions on making a 3DS nand backup without enough space'''
-    embed = discord.Embed(
-        title="How to make a NAND backup without enough space on your sd card:",
-        description=cleandoc("""
-            1. Copy the Nintendo 3DS and the DCIM folder (if you have it) to your computer, then delete them from your SD CARD.
-            2. Boot into GodMode9 and perform the backup again. Once it’s done power off your system.
-            3. Copy all the files in the gm9/out folder on your sd card to a place on your pc. Then delete those files from the SD CARD.
-            4. Copy the Nintendo 3DS and DCIM folder (if you had it) back to your sd card and delete it from your computer.
-        """)
-    )
-    
-    await ctx.send(embed=embed)
-
-@bot.command()
-async def pinkscreen(ctx):
-    '''No, you didn't break it this time, either'''
-    embed = discord.Embed(
-        title="No, it's not broken",
-        description=cleandoc("""
-            If you try to install CFW but get a pink screen in the process, there are two things that might've happened.
-            1. You already have CFW.
-            2. You messed up the file placement somewhere, and need to change it.
-            To check if you have CFW, turn off the console, then press and hold select and boot the system while still holding select.
-            If you boot into Luma, then you have it.
-            If not, you messed up file placement. Did you place things in the ROOT of the sd card?
-            If you booted into luma, you should try [finalizing](https://3ds.hacks.guide/finalizing-setup) it now, as you probably don't have any software right now.
-        """)
-    )
-    
-    await ctx.send(embed=embed)
-    
-@bot.group()
-async def neworold(ctx):
-    '''Shows which version of console you have'''
-    if ctx.invoked_subcommand is None:
-        await ctx.send('Invalid syntax. Options are: 3ds, wii, nx, ns, switch')
-        
-@neworold.command(name="3ds")
-async def _3ds(ctx):
-    embed = make_embed(
-        title="**3DS Versions**",
-        color=discord.Color.default(),
-        image="https://sagamer.co.za/wp-content/uploads/2014/10/New-3DS-vs-3DS-SA-Gamer.jpg",
-        description=cleandoc("""
-            Telling apart a New3DS from an old one is pretty simple. All you need to do is look above the abxy buttons.
-            If there is a c-stick above the abxy buttons, then you have a New3DS.
-            If there isn't, then you have an old 3DS.
-        """)
-    )
-
-    await ctx.send(embed=embed)
-    
-@neworold.command(aliases=("nx","ns"))
-async def switch(ctx):
-    embed = make_embed(
-        title="**Switch Versions**",
-        color=discord.Color.default(),
-        image="https://www.imore.com/sites/imore.com/files/styles/large/public/field/image/2019/08/switch-packaging-comparison.jpg",
-        description=cleandoc("""
-            Telling apart a new switch from an old one isn't like how you would do it with the 3DS.
-            One way is by looking at the serial numbers on the switch. These can tell you exactly which version you have.
-            If you just want a generalization of which version you have, just look at the box.
-        """)
-    )
-
-    await ctx.send(embed=embed)
-
-@neworold.command()
-async def wii(ctx):
-    embed = make_embed(
-        title="**Wii Versions**",
-        color=discord.Color.default(),
-        image="https://retrogamebuyer.com/wp-content/uploads/2020/03/RVL-001-vs-101.png?ezimgfmt=rs:372x186/rscb1/ng:webp/ngcb1",
-        description=cleandoc("""
-            Telling apart the different Wii versions is by far the easiest.
-            If your Wii has slots for Gamecube memory cards and controllers, then you have an original Wii
-            If it doesn't, then you have a newer one.
-        """)
-    )
-
-    await ctx.send(embed=embed)
-
 @bot.command(aliases=["sderrors"])
 async def sd(ctx):
     '''Link a guide to test SD cards for failures'''
-    await ctx.send('How to check your sd card for errors:\n <https://3ds.eiphax.tech/sd.html>')
+    await ctx.send('<https://3ds.eiphax.tech/sd.html>')
 
 @bot.command(aliases=["formatsd"])
 async def sdformat(ctx):
@@ -675,10 +429,8 @@ async def sdformat(ctx):
         title="**Common SD Formatting tools**",
         color=0x2aa8a0,
         description=cleandoc("""
-            Windows-[guiformat](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm)
-
+            Windows-[guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
             Linux-[gparted](https://gparted.org/download.php) + [dosfstools](https://github.com/dosfstools/dosfstools)
-
             MacOS-[Disk Utility](https://support.apple.com/guide/disk-utility/format-a-disk-for-windows-computers-dskutl1010)
             
             MacOS: Always select "MS-DOS (FAT)", even if the card is larger than 32GB.
@@ -686,84 +438,20 @@ async def sdformat(ctx):
     )
 
     await ctx.send(embed=embed)
-    
-@bot.command()
-async def serial(ctx):
-    '''Shows how to check your Switch's serial number'''
-    embed = make_embed(
-        title="**Switch Serial Number**",
-        color=discord.Color.default(),
-        image="https://i.imgur.com/03NfeFN.png",
-        description=cleandoc("""
-           Dont know where your switch serial number is? Look at this image to help ya out
-        """)
-    )
-
-    await ctx.send(embed=embed)
-    
-@bot.command(aliases=["pfp"])
-async def profile(ctx, user: discord.User):
-    '''Fetch a user's profile icon'''
-    await ctx.send(f"Profile image for user: {user.name}")
-    pfp = user.avatar_url
-    await ctx.send(pfp)
-
-@bot.command(aliases=["Radeon"])
-async def radeon(ctx):
-    '''can relate'''
-    await ctx.send('you ever just want to sleep? for like a week?')
-
-@bot.command(aliases=["Uwuham"])
-async def uwuham(ctx):
-    '''something is very wrong here, get the node.js juice'''
-    await ctx.send('guys somethings wrong with uwuham hes using python')
-
-@bot.command(aliases=["Lazr"])
-async def lazr(ctx):
-    '''my brain is expanding by the second'''
-    await ctx.send('brain expansion\n\n\n bottom text')
-    
-@bot.command(aliases=["Mega97"])
-async def mega97(ctx):
-    '''Bro it makes so sense'''
-    await ctx.send("y'all ever just want to 🏱︎☜︎☞︎☟︎𓋴𓂧𓈖𓋴𓊪𓅱𓄿👌︎✞︎👍︎👎︎𓅓𓎡𓈖𓄿𓊃☜︎🕈︎✌︎☪︎💧︎☜︎👎︎☞︎✞︎𓋴𓆑𓂧𓈖☟︎☠︎☟︎☝︎☞︎👍︎✠︎☞︎☝︎☝︎☞︎👍︎")
 
 @bot.command()
-async def brick(ctx):
-    '''why does this even exist (note from lazr: it exists because yes)'''
-    await ctx.send('nah fuck you :wink:')
-
-@bot.command(aliases=["yeet"])
-@commands.has_any_role('Owner', 'Staff', 'Admin')
-async def ban (ctx, member: discord.User = None, reason="[no reason specified]"):
-    '''does what it says on the tin'''
-    if member == None or member == ctx.message.author:
-        await ctx.channel.send("You cannot ban yourself.")
-        return
-    message = f"You have been banned from {ctx.guild.name} for {reason}"
-    await ctx.guild.ban(member, reason=reason, delete_message_days=0)
-    await ctx.channel.send(f"{member} has been b&. 👍")
-    await member.send(message)
-
-@bot.command()
-@commands.has_any_role('Owner', 'Staff', 'Admin', 'Helper')
-async def kick(ctx, member: discord.Member, *, reason=0):
-    '''does what it says on the tin'''
-    await member.kick(reason=reason, delete_message_days=0)
-    send = f"user {member.name} has been kicked."
-    await ctx.send(send)
-
-@bot.command()
-@commands.has_any_role('Owner', 'Staff', 'Admin', 'Helper')
-async def say(ctx, message):
-    '''does what it says on the tin (helpers+)'''
-    await ctx.message.delete()
-    await ctx.send(ctx.message.content[5:])
-
-@bot.command()
-async def snas(ctx):
-    '''fortnite battle royale'''
-    await ctx.send('https://tenor.com/view/sans-undertale-dance-gif-12730380')
+async def db(ctx, console):
+    '''Links 3DS title database'''
+    if console.lower() == "3ds":
+        embed = make_embed(
+            title="3DS Database",
+            url="http://3dsdb.com/",
+            color=discord.Color.dark_orange(),
+            description="3DS database for game releases."
+        )
+        await ctx.send(embed=embed)
+    else:
+        raise commands.BadArgument
 
 @bot.command()
 async def vc(ctx):
@@ -789,23 +477,16 @@ async def vc(ctx):
         await ctx.send('Invalid syntax. Options are: 3ds, wiiu.')
 
 @bot.command()
-@commands.has_any_role('Owner', 'Staff', 'Admin',)
-async def update(ctx):
-    await ctx.send("Updating code. The bot will be down for roughly 15 seconds.")
-    subprocess.run(['bash', '/home/lucas/Documents/Sans/recovery/sans.sh'])
-    
-@bot.command()
-@commands.has_any_role('Owner', 'Staff', 'Admin')
-async def reboot(ctx):
-    await ctx.send("Rebooting bot. Bot will be down for a few seconds.")
-    subprocess.run(['bash', '/home/lucas/Documents/Sans/recovery/reboot.sh'])
-    
-@bot.command()
-@commands.has_any_role('Owner', 'Staff', 'Admin')
-async def load(ctx):
-    await ctx.send("Loading the JS Code, wont take very long.")
-    subprocess.run(['bash', '/home/lucas/Documents/Sans/recovery/load.sh'])
-        
+async def cfwuses(ctx, console):
+    '''Link a page showing some things you can use CFW for'''
+    cfwuses_images = {
+        "3ds": "https://3ds.eiphax.tech/tips.html",
+        "wiiu": "https://cdn.discordapp.com/attachments/754753360132833431/757744237440794654/wiiu_cfw.PNG",
+        "nx": "https://cdn.discordapp.com/attachments/744815170626519062/758814416992075816/Screenshot_20200924-151725_Discord.jpg"
+    }
+    try:    await ctx.send(cfwuses_images[console.lower()])
+    except: await ctx.send('Options are: 3ds, wiiu, nx')
+
 @bot.group()
 async def baninfo(ctx):
     '''Show information about Ban Risk on various consoles'''
@@ -865,11 +546,164 @@ async def retro(ctx):
     
     await ctx.send(embed=embed)
 
+@bot.command(aliases=["cbhcrules"])
+async def cbhc(ctx):
+    '''Show some CBHC rules that should be followed'''
+    embed = discord.Embed(
+        title="CBHC Rules:",
+        description=cleandoc("""
+            - The DS game has to be legitimately installed from the eShop!
+            - Don’t format the system while CBHC is installed!
+            - Don’t delete the user account that bought the DS VC game!
+            - Don’t re-install the same game using WUP Installer or from the eShop!
+            - Don’t install Haxchi over CBHC! (You will not brick, but it will cause a boot-loop! Hold A when booting to access the Homebrew Launcher and uninstall CBHC.)
+            - Don’t uninstall the DS Virtual Console game without properly uninstalling CBHC first! <https://wiiu.hacks.guide/#/uninstall-cbhc>
+            - Don’t move the DS Virtual Console game to a USB drive!
+        """)
+    )
+    
+    await ctx.send(embed=embed)
+
+
+#memes
+
+@bot.command()
+async def halp(ctx):
+    '''Halp'''
+    await ctx.send("no")
+    
+@bot.command()
+async def pat(ctx):
+    '''*pats*'''
+    await ctx.send("https://media1.tenor.com/images/da8f0e8dd1a7f7db5298bda9cc648a9a/tenor.gif?itemid=12018819")
+
+@bot.command()
+async def lazr(ctx):
+    '''bottom gear mates'''
+    await ctx.send('YOU SODDING TICTAC')
+
+@bot.command()
+async def radeon(ctx):
+    '''can relate'''
+    await ctx.send('you ever just want to sleep? for like a week?')
+
+@bot.command()
+async def uwuham(ctx):
+    '''something is very wrong here, get the node.js juice'''
+    await ctx.send('guys somethings wrong with uwuham hes using python')
+
+@bot.command()
+async def mega97(ctx):
+    '''Bro it makes so sense'''
+    await ctx.send("y'all ever just want to 🏱︎☜︎☞︎☟︎𓋴𓂧𓈖𓋴𓊪𓅱𓄿👌︎✞︎👍︎👎︎𓅓𓎡𓈖𓄿𓊃☜︎🕈︎✌︎☪︎💧︎☜︎👎︎☞︎✞︎𓋴𓆑𓂧𓈖☟︎☠︎☟︎☝︎☞︎👍︎✠︎☞︎☝︎☝︎☞︎👍︎")
+
+@bot.command(aliases=["siconoo"])
+async def siconove(ctx):
+    '''sodding tictac'''
+    await ctx.send("MAKE YOUR OWN COMMAND YOU SODDING TICTAC")
+	
+@bot.command()
+async def snas(ctx):
+    '''fortnite battle royale'''
+    await ctx.send('https://tenor.com/view/sans-undertale-dance-gif-12730380')
+
+@bot.command()
+async def brick(ctx):
+    '''why does this even exist (note from lazr: it exists because yes)'''
+    await ctx.send('nah fuck you :wink:')
+
+#bot stuff
+
+@bot.command()
+async def sans(ctx):
+    '''Links the github repo for Sans'''
+    embed = make_embed(
+        title="Sans",
+        author="Maintained by Lazr, Radeon, and UwUham",
+        color=discord.Color.green(),
+        thumbnail="https://i.imgur.com/AkOLH6q.png",
+        url="https://github.com/Lazr1026/Sans",
+        description="Sans, The discord bot that is kinda useful!"
+    )
+
+    await ctx.send(embed=embed)
+
+@bot.command()
+async def contributors(ctx):
+    '''Lists currect Sans contributors'''
+    embed = discord.Embed(
+        title="List of current Sans contributors",
+        description=cleandoc("""
+            Lazr1026 - Creator and programmer
+            476MHz (Radeon) - Programmer
+            Uwuham - Telling us discord.js is better
+            Techmuse - PR'd useful shit
+            Gnome! - Cleaned everything up massively
+            ItsPizzaTime1501 - Helped with proper licensing
+            bleck9999 - (I'm not sure what bleck did, feel free to edit this part - Meganium97)
+            Maretu (ray) - Fixed our terrible grammar
+            Meganium97 (Dire) - Idk, what are you asking me for?
+        """)
+    )
+    
+    await ctx.send(embed=embed)
+    
+@bot.command()
+async def ping(ctx):
+    await ctx.send(f':ping_pong: Pong! Latency is {int(bot.latency * 1000)} ms!')
+
+#other
+
+@bot.command()
+async def listhelpers(ctx):
+    '''Lists helpers in Internet Ivan's discord guild'''
+    embed = make_embed(
+        title="Here are our helpers:",
+        color=0x20b339,
+        description=cleandoc("""
+            **__3DS__**
+            <@554832528238968883>
+            <@578245729060126730>
+            <@504564321716666368>
+            <@334102523365425163>
+	    <@395524987315814400>
+            **__Wii U__**
+            <@664297659686715403>
+        """)
+    )
+
+    await ctx.send(embed=embed)
+
+@bot.command()
+async def liststaff(ctx):
+    '''Lists staff in Internet Ivan's discord guild'''
+    embed = make_embed(
+        title="Here is a list of our staff:",
+        color=0x132e91,
+        description=cleandoc("""
+            **__Owner__**
+            <@505793682297978900>
+            **__Admin__**
+            <@554832528238968883>
+            <@664297659686715403>
+        """)
+    )
+    await ctx.send(embed=embed)
+
+
+@bot.command(aliases=["pfp"])
+async def profile(ctx, user: discord.User):
+    '''Fetch a user's profile icon'''
+    await ctx.send(f"Profile image for user: {user.name}")
+    pfp = user.avatar_url
+    await ctx.send(pfp)
+
 # Gnome: Hey look, it is my code :GWcorbintopkek:
 
 @bot.command()
 @commands.has_any_role('Owner', 'Admin')
 async def proxyuser(ctx, user: Union[discord.Member, discord.User, int, str], *, message):
+    '''bulshit, BULLSHIT!'''
     await ctx.message.delete()
     if isinstance(user, int):
         try:    user = await self.bot.fetch_user(user)
@@ -892,4 +726,149 @@ async def proxyuser(ctx, user: Union[discord.Member, discord.User, int, str], *,
         webhook = webhooks[0]
         await webhook.send(message, username=name, avatar_url=avatar)
 
+@bot.group()
+async def neworold(ctx):
+    '''Shows which version of console you have'''
+    if ctx.invoked_subcommand is None:
+        await ctx.send('Invalid syntax. Options are: 3ds, wii, nx, ns, switch')
+        
+@neworold.command(name="3ds")
+async def _3ds(ctx):
+    embed = make_embed(
+        title="**3DS Versions**",
+        color=discord.Color.default(),
+        image="https://sagamer.co.za/wp-content/uploads/2014/10/New-3DS-vs-3DS-SA-Gamer.jpg",
+        description=cleandoc("""
+            Telling apart a New3DS from an old one is pretty simple. All you need to do is look above the abxy buttons.
+            If there is a c-stick above the abxy buttons, then you have a New3DS.
+            If there isn't, then you have an old 3DS.
+        """)
+    )
+
+    await ctx.send(embed=embed)
+    
+@neworold.command(aliases=("nx","ns"))
+async def switch(ctx):
+    embed = make_embed(
+        title="**Switch Versions**",
+        color=discord.Color.default(),
+        image="https://www.imore.com/sites/imore.com/files/styles/large/public/field/image/2019/08/switch-packaging-comparison.jpg",
+        description=cleandoc("""
+            Telling apart a new switch from an old one isn't like how you would do it with the 3DS.
+            One way is by looking at the serial numbers on the switch. These can tell you exactly which version you have.
+            If you just want a generalization of which version you have, just look at the box.
+        """)
+    )
+
+    await ctx.send(embed=embed)
+
+@neworold.command()
+async def wii(ctx):
+    embed = make_embed(
+        title="**Wii Versions**",
+        color=discord.Color.default(),
+        image="https://retrogamebuyer.com/wp-content/uploads/2020/03/RVL-001-vs-101.png?ezimgfmt=rs:372x186/rscb1/ng:webp/ngcb1",
+        description=cleandoc("""
+            Telling apart the different Wii versions is by far the easiest.
+            If your Wii has slots for Gamecube memory cards and controllers, then you have an original Wii
+            If it doesn't, then you have a newer one.
+        """)
+    )
+
+    await ctx.send(embed=embed)
+
+@bot.command()
+async def invite(ctx, invite):
+    '''Shows the invites for various discord guilds (ivan, homebrew, analog, chill)'''
+    invites = {
+        "ivan": "NM85JqJ",
+        "chill": "eTS6yym",
+        "analog": "7bXpJSh",
+        "homebrew": "C29hYvh"
+    }
+    try:    await ctx.send(f"https://discord.gg/{invites[invite.lower()]}")
+    except: await ctx.send('Options are: ivan, homebrew, analog, chill.')
+
+@bot.command()
+async def serial(ctx):
+    '''Shows how to check your Switch's serial number'''
+    embed = make_embed(
+        title="**Switch Serial Number**",
+        color=discord.Color.default(),
+        image="https://i.imgur.com/03NfeFN.png",
+        description=cleandoc("""
+           Dont know where your switch serial number is? Look at this image to help ya out
+        """)
+    )
+
+    await ctx.send(embed=embed)
+
+@bot.command()
+async def r4(ctx):
+    '''R4? that sounds like a kind of breakfast cereal (tells what an R4(i) cartridge is)'''
+    await ctx.send('An R4 is a Flashcart that can or cannot be used for ntrboot (unbrick and cfw installation tool I guess you can call it). Its also used to play gaems (hopefully dumped from carts).')
+
+@bot.command()
+async def meta(ctx):
+    '''meta? don't you mean off-topic 2?'''
+    await ctx.send('you seem to be in <#759902836116160532>')
+
+#admin stuff
+
+@bot.command(aliases=["yeet"])
+@commands.has_any_role('Owner', 'Staff', 'Admin')
+async def ban (ctx, member: discord.User = None, reason="[no reason specified]"):
+    '''does what it says on the tin'''
+    if member == None or member == ctx.message.author:
+        await ctx.channel.send("You cannot ban yourself.")
+        return
+    message = f"You have been banned from {ctx.guild.name} for {reason}"
+    await ctx.guild.ban(member, reason=reason, delete_message_days=0)
+    await ctx.channel.send(f"{member} has been b&. 👍")
+    await member.send(message)
+    
+@bot.command()
+@commands.has_any_role('Owner', 'Staff', 'Admin', 'Helper')
+async def kick(ctx, member: discord.Member, *, reason=0):
+    '''does what it says on the tin'''
+    await member.kick(reason=reason, delete_message_days=0)
+    send = f"user {member.name} has been kicked."
+    await ctx.send(send)
+
+@bot.command()
+@commands.has_any_role('Owner', 'Staff', 'Admin', 'Helper')
+async def say(ctx, message):
+    '''does what it says on the tin (helpers+)'''
+    await ctx.message.delete()
+    await ctx.send(ctx.message.content[5:])
+
+@bot.command()
+@commands.has_any_role('Owner', 'Staff', 'Admin',)
+async def update(ctx):
+    await ctx.send("Updating code. The bot will be down for roughly 15 seconds.")
+    subprocess.run(['bash', '/home/lazr/Documents/Sans/recovery/sans.sh'])
+    
+@bot.command()
+@commands.has_any_role('Owner', 'Staff', 'Admin')
+async def reboot(ctx):
+    await ctx.send("Rebooting bot. Bot will be down for a few seconds.")
+    subprocess.run(['bash', '/home/lazr/Documents/Sans/recovery/reboot.sh'])
+
+#piracy related things
+
+@bot.command()
+async def amiapirate(ctx):
+    '''Explains what piracy is and how it's bad'''
+    await ctx.send("https://3ds.eiphax.tech/piracy")
+    
+@bot.command(aliases=["r11"])
+async def pirate(ctx):
+    '''oi buy your games m8 (tells why piracy is bad)'''
+    await ctx.send('We do not support nor condone piracy as it is\n 1. Against Discord TOS\n 2. It is illegal, buy your damn games')
+
+@bot.command()
+async def pirate2(ctx):
+    '''oi m8 buy your gams (alternative to pirate)'''
+    await ctx.send('yeah you just need to go to the eShop, put in the magic numbers on your credit card, and then go and press download on the game you want.')
+    
 bot.run(token)
