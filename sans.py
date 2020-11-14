@@ -385,10 +385,10 @@ async def ftp(ctx):
     '''Links FTPD guide'''
     embed = make_embed(
         title="FTP Guide",
-        author="Kreig",
+        author="Krieg",
         color=0x2aa8a0,
         url="https://3ds.eiphax.tech/ftp.html",
-        description="A guide on how to set up FTP on your 3ds, Note 3ds and switch are basically the same process",
+        description="A guide on how to set up FTP on your 3ds.",
     )
     await ctx.send(embed=embed)
 
