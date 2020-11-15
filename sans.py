@@ -510,12 +510,12 @@ async def _3ds(ctx):
 @baninfo.command()
 async def wiiu(ctx):
     embed = discord.Embed(
-        title="**WiiU Bans**",
+        title="**Wii U Bans**",
         description=cleandoc("""
             Just like 3DS, Nintendo has shown a marked lack of care about bans on the Wii U lately.
             However, such things as piracy and cheating online/cheating in multiplayer games have been known causes for NNID/console bans in the past.
             eShop fraud (eg credit card chargebacks) will also get you banned.
-            You can enable online status and Spotpass/Streetpass as these do not seem to be high risk at this time.
+            You can enable online status as it doesnt seem to be a bigh risk at this time
         """)
     )
     
