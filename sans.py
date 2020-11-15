@@ -515,7 +515,7 @@ async def wiiu(ctx):
             Just like 3DS, Nintendo has shown a marked lack of care about bans on the Wii U lately.
             However, such things as piracy and cheating online/cheating in multiplayer games have been known causes for NNID/console bans in the past.
             eShop fraud (eg credit card chargebacks) will also get you banned.
-            You can enable online status as it doesnt seem to be a bigh risk at this time
+            You can enable online status as it doesnt seem to be a high risk at this time
         """)
     )
     
