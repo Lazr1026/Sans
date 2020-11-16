@@ -612,6 +612,11 @@ async def brick(ctx):
     '''why does this even exist (note from lazr: it exists because yes)'''
     await ctx.send('nah fuck you :wink:')
 
+@bot.command()
+async def bean(ctx, u: discord.Member):
+    '''BEAN!!!'''
+    await ctx.send(f"{u.mention} Get Beaned!!!")
+	
 #bot stuff
 
 @bot.command()
