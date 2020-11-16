@@ -11,3 +11,5 @@ if you want to invite this shit of a bot to your server invite link is [here](ht
 6. In sans.js, replace the part where it says `yourtoken` with the token of your bot.
 7. Open terminal and run `cd (wherever you're keeping sans.js)` and then `node sans.js`.
 Enjoy hosting Sans!
+
+If you tried hosting the bot what the fuck is wrong with you? This barely works anywhere else but my computer what makes you think that its a good idea.
