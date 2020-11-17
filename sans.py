@@ -37,7 +37,7 @@ async def on_ready():
 #assistance
 
 @bot.group()
-async def recstore(ctx)
+async def recstore(ctx):
     '''Tells recommended storage for each console'''
     if ctx.invoked_subcommand is None:
 	await ctx.send('Options are: 3ds, wiiu, wii, nx')
@@ -46,7 +46,7 @@ async def recstore(ctx)
 async def _3ds(ctx):
     embed = make_embed(
 	title="3DS",
-	color=0x8345e5
+	color=0x8345e5,
 	description=cleandoc("""
 	    For the 3DS, it is required to have an SD card larger than 4GB. This is because that is the minimum amount required to complete installing CFW.
 	    As the 3ds was developed after SDXC, it is acceptable to put in an SD card greater than 32GB. However, anything above 64GB will start to affect boot times.
@@ -55,6 +55,37 @@ async def _3ds(ctx):
 
     await ctx.send(embed=embed)
 
+@recstore.command()
+async def wiiu(ctx):
+    embed = make_embed(
+        title="Wii U",
+        color=0x009ac4,
+        description=cleandoc("""
+            For the WiiU any size will work really, but here are some size recommendations:
+            **Installing game backups** - 32GB (Smaller SD card sizes may be used but some games go up to 20GB)
+            **Running game mods** - 8GB (FAT32 USB drive may be used for mods as well)
+            **Only running homebrew apps** - Any size will work
+        """)
+    )
+    
+    await ctx.send(embed=embed)
+
+@recstore.command(aliases=("switch, ns"))
+async def nx(ctx):
+    embed = make_embed(
+        title="Switch",
+        color=0x910404,
+        description=cleandoc("""
+            For the Switch a 64GB is the minimum for an EmuMMC But a 128GB+ is recommended so you can have an EmuMMC and install Game Backups without running out of storage + having enough storage for your SysMMC as well.
+            When you get an SD Card for you Switch you have to format as FAT32 because Nintendos exfat drivers are crap, here are some formatting tools:
+            Windows-[GUIformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
+            Linux-[GParted](https://gparted.org/download.php)+[dosfstools](https://github.com/dosfstools/dosfstools)
+            MacOS-[Disk Utility](https://support.apple.com/guide/disk-utility/format-a-disk-for-windows-computers-dskutl1010)
+        """)
+    )
+
+    await ctx.send(embed=embed)
+	
 @bot.group()
 async def guide(ctx):
     '''Links the CFW guide for various consoles'''
@@ -853,16 +884,10 @@ async def say(ctx, message):
     await ctx.send(ctx.message.content[5:])
 
 @bot.command()
-@commands.has_any_role('Owner', 'Staff', 'Admin',)
+@commands.has_any_role('Owner', 'Staff', 'Admin', 'Sans Contributor')
 async def update(ctx):
     await ctx.send("Updating code. The bot will be down for roughly 15 seconds.")
     subprocess.run(['bash', '/home/lazr/Documents/Sans/recovery/sans.sh'])
-    
-@bot.command()
-@commands.has_any_role('Owner', 'Staff', 'Admin')
-async def reboot(ctx):
-    await ctx.send("Rebooting bot. Bot will be down for a few seconds.")
-    subprocess.run(['bash', '/home/lazr/Documents/Sans/recovery/reboot.sh'])
 
 #piracy related things
 
