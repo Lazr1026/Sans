@@ -46,11 +46,11 @@ async def guide(ctx):
 async def _3ds(ctx):
     embed = make_embed(
         title="Guide",
-        author="Internet Ivan",
+        author="NH and Friends",
         color=0x56238c,
-        thumbnail="https://i.imgur.com/CFp51Hb.jpg",
-        url="https://www.youtube.com/watch?v=tt1rUcng4OU",
-        description="Guide on how to install B9S on your 3ds"
+        thumbnail="https://nintendohomebrew.com/pics/nhplai.png",
+        url="https://3ds.hacks.guide/",
+        description="A complete guide to 3DS custom firmware, from stock to boot9strap."
     )
 
     await ctx.send(embed=embed)
@@ -133,20 +133,6 @@ async def ctr(ctx):
         thumbnail="https/nintendohomebrew.com/pics/nhplai.png",
         url="https://3ds.hacks.guide/ctrtransfer",
         description="How to do the 11.5.0-38 ctrtransfer"
-    )
-
-    await ctx.send(embed=embed)
-
-@bot.command(aliases=["browserhack"])
-async def browserhax(ctx):
-    '''Links the guide for BrowserHax2020'''
-    embed = make_embed(
-        title="Browserhax",
-        author="Nintendo Homebrew",
-        color=discord.Color.blue(),
-        thumbnail="https://3ds.eiphax.tech/pic/browserhaxfriends.png",
-        url="https://3ds.hacks.guide/homebrew-launcher-(browserhax-2020)",
-        description="A guide on how to do BrowserHax 2020 for getting CFW on your 3DS"
     )
 
     await ctx.send(embed=embed)
