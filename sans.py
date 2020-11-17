@@ -336,8 +336,8 @@ async def wiiu(ctx):
     
     await ctx.send(embed=embed)
 
-@recstore.command(aliases=("switch, ns"))
-async def nx(ctx):
+@recstore.command(aliases=("nx", "ns"))
+async def switch(ctx):
     embed = make_embed(
         title="Switch",
         color=0x910404,
