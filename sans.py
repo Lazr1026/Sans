@@ -37,6 +37,25 @@ async def on_ready():
 #assistance
 
 @bot.group()
+async def recstore(ctx)
+    '''Tells recommended storage for each console'''
+    if ctx.invoked_subcommand is None:
+	await ctx.send('Options are: 3ds, wiiu, wii, nx')
+
+@recstore.command(name="3ds")
+async def _3ds(ctx):
+    embed = make_embed(
+	title="3DS",
+	color=0x8345e5
+	description=cleandoc("""
+	    For the 3DS, it is required to have an SD card larger than 4GB. This is because that is the minimum amount required to complete installing CFW.
+	    As the 3ds was developed after SDXC, it is acceptable to put in an SD card greater than 32GB. However, anything above 64GB will start to affect boot times.
+	""")
+    )
+
+    await ctx.send(embed=embed)
+
+@bot.group()
 async def guide(ctx):
     '''Links the CFW guide for various consoles'''
     if ctx.invoked_subcommand is None:
