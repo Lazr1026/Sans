@@ -305,7 +305,7 @@ async def sdroot(ctx):
 @bot.group()
 async def recstore(ctx):
     '''Tells recommended storage for each console'''
-    if ctx.invoked_subcommand is None
+    if ctx.invoked_subcommand is None:
         await ctx.send('Options are: 3ds, wiiu, wii, nx')
 
 @recstore.command(name="3ds")
