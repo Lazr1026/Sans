@@ -681,7 +681,7 @@ async def contributors(ctx):
             Techmuse - PR'd useful shit
             Gnome! - Cleaned everything up massively
             ItsPizzaTime1501 - Helped with proper licensing
-            bleck9999 - (I'm not sure what bleck did, feel free to edit this part - Meganium97)
+            bleck9999 - Fixed Gnomes mistakes
             Maretu (ray) - Fixed our terrible grammar
             Meganium97 (Dire) - Idk, what are you asking me for?
         """)
