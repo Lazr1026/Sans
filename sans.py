@@ -25,8 +25,8 @@ def make_embed(title=None, description=None, author=None, thumbnail=None, url=No
 
 bot = commands.Bot(command_prefix=("."), case_insensitive=True, allowed_mentions=discord.AllowedMentions(everyone=False, roles=False, users=True))
 
-tokendir = os.path.dirname(os.path.realpath(__file__))
-with open(tokendir + "/token.json") as tokenfile:
+home_path = os.path.dirname(os.path.realpath(__file__)) # previously token_dir
+with open(home_path + "/token.json") as tokenfile:
     token = tokenfile.read()
 
 @bot.event
@@ -684,6 +684,7 @@ async def contributors(ctx):
             bleck9999 - Fixed Gnomes mistakes
             Maretu (ray) - Fixed our terrible grammar
             Meganium97 (Dire) - Idk, what are you asking me for?
+            Glazed_Belmont - Fixed the paths not being universal
         """)
     )
     
@@ -887,7 +888,7 @@ async def say(ctx, message):
 @commands.has_any_role('Owner', 'Staff', 'Admin', 'Sans Contributor')
 async def update(ctx):
     await ctx.send("Updating code. The bot will be down for roughly 15 seconds.")
-    subprocess.run(['bash', '/home/lazr/Documents/Sans/recovery/sans.sh'])
+    subprocess.run(['bash', home_path + '/recovery/sans.sh'])
 
 #piracy related things
 
