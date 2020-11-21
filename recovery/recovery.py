@@ -20,7 +20,7 @@ bot.remove_command('help')
 @bot.command()
 async def recover(ctx):
     await ctx.send("Performing recovery. Please make sure the latest git commit is in a working state.")
-    subprocess.run(['bash', '/home/lucas/Documents/Sans/sans.sh'])
+    subprocess.run(['bash', home_path + '/sans.sh'])
 
 @commands.has_any_role('Owner', 'Admin')
 @bot.command()
