@@ -434,7 +434,7 @@ async def twlmenu(ctx):
     await ctx.send('https://www.youtube.com/watch?v=07ZMSrrZwCQ')
 
 @bot.command()
-async def twlfix(ctx, mode):
+async def twlfix(ctx):
     '''Instructions for fixing a broken TWLNand'''
     embed = make_embed(
 	title="**Fix broken TWL**",
