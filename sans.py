@@ -436,7 +436,7 @@ async def twlmenu(ctx):
 @bot.command()
 async def twlfix(ctx, mode):
     '''Instructions for fixing a broken TWLNand'''
-    embed = make embed(
+    embed = make_embed(
 	title="**Fix broken TWL**",
 	color=0x3eb2c7,
 	description=cleandoc("""
