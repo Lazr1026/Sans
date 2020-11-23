@@ -443,10 +443,10 @@ async def twlfix(ctx, mode):
         	If you already have CFW use [TWLfix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/)
         	If you already have homebrew but not CFW use [TWLfix-3DS](https://github.com/MechanicalDragon0687/TWLFix-3DS)
         	If you have neither CFW or homebrew it is easier to get homebrew and use the previous option.you could also get a DSiWare app and follow: [TWLfix Stock](https://github.com/MechanicalDragon0687/TWLFix/wiki/Instructions)
-        	Each of these require a system update after being ran or restoring the DSiWare.
+        	Each of these require a system update after being performed or restoring the DSiWare.
         """)
 	)
-	await ctx.send(embed=embed)
+    await ctx.send(embed=embed)
 
 @bot.command()
 async def ndsforwarders(ctx):
