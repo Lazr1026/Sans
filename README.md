@@ -6,10 +6,6 @@ if you want to invite this shit of a bot to your server invite link is [here](ht
 1. Install [Python3.8](https://www.python.org/downloads/) or newer.
 2. Install everything in requirements.txt with `pip install -r path/to/requirements.txt` (if this fails try `pip3 install -r path/to/requirements.txt`)
 3. Place the token in a file called `token.json` in the same directory as `sans.py`, then run `sans.py`.
-4. Install the latest build of [Node.js](https://nodejs.org/en/).
-5. Install [discord.js](https://discord.js.org/#/) in terminal with the command `npm install discord.js`.
-6. In sans.js, replace the part where it says `yourtoken` with the token of your bot.
-7. Open terminal and run `cd (wherever you're keeping sans.js)` and then `node sans.js`.
 Enjoy hosting Sans!
 
 If you tried hosting the bot what the fuck is wrong with you? This barely works anywhere else but my computer what makes you think that its a good idea.
