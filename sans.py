@@ -437,9 +437,9 @@ async def twlmenu(ctx):
 async def twlfix(ctx, mode):
     '''Instructions for fixing a broken TWLNand'''
     embed = make_embed(
-	title="**Fix broken TWL**",
-	color=0x3eb2c7,
-	description=cleandoc("""
+		title="**Fix broken TWL**",
+		color=0x3eb2c7,
+		description=cleandoc("""
         	If you already have CFW use [TWLfix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/)
         	If you already have homebrew but not CFW use [TWLfix-3DS](https://github.com/MechanicalDragon0687/TWLFix-3DS)
         	If you have neither CFW or homebrew it is easier to get homebrew and use the previous option.you could also get a DSiWare app and follow: [TWLfix Stock](https://github.com/MechanicalDragon0687/TWLFix/wiki/Instructions)
