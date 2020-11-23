@@ -25,8 +25,8 @@ def make_embed(title=None, description=None, author=None, thumbnail=None, url=No
 
 bot = commands.Bot(command_prefix=("."), case_insensitive=True, allowed_mentions=discord.AllowedMentions(everyone=False, roles=False, users=True))
 
-tokendir = os.path.dirname(os.path.realpath(__file__))
-with open(tokendir + "/token.json") as tokenfile:
+home_path = os.path.dirname(os.path.realpath(__file__)) # previously token_dir
+with open(home_path + "/token.json") as tokenfile:
     token = tokenfile.read()
 
 @bot.event
@@ -35,26 +35,7 @@ async def on_ready():
     print(f'We have logged in as {bot.user}')
 
 #assistance
-
-@bot.group()
-async def recstore(ctx)
-    '''Tells recommended storage for each console'''
-    if ctx.invoked_subcommand is None:
-	await ctx.send('Options are: 3ds, wiiu, wii, nx')
-
-@recstore.command(name="3ds")
-async def _3ds(ctx):
-    embed = make_embed(
-	title="3DS",
-	color=0x8345e5
-	description=cleandoc("""
-	    For the 3DS, it is required to have an SD card larger than 4GB. This is because that is the minimum amount required to complete installing CFW.
-	    As the 3ds was developed after SDXC, it is acceptable to put in an SD card greater than 32GB. However, anything above 64GB will start to affect boot times.
-	""")
-    )
-
-    await ctx.send(embed=embed)
-
+	
 @bot.group()
 async def guide(ctx):
     '''Links the CFW guide for various consoles'''
@@ -321,6 +302,56 @@ async def sdroot(ctx):
 
     await ctx.send(embed=embed)
 
+@bot.group()
+async def recstore(ctx):
+    '''Tells recommended storage for each console'''
+    if ctx.invoked_subcommand is None:
+        await ctx.send('Options are: 3ds, wiiu, wii, nx')
+
+@recstore.command(name="3ds")
+async def _3ds(ctx):
+    embed = make_embed(
+	title="3DS",
+	color=0x8345e5,
+	description=cleandoc("""
+	    For the 3DS, it is required to have an SD card larger than 4GB. This is because that is the minimum amount required to complete installing CFW.
+	    As the 3ds was developed after SDXC, it is acceptable to put in an SD card greater than 32GB. However, anything above 64GB will start to affect boot times.
+	""")
+    )
+
+    await ctx.send(embed=embed)
+
+@recstore.command()
+async def wiiu(ctx):
+    embed = make_embed(
+        title="Wii U",
+        color=0x009ac4,
+        description=cleandoc("""
+            For the WiiU any size will work really, but here are some size recommendations:
+            **Installing game backups** - 32GB (Smaller SD card sizes may be used but some games go up to 20GB)
+            **Running game mods** - 8GB (FAT32 USB drive may be used for mods as well)
+            **Only running homebrew apps** - Any size will work
+        """)
+    )
+    
+    await ctx.send(embed=embed)
+
+@recstore.command(aliases=("nx", "ns"))
+async def switch(ctx):
+    embed = make_embed(
+        title="Switch",
+        color=0x910404,
+        description=cleandoc("""
+            For the Switch a 64GB is the minimum for an EmuMMC But a 128GB+ is recommended so you can have an EmuMMC and install Game Backups without running out of storage + having enough storage for your SysMMC as well.
+            When you get an SD Card for you Switch you have to format as FAT32 because Nintendos exfat drivers are crap, here are some formatting tools:
+            Windows-[GUIformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
+            Linux-[GParted](https://gparted.org/download.php)+[dosfstools](https://github.com/dosfstools/dosfstools)
+            MacOS-[Disk Utility](https://support.apple.com/guide/disk-utility/format-a-disk-for-windows-computers-dskutl1010)
+        """)
+    )
+
+    await ctx.send(embed=embed)
+
 @bot.command(name="7zip")
 async def _7zip(ctx):
     '''Links 7-zip download'''
@@ -403,15 +434,19 @@ async def twlmenu(ctx):
     await ctx.send('https://www.youtube.com/watch?v=07ZMSrrZwCQ')
 
 @bot.command()
-async def twlfix(ctx, mode):
+async def twlfix(ctx):
     '''Instructions for fixing a broken TWLNand'''
-    twlfix_links = {
-        "cfw": "TWLFix-CFW/releases",
-        "3ds": "TWLFix-3DS/releases",
-        "stock": "TWLFix/wiki/Instructions"
-    }
-    try:    await ctx.send(f"```Use this tool to fix the dsiware on your 3ds!``` <https://github.com/MechanicalDragon0687/{twlfix_links[mode.lower()]}/>, please note that you must do a system update after the process has finished'")
-    except: await ctx.send('```What twlfix would ya like? cfw, 3ds, stock```')
+    embed = make_embed(
+	title="**Fix broken TWL**",
+	color=0x3eb2c7,
+	description=cleandoc("""
+	    If you already have CFW use [TWLfix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/)
+            If you already have homebrew but not CFW use [TWLfix-3DS](https://github.com/MechanicalDragon0687/TWLFix-3DS)
+            If you have neither CFW or homebrew it is easier to get homebrew and use the previous option.you could also get a DSiWare app and follow: [TWLfix Stock](https://github.com/MechanicalDragon0687/TWLFix/wiki/Instructions)
+            Each of these require a system update after being performed or restoring the DSiWare.
+        """)
+    )
+    await ctx.send(embed=embed)
 
 @bot.command()
 async def ndsforwarders(ctx):
@@ -650,9 +685,10 @@ async def contributors(ctx):
             Techmuse - PR'd useful shit
             Gnome! - Cleaned everything up massively
             ItsPizzaTime1501 - Helped with proper licensing
-            bleck9999 - (I'm not sure what bleck did, feel free to edit this part - Meganium97)
+            bleck9999 - Fixed Gnomes mistakes
             Maretu (ray) - Fixed our terrible grammar
             Meganium97 (Dire) - Idk, what are you asking me for?
+            Glazed_Belmont - Fixed the paths not being universal
         """)
     )
     
@@ -713,7 +749,7 @@ async def profile(ctx, user: discord.User):
 @bot.command()
 @commands.has_any_role('Owner', 'Admin')
 async def proxyuser(ctx, user: Union[discord.Member, discord.User, int, str], *, message):
-    '''bulshit, BULLSHIT!'''
+    '''bullshit, BULLSHIT!'''
     await ctx.message.delete()
     if isinstance(user, int):
         try:    user = await self.bot.fetch_user(user)
@@ -853,16 +889,10 @@ async def say(ctx, message):
     await ctx.send(ctx.message.content[5:])
 
 @bot.command()
-@commands.has_any_role('Owner', 'Staff', 'Admin',)
+@commands.has_any_role('Owner', 'Staff', 'Admin', 'Sans Contributor')
 async def update(ctx):
     await ctx.send("Updating code. The bot will be down for roughly 15 seconds.")
-    subprocess.run(['bash', '/home/lazr/Documents/Sans/recovery/sans.sh'])
-    
-@bot.command()
-@commands.has_any_role('Owner', 'Staff', 'Admin')
-async def reboot(ctx):
-    await ctx.send("Rebooting bot. Bot will be down for a few seconds.")
-    subprocess.run(['bash', '/home/lazr/Documents/Sans/recovery/reboot.sh'])
+    subprocess.run(['bash', home_path + '/recovery/sans.sh'])
 
 #piracy related things
 
