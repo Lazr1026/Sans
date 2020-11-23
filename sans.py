@@ -436,13 +436,17 @@ async def twlmenu(ctx):
 @bot.command()
 async def twlfix(ctx, mode):
     '''Instructions for fixing a broken TWLNand'''
-    twlfix_links = {
-        "cfw": "TWLFix-CFW/releases",
-        "3ds": "TWLFix-3DS/releases",
-        "stock": "TWLFix/wiki/Instructions"
-    }
-    try:    await ctx.send(f"```Use this tool to fix the dsiware on your 3ds!``` <https://github.com/MechanicalDragon0687/{twlfix_links[mode.lower()]}/>, please note that you must do a system update after the process has finished'")
-    except: await ctx.send('```What twlfix would ya like? cfw, 3ds, stock```')
+    embed = make embed(
+	title="**Fix broken TWL**",
+	color=0x3eb2c7,
+	description=cleandoc("""
+        	If you already have CFW use [TWLfix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/)
+        	If you already have homebrew but not CFW use [TWLfix-3DS](https://github.com/MechanicalDragon0687/TWLFix-3DS)
+        	If you have neither CFW or homebrew it is easier to get homebrew and use the previous option.you could also get a DSiWare app and follow: [TWLfix Stock](https://github.com/MechanicalDragon0687/TWLFix/wiki/Instructions)
+        	Each of these require a system update after being ran or restoring the DSiWare.
+        """)
+	)
+	await ctx.send(embed=embed)
 
 @bot.command()
 async def ndsforwarders(ctx):
@@ -745,7 +749,7 @@ async def profile(ctx, user: discord.User):
 @bot.command()
 @commands.has_any_role('Owner', 'Admin')
 async def proxyuser(ctx, user: Union[discord.Member, discord.User, int, str], *, message):
-    '''bulshit, BULLSHIT!'''
+    '''bullshit, BULLSHIT!'''
     await ctx.message.delete()
     if isinstance(user, int):
         try:    user = await self.bot.fetch_user(user)
