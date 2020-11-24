@@ -882,7 +882,7 @@ async def kick(ctx, member: discord.Member, *, reason=0):
     await ctx.send(send)
 
 @bot.command()
-@commands.has_any_role('Owner', 'Staff', 'Admin', 'Helper')
+@commands.has_any_role('Owner', 'Staff', 'Admin', 'Helper', 'Sans Contributor')
 async def say(ctx, message):
     '''does what it says on the tin (helpers+)'''
     await ctx.message.delete()
