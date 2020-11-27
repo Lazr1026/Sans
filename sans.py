@@ -197,7 +197,7 @@ async def updateluma(ctx):
 	color=0x000000,
 	thumbnail="https://avatars0.githubusercontent.com/u/5243259?s=400&v=4",
 	url="https://gist.github.com/lilyuwuu/3a7ba3dcd2476e6b5f4b6f66fa173bd6"
-	description="A guide for manually updating Luma3ds. This is necessary if you receive the \"Failed to apply 1 Firm patch(es)\" or \"pm\" errors"
+	description="A guide for manually updating Luma3ds. This is necessary if you receive the \"Failed to apply 1 Firm patch(es)\" or \"pm\" errors",
     )
     await ctx.send(embed=embed)
 	
