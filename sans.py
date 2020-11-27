@@ -657,6 +657,11 @@ async def bean(ctx, u: discord.Member):
     '''BEAN!!!'''
     await ctx.send(f"{u.mention} Get Beaned!!!")
 	
+@bot.command()
+async def nh(ctx):
+    '''nh bad hoes mad'''
+    await ctx.send('Nintendo Homebrew mods have shown a marked lack of care about bans on elsewhere lately. However,such things as pyrosee in asschans and memes in off topic are known causes for Discord account bans in the past.\n You should enable invisible mode while talking in Nintendo Homebrew and not talking to pbanj as these seem to be high risk at this time.')
+	
 #bot stuff
 
 @bot.command()
