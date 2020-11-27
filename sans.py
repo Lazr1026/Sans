@@ -189,6 +189,19 @@ async def finalizing(ctx):
     await ctx.send(embed=embed)
 	
 @bot.command()
+async def updateluma(ctx):
+    '''Links the Manually Updating luma guide'''
+    embed = make_embed(
+	title="Manually Updating Luma",
+	author="chenzw + lily",
+	color=0x000000,
+	thumbnail="https://avatars0.githubusercontent.com/u/5243259?s=400&v=4",
+	url="https://gist.github.com/lilyuwuu/3a7ba3dcd2476e6b5f4b6f66fa173bd6"
+	description="A guide for manually updating Luma3ds. This is necessary if you receive the \"Failed to apply 1 Firm patch(es)\" or \"pm\" errors
+    )
+    await ctx.send(embed=embed)
+	
+@bot.command()
 async def atob(ctx):
     '''Links the A9LH to B9S guide'''
     embed = make_embed(
@@ -660,7 +673,7 @@ async def bean(ctx, u: discord.Member):
 @bot.command()
 async def nh(ctx):
     '''nh bad hoes mad'''
-    await ctx.send('Nintendo Homebrew mods have shown a marked lack of care about bans on elsewhere lately. However,such things as pyrosee in asschans and memes in off topic are known causes for Discord account bans in the past.\n You should enable invisible mode while talking in Nintendo Homebrew and not talking to pbanj as these seem to be high risk at this time.')
+    await ctx.send('Nintendo Homebrew mods have shown a marked lack of care about bans on elsewhere lately. However,such things as pyrosee in asschans and memes in off topic are known causes for Discord account bans in the past.\nYou should enable invisible mode while talking in Nintendo Homebrew and not talking to pbanj as these seem to be high risk at this time.')
 	
 #bot stuff
 
