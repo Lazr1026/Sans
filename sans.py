@@ -919,12 +919,12 @@ async def amiapirate(ctx):
     '''Explains what piracy is and how it's bad'''
     await ctx.send("https://3ds.eiphax.tech/piracy")
     
-@bot.command(aliases=["r11"])
+@bot.command(aliases=["r11", "piracy"])
 async def pirate(ctx):
     '''oi buy your games m8 (tells why piracy is bad)'''
     await ctx.send('We do not support nor condone piracy as it is\n 1. Against Discord TOS\n 2. It is illegal, buy your damn games')
 
-@bot.command()
+@bot.command(aliases=["piracy2"])
 async def pirate2(ctx):
     '''oi m8 buy your gams (alternative to pirate)'''
     await ctx.send('yeah you just need to go to the eShop, put in the magic numbers on your credit card, and then go and press download on the game you want.')
