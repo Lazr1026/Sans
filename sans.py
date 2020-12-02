@@ -95,7 +95,7 @@ async def wii(ctx):
     await ctx.send(embed=embed)
 
 @bot.group()
-async def what(ctx):
+async def what(ctx)
     '''Links the What? pages for various consoles'''
     if ctx.invoked_subcommand is None:
         await ctx.send('Options are: 3ds, switch, ns, nx')
@@ -498,7 +498,7 @@ async def db(ctx, console):
     if console.lower() == "3ds":
         embed = make_embed(
             title="3DS Database",
-            url="http://3dsdb.com/",
+            url="https://hax0kartik.github.io/3dsdb/",
             color=discord.Color.dark_orange(),
             description="3DS database for game releases."
         )
