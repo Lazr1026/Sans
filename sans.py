@@ -111,7 +111,7 @@ async def _3ds(ctx):
         
     await ctx.send(embed=embed)
         
-@what.commmand()
+@what.command()
 async def wiiu(ctx):
     embed = make_embed(
 	title="What?",
