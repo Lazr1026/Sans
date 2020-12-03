@@ -95,7 +95,7 @@ async def wii(ctx):
     await ctx.send(embed=embed)
 
 @bot.group()
-async def what(ctx)
+async def what(ctx):
     '''Links the What? pages for various consoles'''
     if ctx.invoked_subcommand is None:
         await ctx.send('Options are: 3ds, switch, ns, nx')
