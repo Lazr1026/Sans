@@ -112,12 +112,12 @@ async def _3ds(ctx):
     await ctx.send(embed=embed)
         
 @what.commmand()
-aasync def wiiu(ctx):
+async def wiiu(ctx):
     embed = make_embed(
-	    title="What?",
-	    color=0x00b0ad,
-	    url="http://wiiubrew.org/wiki/FAQ"
-	    description="The following link is Wii U Homebrew in a nutshell."
+	title="What?",
+	color=0x00b0ad,
+	url="http://wiiubrew.org/wiki/FAQ"
+	description="The following link is Wii U Homebrew in a nutshell."
     )
 
     await ctx.send(embed=embed)
