@@ -773,34 +773,6 @@ async def profile(ctx, user: discord.User):
     pfp = user.avatar_url
     await ctx.send(pfp)
 
-# Gnome: Hey look, it is my code :GWcorbintopkek:
-
-@bot.command()
-@commands.has_any_role('Owner', 'Admin')
-async def proxyuser(ctx, user: Union[discord.Member, discord.User, int, str], *, message):
-    '''bullshit, BULLSHIT!'''
-    await ctx.message.delete()
-    if isinstance(user, int):
-        try:    user = await self.bot.fetch_user(user)
-        except: user = str(user)
-    if isinstance(user, str):
-        name = user
-        avatar = "https://cdn.discordapp.com/avatars/689564772512825363/f05524fd9e011108fd227b85c53e3d87.png"
-    else:
-        name = user.display_name
-        avatar = user.avatar_url
-    if "@everyone" in message or "@here" in message:
-        message = message.replace("@everyone", "everyone")
-        message = message.replace("@here", "here")
-    webhooks = await ctx.channel.webhooks()
-    if len(webhooks) == 0:
-        webhook = await ctx.channel.create_webhook(name="Webhook for bullshit")
-        await webhook.send(message, username=name, avatar_url=avatar)
-        await webhook.delete()
-    else:
-        webhook = webhooks[0]
-        await webhook.send(message, username=name, avatar_url=avatar)
-
 @bot.group()
 async def neworold(ctx):
     '''Shows which version of console you have'''
