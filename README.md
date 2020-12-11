@@ -1,5 +1,5 @@
 # Sans
-A discord bot for [internet ivans](https://discord.com/invite/5WamMCC) and [Lazr's](https://discord.gg/7ECUWDp) discord guilds
+A discord bot for [internet ivans](https://discord.com/invite/5WamMCC) and [Lazr's](https://discord.gg/eTS6yym) discord guilds - PR's are welcome
 ### Invite link
 if you want to invite this shit of a bot to your server invite link is [here](https://discord.com/api/oauth2/authorize?client_id=754750158125924483&permissions=805431350&scope=bot)
 ### Instructions - selfhosting

@@ -110,7 +110,7 @@ async def _3ds(ctx):
     )
         
     await ctx.send(embed=embed)
-        
+	
 @what.command(aliases=("ns", "nx"))
 async def switch(ctx):
     embed = make_embed(
@@ -121,7 +121,6 @@ async def switch(ctx):
     )
     
     await ctx.send(embed=embed)
-
 
 @bot.command(aliases=["ctrtransfer"])
 async def ctr(ctx):
@@ -498,7 +497,7 @@ async def db(ctx, console):
     if console.lower() == "3ds":
         embed = make_embed(
             title="3DS Database",
-            url="http://3dsdb.com/",
+            url="https://hax0kartik.github.io/3dsdb/",
             color=discord.Color.dark_orange(),
             description="3DS database for game releases."
         )
@@ -552,7 +551,7 @@ async def _3ds(ctx):
         title="**3DS Bans**",
         description=cleandoc("""
             Nintendo has shown a marked lack of care about bans on the 3DS lately.
-            However, such things as piracy and cheating online/cheating in multiplayer games have been known causes for NNID/console bans in the past.
+            However, such things as cheating online/cheating in multiplayer games have been known causes for NNID/console bans in the past.
             eShop fraud (eg credit card chargebacks) will also get you banned.
             You can enable online status and Spotpass/Streetpass as these do not seem to be high risk at this time.
         """)
@@ -566,7 +565,7 @@ async def wiiu(ctx):
         title="**Wii U Bans**",
         description=cleandoc("""
             Just like 3DS, Nintendo has shown a marked lack of care about bans on the Wii U lately.
-            However, such things as piracy and cheating online/cheating in multiplayer games have been known causes for NNID/console bans in the past.
+            However, such things as cheating online/cheating in multiplayer games have been known causes for NNID/console bans in the past.
             eShop fraud (eg credit card chargebacks) will also get you banned.
             You can enable online status as it doesnt seem to be a high risk at this time
         """)
@@ -642,8 +641,8 @@ async def radeon(ctx):
 
 @bot.command()
 async def uwuham(ctx):
-    '''something is very wrong here, get the node.js juice'''
-    await ctx.send('guys somethings wrong with uwuham hes using python')
+    '''true facts.'''
+    await ctx.send('uwuham is :poggu:')
 
 @bot.command()
 async def mega97(ctx):
@@ -728,9 +727,10 @@ async def listhelpers(ctx):
             **__3DS__**
             <@554832528238968883>
             <@578245729060126730>
-            <@504564321716666368>
             <@334102523365425163>
 	    <@395524987315814400>
+	    <@286488483994927109>
+	    <@295211947949948929>
             **__Wii U__**
             <@664297659686715403>
         """)
@@ -761,34 +761,6 @@ async def profile(ctx, user: discord.User):
     await ctx.send(f"Profile image for user: {user.name}")
     pfp = user.avatar_url
     await ctx.send(pfp)
-
-# Gnome: Hey look, it is my code :GWcorbintopkek:
-
-@bot.command()
-@commands.has_any_role('Owner', 'Admin')
-async def proxyuser(ctx, user: Union[discord.Member, discord.User, int, str], *, message):
-    '''bullshit, BULLSHIT!'''
-    await ctx.message.delete()
-    if isinstance(user, int):
-        try:    user = await self.bot.fetch_user(user)
-        except: user = str(user)
-    if isinstance(user, str):
-        name = user
-        avatar = "https://cdn.discordapp.com/avatars/689564772512825363/f05524fd9e011108fd227b85c53e3d87.png"
-    else:
-        name = user.display_name
-        avatar = user.avatar_url
-    if "@everyone" in message or "@here" in message:
-        message = message.replace("@everyone", "everyone")
-        message = message.replace("@here", "here")
-    webhooks = await ctx.channel.webhooks()
-    if len(webhooks) == 0:
-        webhook = await ctx.channel.create_webhook(name="Webhook for bullshit")
-        await webhook.send(message, username=name, avatar_url=avatar)
-        await webhook.delete()
-    else:
-        webhook = webhooks[0]
-        await webhook.send(message, username=name, avatar_url=avatar)
 
 @bot.group()
 async def neworold(ctx):
@@ -902,7 +874,7 @@ async def kick(ctx, member: discord.Member, *, reason=0):
 @bot.command()
 @commands.has_any_role('Owner', 'Staff', 'Admin', 'Helper', 'Sans Contributor')
 async def say(ctx, message):
-    '''does what it says on the tin (helpers+)'''
+    '''does what it says on the tin (Sans Contributors+)'''
     await ctx.message.delete()
     await ctx.send(ctx.message.content[5:])
 
