@@ -94,6 +94,45 @@ async def wii(ctx):
 
     await ctx.send(embed=embed)
 
+@bot.group()
+async def what(ctx):
+    '''Links the What? pages for various consoles'''
+    if ctx.invoked_subcommand is None:
+        await ctx.send('Options are: 3ds, wiiu, switch, ns, nx')
+        
+@what.command(name="3ds")
+async def _3ds(ctx):
+    embed = make_embed(
+        title="What?",
+        color=0x12e6b4,
+        url="https://3ds.eiphax.tech/what",
+        description="Confused? Click the link above, it'll show you some basic things about the 3DS and CFW"
+    )
+        
+    await ctx.send(embed=embed)
+        
+@what.command()
+async def wiiu(ctx):
+    embed = make_embed(
+	title="What?",
+	color=0x00b0ad,
+	url="http://wiiubrew.org/wiki/FAQ"
+	description="The following link is Wii U Homebrew in a nutshell."
+    )
+
+    await ctx.send(embed=embed)
+	
+@what.command(aliases=("ns", "nx"))
+async def switch(ctx):
+    embed = make_embed(
+        title="What?",
+        color=0x006f9e,
+        url="https://nx.eiphax.tech/nutshell.html",
+        description="Confused? Click the link above, it'll show you some basic things about the Switch and CFW"
+    )
+    
+    await ctx.send(embed=embed)
+
 @bot.command(aliases=["ctrtransfer"])
 async def ctr(ctx):
     '''Link the guide for a CTRtransfer'''
