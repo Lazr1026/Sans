@@ -613,8 +613,8 @@ async def radeon(ctx):
 
 @bot.command()
 async def uwuham(ctx):
-    '''something is very wrong here, get the node.js juice'''
-    await ctx.send('guys somethings wrong with uwuham hes using python')
+    '''true facts.'''
+    await ctx.send('uwuham is :poggu:')
 
 @bot.command()
 async def mega97(ctx):
@@ -845,7 +845,7 @@ async def kick(ctx, member: discord.Member, *, reason=0):
 @bot.command()
 @commands.has_any_role('Owner', 'Staff', 'Admin', 'Helper', 'Sans Contributor')
 async def say(ctx, message):
-    '''does what it says on the tin (helpers+)'''
+    '''does what it says on the tin (Sans Contributors+)'''
     await ctx.message.delete()
     await ctx.send(ctx.message.content[5:])
 
