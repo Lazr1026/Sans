@@ -8,4 +8,4 @@ if you want to invite this shit of a bot to your server invite link is [here](ht
 3. Place the token in a file called `token.json` in the same directory as `sans.py`, then run `sans.py`.
 Enjoy hosting Sans!
 
-If you tried hosting the bot what the fuck is wrong with you? This barely works anywhere else but my computer what makes you think that its a good idea.
+We're still working on both new update code and universal paths, so any hosters should host it from /home/lazr/Documents/Sans/ and as a root user.
