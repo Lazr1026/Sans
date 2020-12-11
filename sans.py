@@ -98,7 +98,7 @@ async def wii(ctx):
 async def what(ctx):
     '''Links the What? pages for various consoles'''
     if ctx.invoked_subcommand is None:
-        await ctx.send('Options are: 3ds, wiiu, switch, ns, nx')
+        await ctx.send('Options are: 3ds, switch, ns, nx')
         
 @what.command(name="3ds")
 async def _3ds(ctx):
@@ -109,17 +109,6 @@ async def _3ds(ctx):
         description="Confused? Click the link above, it'll show you some basic things about the 3DS and CFW"
     )
         
-    await ctx.send(embed=embed)
-
-@what.command()
-async def wiiu(ctx):
-    embed = make_embed(
-	title="What?",
-	color=0x00b0ad,
-	url="http://wiiubrew.org/wiki/FAQ"
-	description="The following link is Wii U Homebrew in a nutshell."
-    )
-
     await ctx.send(embed=embed)
 	
 @what.command(aliases=("ns", "nx"))
