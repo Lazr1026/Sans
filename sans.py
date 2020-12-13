@@ -851,9 +851,9 @@ async def meta(ctx):
 
 #admin stuff
 
-@bot.command(aliases=["yeet"])
+@bot.command()
 @commands.has_any_role('Owner', 'Staff', 'Admin')
-async def ban (ctx, member: discord.User = None, reason="[no reason specified]"):
+async def ban(ctx, member: discord.User = None, reason="[no reason specified]"):
     '''does what it says on the tin'''
     if member == None or member == ctx.message.author:
         await ctx.channel.send("You cannot ban yourself.")
@@ -916,4 +916,8 @@ async def k(ctx):
     '''k'''
     await ctx.send('https://tenor.com/view/kermit-sesame-street-write-gif-4298020')
 
+@bot.command(aliases=["uwuham2"])
+async def yeet(ctx):
+    ''':wink:'''
+    await ctx.send('https://cdn.discordapp.com/emojis/476606907512127501.gif?v=1')
 bot.run(token)
