@@ -904,8 +904,7 @@ async def pirate2(ctx):
 @bot.command(aliases=["piracy3"])
 async def pirate3(ctx):
     '''m8 oi your gams buy (another alternative to pirate cause why not)'''
-    await ctx.send('''Yarr harr fiddle dee dee
-    We will not help you with your piracy''')
+    await ctx.send('Yarr harr fiddle dee dee/nWe will not help you with your piracy')
 
 @bot.command(aliases=["piracy4"])
 async def pirate4(ctx):
