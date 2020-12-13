@@ -900,5 +900,21 @@ async def pirate(ctx):
 async def pirate2(ctx):
     '''oi m8 buy your gams (alternative to pirate)'''
     await ctx.send('yeah you just need to go to the eShop, put in the magic numbers on your credit card, and then go and press download on the game you want.')
-    
+
+@bot.command(aliases=["piracy3"])
+async def pirate3(ctx):
+    '''m8 oi your gams buy (another alternative to pirate cause why not)'''
+    await ctx.send('''Yarr harr fiddle dee dee
+    We will not help you with your piracy''')
+
+@bot.command(aliases=["piracy4"])
+async def pirate4(ctx):
+    '''gams m8 oi your buy (yet another alternative to pirate cause why not)'''
+    await ctx.send('https://cdn.discordapp.com/attachments/508390946753216528/695752500179107910/giphy.gif')
+
+@bot.command(aliases=["ok"])
+async def k(ctx):
+    '''k'''
+    await ctx.send('https://tenor.com/view/kermit-sesame-street-write-gif-4298020')
+
 bot.run(token)
