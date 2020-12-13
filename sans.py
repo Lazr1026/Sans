@@ -920,4 +920,9 @@ async def k(ctx):
 async def yeet(ctx):
     ''':wink:'''
     await ctx.send('https://cdn.discordapp.com/emojis/476606907512127501.gif?v=1')
+
+@bot.command(aliases=["kerry"])
+async def uwuham3(ctx):
+    '''we were bad but now we're bad'''
+    await ctx.send('https://cdn.discordapp.com/attachments/732483185471914044/787623265685471232/9uxg53a4xz841.png')
 bot.run(token)
