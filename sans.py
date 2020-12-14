@@ -24,6 +24,8 @@ def make_embed(title=None, description=None, author=None, thumbnail=None, url=No
     return embed
 
 bot = commands.Bot(command_prefix=("."), case_insensitive=True, allowed_mentions=discord.AllowedMentions(everyone=False, roles=False, users=True))
+bot.help_command = commands.DefaultHelpCommand(dm_help=None)
+
 
 home_path = os.path.dirname(os.path.realpath(__file__)) # previously token_dir
 with open(home_path + "/token.json") as tokenfile:
