@@ -622,6 +622,11 @@ async def cbhc(ctx):
 #memes
 
 @bot.command()
+async def die(ctx):
+    '''Perish'''
+    await ctx.send("https://cdn.discordapp.com/attachments/754753360132833431/787847978042916875/Mematic_meme_20201213_190551.jpg")
+
+@bot.command()
 async def halp(ctx):
     '''Halp'''
     await ctx.send("no")
