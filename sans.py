@@ -24,6 +24,8 @@ def make_embed(title=None, description=None, author=None, thumbnail=None, url=No
     return embed
 
 bot = commands.Bot(command_prefix=("."), case_insensitive=True, allowed_mentions=discord.AllowedMentions(everyone=False, roles=False, users=True))
+bot.help_command = commands.DefaultHelpCommand(dm_help=None)
+
 
 home_path = os.path.dirname(os.path.realpath(__file__)) # previously token_dir
 with open(home_path + "/token.json") as tokenfile:
@@ -655,6 +657,21 @@ async def siconove(ctx):
     await ctx.send("MAKE YOUR OWN COMMAND YOU SODDING TICTAC")
 	
 @bot.command()
+async def boop(ctx):
+	'''boop'''
+	await ctx.send('boop')
+	
+@bot.command()
+async def boop2(ctx):
+	'''free games'''
+	await ctx.send('boop2: electric boogaloo')
+	
+@bot.command()
+async def boop3(ctx):
+    '''not misinfo.'''
+    await ctx.send("boop 3: kerry is good <a:meowawau:788144699025784892>")
+	
+@bot.command()
 async def snas(ctx):
     '''fortnite battle royale'''
     await ctx.send('https://tenor.com/view/sans-undertale-dance-gif-12730380')
@@ -851,9 +868,9 @@ async def meta(ctx):
 
 #admin stuff
 
-@bot.command(aliases=["yeet"])
+@bot.command()
 @commands.has_any_role('Owner', 'Staff', 'Admin')
-async def ban (ctx, member: discord.User = None, reason="[no reason specified]"):
+async def ban(ctx, member: discord.User = None, reason="[no reason specified]"):
     '''does what it says on the tin'''
     if member == None or member == ctx.message.author:
         await ctx.channel.send("You cannot ban yourself.")
@@ -900,5 +917,29 @@ async def pirate(ctx):
 async def pirate2(ctx):
     '''oi m8 buy your gams (alternative to pirate)'''
     await ctx.send('yeah you just need to go to the eShop, put in the magic numbers on your credit card, and then go and press download on the game you want.')
-    
+
+@bot.command(aliases=["piracy3"])
+async def pirate3(ctx):
+    '''m8 oi your gams buy (another alternative to pirate cause why not)'''
+    await ctx.send('Yarr harr fiddle dee dee\nWe will not help you with your piracy')
+
+@bot.command(aliases=["piracy4"])
+async def pirate4(ctx):
+    '''gams m8 oi your buy (yet another alternative to pirate cause why not)'''
+    await ctx.send('https://cdn.discordapp.com/attachments/508390946753216528/695752500179107910/giphy.gif')
+
+@bot.command(aliases=["ok"])
+async def k(ctx):
+    '''k'''
+    await ctx.send('https://tenor.com/view/kermit-sesame-street-write-gif-4298020')
+
+@bot.command(aliases=["uwuham2"])
+async def yeet(ctx):
+    ''':wink:'''
+    await ctx.send('https://cdn.discordapp.com/emojis/476606907512127501.gif?v=1')
+
+@bot.command(aliases=["kerry"])
+async def uwuham3(ctx):
+    '''we were bad but now we're bad'''
+    await ctx.send('https://cdn.discordapp.com/attachments/732483185471914044/787623265685471232/9uxg53a4xz841.png')
 bot.run(token)
