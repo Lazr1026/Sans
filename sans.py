@@ -657,6 +657,16 @@ async def siconove(ctx):
     await ctx.send("MAKE YOUR OWN COMMAND YOU SODDING TICTAC")
 	
 @bot.command()
+async def boop(ctx):
+	'''boop'''
+	await ctx.send('boop')
+	
+@bot.command()
+async def boop2(ctx):
+	'''free games'''
+	await ctx.send('boop2: electric boogaloo')
+	
+@bot.command()
 async def boop3(ctx):
     '''not misinfo.'''
     await ctx.send("boop 3: kerry is good <a:meowawau:788144699025784892>")
