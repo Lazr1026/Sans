@@ -657,6 +657,11 @@ async def siconove(ctx):
     await ctx.send("MAKE YOUR OWN COMMAND YOU SODDING TICTAC")
 	
 @bot.command()
+async def boop3(ctx):
+    '''not misinfo.'''
+   await ctx.send("boop 3: kerry is good <a:meowawau:788144699025784892>
+	
+@bot.command()
 async def snas(ctx):
     '''fortnite battle royale'''
     await ctx.send('https://tenor.com/view/sans-undertale-dance-gif-12730380')
