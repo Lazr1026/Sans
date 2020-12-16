@@ -631,9 +631,8 @@ async def pat(ctx):
     await ctx.send("https://media1.tenor.com/images/da8f0e8dd1a7f7db5298bda9cc648a9a/tenor.gif?itemid=12018819")
 
 @bot.command()
-async def lazr(ctx):
-    '''bottom gear mates'''
-    await ctx.send('YOU SODDING TICTAC')
+    '''( ͡° ͜ʖ ͡°)'''
+    await ctx.send('sex ( ͡° ͜ʖ ͡°)')
 
 @bot.command()
 async def radeon(ctx):
