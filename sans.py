@@ -643,7 +643,7 @@ async def radeon(ctx):
 @bot.command()
 async def uwuham(ctx):
     '''true facts.'''
-    await ctx.send('uwuham is :poggu:')
+    await ctx.send('uwuham is :stupidfuckinguwuham:')
 
 @bot.command()
 async def mega97(ctx):
@@ -714,7 +714,7 @@ async def contributors(ctx):
         description=cleandoc("""
             Lazr1026 - Creator and programmer
             476MHz (Radeon) - Programmer
-            Uwuham - Telling us discord.js is better
+            Uwuham - Not very much, he makes commits sometimes
             Techmuse - PR'd useful shit
             Gnome! - Cleaned everything up massively
             ItsPizzaTime1501 - Helped with proper licensing
@@ -937,7 +937,7 @@ async def yeet(ctx):
     ''':wink:'''
     await ctx.send('https://cdn.discordapp.com/emojis/476606907512127501.gif?v=1')
 
-@bot.command(aliases=["kerry"])
+@bot.command(aliases=["kerry", "m1807"])
 async def uwuham3(ctx):
     '''we were bad but now we're bad'''
     await ctx.send('https://cdn.discordapp.com/attachments/732483185471914044/787623265685471232/9uxg53a4xz841.png')
