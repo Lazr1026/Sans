@@ -631,10 +631,6 @@ async def pat(ctx):
     await ctx.send("https://media1.tenor.com/images/da8f0e8dd1a7f7db5298bda9cc648a9a/tenor.gif?itemid=12018819")
 
 @bot.command()
-    '''( ͡° ͜ʖ ͡°)'''
-    await ctx.send('sex ( ͡° ͜ʖ ͡°)')
-
-@bot.command()
 async def radeon(ctx):
     '''can relate'''
     await ctx.send('you ever just want to sleep? for like a week?')
