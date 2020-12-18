@@ -247,7 +247,7 @@ async def lumacheck(ctx):
         description=cleandoc("""
             1. Power off your console
             2. Press and hold the SELECT button, then press power while still holding SELECT
-            3. Send a picture of the Luma configuration
+            If a helper requests, send a picture of the Luma configuration
         """)
     )
 
