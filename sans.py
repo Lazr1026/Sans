@@ -618,13 +618,7 @@ async def cbhc(ctx):
     
     await ctx.send(embed=embed)
 
-
 #memes
-
-@bot.command()
-async def die(ctx):
-    '''Perish'''
-    await ctx.send("https://cdn.discordapp.com/attachments/754753360132833431/787847978042916875/Mematic_meme_20201213_190551.jpg")
 
 @bot.command()
 async def halp(ctx):
@@ -637,11 +631,6 @@ async def pat(ctx):
     await ctx.send("https://media1.tenor.com/images/da8f0e8dd1a7f7db5298bda9cc648a9a/tenor.gif?itemid=12018819")
 
 @bot.command()
-async def lazr(ctx):
-    '''bottom gear mates'''
-    await ctx.send('YOU SODDING TICTAC')
-
-@bot.command()
 async def radeon(ctx):
     '''can relate'''
     await ctx.send('you ever just want to sleep? for like a week?')
@@ -649,7 +638,7 @@ async def radeon(ctx):
 @bot.command()
 async def uwuham(ctx):
     '''true facts.'''
-    await ctx.send('uwuham is :poggu:')
+    await ctx.send('uwuham is :stupidfuckinguwuham:')
 
 @bot.command()
 async def mega97(ctx):
@@ -674,7 +663,7 @@ async def boop2(ctx):
 @bot.command()
 async def boop3(ctx):
     '''not misinfo.'''
-    await ctx.send("boop 3: kerry is good <a:meowawau:788144699025784892>")
+    await ctx.send("boop 3: kerry is good <:meowawau:788144699025784892>")
 	
 @bot.command()
 async def snas(ctx):
@@ -720,7 +709,7 @@ async def contributors(ctx):
         description=cleandoc("""
             Lazr1026 - Creator and programmer
             476MHz (Radeon) - Programmer
-            Uwuham - Telling us discord.js is better
+            Uwuham - Not very much, he makes commits sometimes
             Techmuse - PR'd useful shit
             Gnome! - Cleaned everything up massively
             ItsPizzaTime1501 - Helped with proper licensing
@@ -943,7 +932,7 @@ async def yeet(ctx):
     ''':wink:'''
     await ctx.send('https://cdn.discordapp.com/emojis/476606907512127501.gif?v=1')
 
-@bot.command(aliases=["kerry"])
+@bot.command(aliases=["kerry", "m1807"])
 async def uwuham3(ctx):
     '''we were bad but now we're bad'''
     await ctx.send('https://cdn.discordapp.com/attachments/732483185471914044/787623265685471232/9uxg53a4xz841.png')
