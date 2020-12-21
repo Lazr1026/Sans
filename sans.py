@@ -33,7 +33,7 @@ with open(home_path + "/token.json") as tokenfile:
 
 @bot.event
 async def on_ready():
-    print('Ready.')
+    print('Ready. UwUham is bad.')
     print(f'We have logged in as {bot.user}')
 
 #assistance
@@ -869,7 +869,8 @@ async def ban(ctx, member: discord.User = None, reason="[no reason specified]"):
     if member == None or member == ctx.message.author:
         await ctx.channel.send("You cannot ban yourself.")
         return
-    message = f"You have been banned from {ctx.guild.name} for {reason}"
+    reasonraw = ctx.message.content[28:]
+    message = f"You have been banned from {ctx.guild.name} for {reasonraw}"
     await ctx.guild.ban(member, reason=reason, delete_message_days=0)
     await ctx.channel.send(f"{member} has been b&. 👍")
     await member.send(message)
