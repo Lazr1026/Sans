@@ -638,7 +638,7 @@ async def radeon(ctx):
 @bot.command()
 async def uwuham(ctx):
     '''true facts.'''
-    await ctx.send('uwuham is :stupidfuckinguwuham:')
+    await ctx.send('uwuham is :meowawau:')
 
 @bot.command()
 async def mega97(ctx):
