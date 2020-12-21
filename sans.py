@@ -870,7 +870,7 @@ async def ban(ctx, member: discord.User = None, reason="[no reason specified]"):
         await ctx.channel.send("You cannot ban yourself.")
         return
     reasonraw = ctx.message.content[28:]
-    message = f"You have been banned from {ctx.guild.name} for {reasonraw}"
+    message = f"You have been banned from {ctx.guild.name} for the reason {reasonraw}"
     await ctx.guild.ban(member, reason=reasonraw, delete_message_days=0)
     await ctx.channel.send(f"{member} has been b&. 👍")
     await member.send(message)
