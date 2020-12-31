@@ -9,3 +9,5 @@ if you want to invite this shit of a bot to your server invite link is [here](ht
 Enjoy hosting Sans!
 
 We're still working on both new update code and universal paths, so any hosters should host it from /home/lazr/Documents/Sans/ and as a root user.
+
+As of 12/31/2020, this bot is planned to be archived, due to the fact that its one job no longer being needed, as Ivan's server is no longer a help server. You can still host it, but don't expect any updates to it.
