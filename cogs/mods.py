@@ -3,7 +3,9 @@ import os
 import subprocess
 from discord.ext import commands
 
-home_path = os.path.dirname(os.path.realpath(__file__))
+path = os.getcwd()
+home_path = os.path.abspath(os.path.join(path, os.pardir))
+print(f'{home_path}')
 
 class mods(commands.Cog):
     def __init__(self, client):
@@ -41,7 +43,7 @@ class mods(commands.Cog):
     @commands.has_any_role('Owner', 'Admin')
     async def update(self, ctx):
         await ctx.send("Updating code. The bot will be down for roughly 15 seconds.")
-        subprocess.run(['bash', home_path + '../sans.sh'])
+        subprocess.run(['bash', home_path + '/Sans/sans.sh'])
 
 def setup(client):
     client.add_cog(mods(client))
