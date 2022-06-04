@@ -39,7 +39,7 @@ class mods(commands.Cog):
     @commands.has_any_role('Owner', 'Admin')
     async def update(self, ctx):
         await ctx.send("Updating code. The bot will be down for roughly 15 seconds.")
-        subprocess.run(['bash', home_path + '/recovery/sans.sh'])
+        subprocess.run(['bash', home_path + '/sans.sh'])
 
 def setup(client):
     client.add_cog(mods(client))
