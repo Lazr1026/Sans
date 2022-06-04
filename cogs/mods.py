@@ -3,6 +3,8 @@ import os
 import subprocess
 from discord.ext import commands
 
+home_path = os.path.dirname(os.path.realpath(__file__))
+
 class mods(commands.Cog):
     def __init__(self, client):
         self.client = client 
