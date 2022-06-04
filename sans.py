@@ -33,7 +33,7 @@ with open(home_path + "/token.json") as tokenfile:
 
 @bot.event
 async def on_ready():
-    print('Ready. UwUham is bad.')
+    print('Ready.')
     print(f'We have logged in as {bot.user}')
 
 #assistance
