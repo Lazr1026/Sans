@@ -1,5 +1,6 @@
 *.bak
 __pycache__/
+/cogs/__pycache__/
 token.json
 recoverytoken
 token.old
