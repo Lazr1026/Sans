@@ -10,7 +10,7 @@ class mods(commands.Cog):
     @commands.command()
     @commands.has_any_role('Owner', 'Admin')
     async def ban(self, ctx, member: discord.User = None, reason=""):
-        '''Ban Users. Adin+'''
+        '''Ban Users. Admin+'''
         if member == None or member == ctx.message.author:
             await ctx.channel.send("You cannot ban yourself.")
             return
