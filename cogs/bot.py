@@ -30,7 +30,7 @@ class bot(commands.Cog):
 
     @commands.command()
     async def ping(seld, ctx):
-        await ctx.send(f':ping_pong:! Latency is {int(bot.latency * 1000)} ms!')
+        await ctx.send(f':ping_pong:! Latency is {int(client.latency * 1000)} ms!')
 
 def setup(client):
     client.add_cog(bot(client))
