@@ -5,7 +5,6 @@ from discord.ext import commands
 
 path = os.getcwd()
 home_path = os.path.abspath(os.path.join(path, os.pardir))
-print(f'{home_path}')
 
 class mods(commands.Cog):
     def __init__(self, client):
